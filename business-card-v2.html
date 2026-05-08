@@ -40,12 +40,28 @@ body {
   background: #000;
 }
 
-#front::before {
-  content: '';
+/* Auto de lujo — lado derecho */
+.car-bg {
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at 70% 30%, rgba(30,35,50,0.45) 0%, rgba(0,0,0,0) 70%);
-  pointer-events: none;
+  background-image: url('cip/car-luxury.png');
+  background-size: cover;
+  background-position: center right;
+  opacity: 0.9;
+}
+
+/* Gradiente que protege el logo a la izquierda */
+.car-mask {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    #000 0%,
+    #000 30%,
+    rgba(0,0,0,0.75) 52%,
+    rgba(0,0,0,0.1) 75%,
+    rgba(0,0,0,0) 100%
+  );
 }
 
 .front-content {
@@ -212,6 +228,8 @@ body {
 
 <!-- FRENTE -->
 <div class="card" id="front">
+  <div class="car-bg"></div>
+  <div class="car-mask"></div>
   <div class="front-content">
     <div class="logo-lockup">
       <div class="logo-line1">
