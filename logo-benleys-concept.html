@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Coastal Finest — Concepto BENLEY'S</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,700&family=Open+Sans:wght@300;400;600&family=Public+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #060C18; padding: 48px 40px; display: flex; flex-direction: column; gap: 3px; align-items: center; }
+
+  .label {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 9px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #4A6080;
+    padding: 10px 0 4px;
+    width: 900px;
+  }
+
+  /* ─── DARK CARD ─── */
+  .card-dark {
+    width: 900px;
+    background: #0B1628;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 72px 64px;
+  }
+
+  /* ─── LIGHT CARD ─── */
+  .card-light {
+    width: 900px;
+    background: #F2F0EB;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 72px 64px;
+  }
+
+  /* ─── LOGO ─── */
+  .logo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+  }
+
+  .wordmark {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    line-height: 1;
+  }
+
+  .wordmark-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 64px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    color: #FFFFFF;
+  }
+
+  .wordmark-text-light {
+    font-family: 'Playfair Display', serif;
+    font-size: 64px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    color: #0B1628;
+  }
+
+  /* 4-pointed star */
+  .star {
+    flex-shrink: 0;
+    margin-top: -4px;
+  }
+
+  .sep {
+    height: 1px;
+    background: #C9A84C;
+    opacity: 0.5;
+    margin: 10px 0 12px;
+    width: 100%;
+  }
+
+  .sep-dark {
+    height: 1px;
+    background: #0B1628;
+    opacity: 0.3;
+    margin: 10px 0 12px;
+    width: 100%;
+  }
+
+  .subtitle {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+  }
+
+  .subtitle-light {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    color: #0B1628;
+  }
+
+  /* ─── ICON SOLO ─── */
+  .card-icon {
+    width: 200px;
+    height: 200px;
+    background: #0B1628;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* ─── TAGLINE ─── */
+  .tagline {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    font-weight: 400;
+    font-style: italic;
+    color: #F2F0EB;
+    letter-spacing: 0;
+    line-height: 1.35;
+  }
+
+  .tagline-block {
+    width: 900px;
+    background: #0B1628;
+    padding: 56px 64px;
+    display: flex;
+    align-items: center;
+    gap: 64px;
+  }
+
+  .tagline-right {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #4A6080;
+    line-height: 2;
+  }
+
+  .tagline-right strong {
+    display: block;
+    color: #F2F0EB;
+    font-size: 12px;
+    letter-spacing: 4px;
+  }
+</style>
+</head>
+<body>
+
+<!-- DARK VERSION -->
+<div class="label">Fondo oscuro — uso primario</div>
+<div class="card-dark">
+  <div class="logo">
+    <div class="wordmark">
+      <span class="wordmark-text">Coastal Finest</span>
+      <svg class="star" width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+        <path d="M16,0 C16,0 17.5,12 32,16 C32,16 17.5,20 16,32 C16,32 14.5,20 0,16 C0,16 14.5,12 16,0 Z" fill="#C9A84C"/>
+      </svg>
+    </div>
+    <div class="sep"></div>
+    <div class="subtitle">Detailing</div>
+  </div>
+</div>
+
+<!-- LIGHT VERSION -->
+<div class="label" style="margin-top: 16px;">Fondo claro — uso alternativo</div>
+<div class="card-light">
+  <div class="logo">
+    <div class="wordmark">
+      <span class="wordmark-text-light">Coastal Finest</span>
+      <svg class="star" width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+        <path d="M16,0 C16,0 17.5,12 32,16 C32,16 17.5,20 16,32 C16,32 14.5,20 0,16 C0,16 14.5,12 16,0 Z" fill="#C9A84C"/>
+      </svg>
+    </div>
+    <div class="sep-dark"></div>
+    <div class="subtitle-light">Detailing</div>
+  </div>
+</div>
+
+<!-- ICON SOLO -->
+<div style="display:flex; gap:3px; margin-top:16px;">
+  <div>
+    <div class="label" style="width:200px;">Ícono solo</div>
+    <div class="card-icon">
+      <svg width="80" height="80" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+        <path d="M16,0 C16,0 17.5,12 32,16 C32,16 17.5,20 16,32 C16,32 14.5,20 0,16 C0,16 14.5,12 16,0 Z" fill="#C9A84C"/>
+      </svg>
+    </div>
+  </div>
+  <div>
+    <div class="label" style="width:200px;">Ícono + inicial</div>
+    <div class="card-icon">
+      <div style="position:relative; display:flex; align-items:center; justify-content:center;">
+        <span style="font-family:'Playfair Display',serif; font-size:72px; font-weight:700; color:#fff; line-height:1;">C</span>
+        <svg style="position:absolute; top:-4px; right:-16px;" width="22" height="22" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+          <path d="M16,0 C16,0 17.5,12 32,16 C32,16 17.5,20 16,32 C16,32 14.5,20 0,16 C0,16 14.5,12 16,0 Z" fill="#C9A84C"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div class="label" style="width:200px;">Monograma CF</div>
+    <div class="card-icon">
+      <div style="position:relative; display:flex; align-items:center; justify-content:center;">
+        <span style="font-family:'Playfair Display',serif; font-size:52px; font-weight:700; color:#fff; line-height:1; letter-spacing:-3px;">CF</span>
+        <svg style="position:absolute; top:-4px; right:-10px;" width="18" height="18" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+          <path d="M16,0 C16,0 17.5,12 32,16 C32,16 17.5,20 16,32 C16,32 14.5,20 0,16 C0,16 14.5,12 16,0 Z" fill="#C9A84C"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div class="label" style="width:270px;">Ícono solo — fondo claro</div>
+    <div class="card-icon" style="background:#F2F0EB; width:270px;">
+      <svg width="80" height="80" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+        <path d="M16,0 C16,0 17.5,12 32,16 C32,16 17.5,20 16,32 C16,32 14.5,20 0,16 C0,16 14.5,12 16,0 Z" fill="#C9A84C"/>
+      </svg>
+    </div>
+  </div>
+</div>
+
+<!-- TAGLINE APPLICATION -->
+<div class="label" style="margin-top: 16px;">Aplicación con tagline</div>
+<div class="tagline-block">
+  <div class="tagline">
+    Where Precision<br>Meets Perfection.
+  </div>
+  <div style="flex:1; height:1px; background:linear-gradient(to right, #C9A84C33, transparent);"></div>
+  <div class="tagline-right">
+    <strong>YOUR COMPLETE CAR CARE.</strong>
+    Mobile Detailing · Mobile, Alabama
+  </div>
+</div>
+
+</body>
+</html>
