@@ -102,17 +102,9 @@ document.fonts.ready.then(() => {
     if (!coastalDiv || !detailingDiv || coastalDiv === detailingDiv) return;
 
     const coastalWidth = coastalDiv.offsetWidth;
-    const targetWidth = coastalWidth * 0.78;
-
-    const saved = detailingDiv.style.letterSpacing;
-    detailingDiv.style.letterSpacing = '0px';
-    const naturalWidth = detailingDiv.offsetWidth;
-    detailingDiv.style.letterSpacing = saved;
-
-    const n = detailingDiv.textContent.trim().length;
-    const newSpacing = (targetWidth - naturalWidth) / n;
-    detailingDiv.style.letterSpacing = newSpacing + 'px';
-    detailingDiv.style.width = targetWidth + 'px';
+    const fontSize = parseFloat(getComputedStyle(detailingDiv).fontSize);
+    detailingDiv.style.letterSpacing = (fontSize * 0.32) + 'px';
+    detailingDiv.style.width = '';
 
     if (sepDiv) sepDiv.style.width = coastalWidth + 'px';
   });
