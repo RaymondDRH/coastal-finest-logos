@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Coastal Finest Detailing — Brand Guidelines</title>
+<style>
+@font-face { font-family: 'Clash Display'; src: url('fonts/clash-display/ClashDisplay-Bold.woff2') format('woff2'); font-weight: 700; }
+@font-face { font-family: 'Clash Display'; src: url('fonts/clash-display/ClashDisplay-Semibold.woff2') format('woff2'); font-weight: 600; }
+@font-face { font-family: 'Clash Display'; src: url('fonts/clash-display/ClashDisplay-Medium.woff2') format('woff2'); font-weight: 500; }
+@font-face { font-family: 'Clash Display'; src: url('fonts/clash-display/ClashDisplay-Regular.woff2') format('woff2'); font-weight: 400; }
+@font-face { font-family: 'Clash Display'; src: url('fonts/clash-display/ClashDisplay-Light.woff2') format('woff2'); font-weight: 300; }
+@font-face { font-family: 'Clash Display'; src: url('fonts/clash-display/ClashDisplay-Extralight.woff2') format('woff2'); font-weight: 200; }
+
+:root {
+  --black:  #000000;
+  --navy:   #080F1E;
+  --steel:  #C4D0D8;
+  --cream:  #F0EDE8;
+  --white:  #FFFFFF;
+  --mist:   #999999;
+  --dim:    #404040;
+  --bg:     #060C18;
+  --label:  #3A5070;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  background: var(--bg);
+  font-family: 'Clash Display', sans-serif;
+  color: var(--white);
+  padding: 80px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 80px;
+}
+
+/* ─── SECTION ─── */
+.section { width: 900px; display: flex; flex-direction: column; gap: 3px; }
+.section-header {
+  display: flex; align-items: center; gap: 20px;
+  padding-bottom: 20px; margin-bottom: 4px;
+}
+.section-number {
+  font-weight: 200; font-size: 11px; letter-spacing: 4px;
+  text-transform: uppercase; color: var(--label);
+}
+.section-title {
+  font-weight: 600; font-size: 13px; letter-spacing: 3px;
+  text-transform: uppercase; color: var(--white);
+}
+.section-rule { flex: 1; height: 1px; background: rgba(255,255,255,0.08); }
+
+/* ─── CARDS ─── */
+.row { display: flex; gap: 3px; }
+.card { background: var(--black); padding: 48px; flex: 1; }
+.card-navy { background: var(--navy); padding: 48px; flex: 1; }
+.card-cream { background: var(--cream); padding: 48px; flex: 1; }
+.card-full { background: var(--black); padding: 64px 80px; width: 100%; }
+.card-label {
+  font-weight: 200; font-size: 9px; letter-spacing: 4px;
+  text-transform: uppercase; color: var(--label);
+  margin-bottom: 32px; display: block;
+}
+.card-label-dark {
+  font-weight: 200; font-size: 9px; letter-spacing: 4px;
+  text-transform: uppercase; color: rgba(8,15,30,0.35);
+  margin-bottom: 32px; display: block;
+}
+
+/* ─── 1. LOGO ─── */
+.logo { display: flex; flex-direction: column; align-items: flex-start; line-height: 1; }
+.logo .line1 { display: flex; align-items: baseline; }
+.logo .coastal  { font-weight: 300; font-size: 52px; letter-spacing: -0.02em; color: var(--white); }
+.logo .finest   { font-weight: 700; font-size: 52px; letter-spacing: -0.02em; color: var(--white); }
+.logo .detailing{ font-weight: 300; font-size: 100px; letter-spacing: -0.03em; color: var(--white); line-height: 0.9; }
+.logo .coastal-d { font-weight: 300; font-size: 52px; letter-spacing: -0.02em; color: var(--navy); }
+.logo .finest-d  { font-weight: 700; font-size: 52px; letter-spacing: -0.02em; color: var(--navy); }
+.logo .detailing-d { font-weight: 300; font-size: 100px; letter-spacing: -0.03em; color: var(--navy); line-height: 0.9; }
+
+/* compact */
+.logo-compact { display: flex; align-items: center; gap: 16px; }
+.logo-compact .left { display: flex; flex-direction: column; }
+.logo-compact .c  { font-weight: 300; font-size: 18px; letter-spacing: -0.02em; color: var(--white); line-height: 1; }
+.logo-compact .f  { font-weight: 700; font-size: 18px; letter-spacing: -0.02em; color: var(--white); line-height: 1; }
+.logo-compact .vl { width: 1px; height: 34px; background: rgba(255,255,255,0.2); }
+.logo-compact .d  { font-weight: 300; font-size: 32px; letter-spacing: -0.02em; color: var(--white); }
+
+/* monogram */
+.monogram-wrap { display: flex; flex-direction: column; align-items: center; gap: 10px; width: fit-content; }
+.mono-rule  { width: 100%; height: 1px; background: var(--white); }
+.mono-rule-dark { width: 100%; height: 1px; background: var(--navy); }
+.mono-cf    { font-weight: 700; font-size: 64px; letter-spacing: -0.03em; color: var(--white); line-height: 1; }
+.mono-cf-d  { font-weight: 700; font-size: 64px; letter-spacing: -0.03em; color: var(--navy); line-height: 1; }
+
+/* clear space */
+.clearspace-wrap {
+  position: relative; display: inline-flex; align-items: flex-start;
+  border: 1px dashed rgba(255,255,255,0.15); padding: 32px;
+}
+.clearspace-label {
+  position: absolute; top: 8px; left: 50%; transform: translateX(-50%);
+  font-size: 9px; letter-spacing: 3px; text-transform: uppercase;
+  color: rgba(255,255,255,0.25); white-space: nowrap;
+}
+
+/* ─── 2. COLORS ─── */
+.swatch-row { display: flex; gap: 3px; width: 100%; }
+.swatch-card {
+  flex: 1; display: flex; flex-direction: column; justify-content: space-between;
+  padding: 32px 24px; min-height: 160px;
+}
+.swatch-name { font-weight: 600; font-size: 14px; letter-spacing: 0; }
+.swatch-meta { font-weight: 300; font-size: 11px; letter-spacing: 1px; margin-top: 4px; opacity: 0.6; }
+.swatch-hex  { font-weight: 500; font-size: 13px; letter-spacing: 1px; margin-top: auto; padding-top: 24px; }
+.swatch-usage{ font-weight: 200; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; opacity: 0.5; margin-top: 4px; }
+
+/* ─── 3. TYPOGRAPHY ─── */
+.type-row {
+  display: flex; align-items: baseline; gap: 32px;
+  padding: 28px 40px; background: var(--black);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+.type-meta {
+  min-width: 200px; display: flex; flex-direction: column; gap: 4px;
+}
+.type-tag   { font-weight: 200; font-size: 9px; letter-spacing: 4px; text-transform: uppercase; color: var(--label); }
+.type-spec  { font-weight: 300; font-size: 10px; letter-spacing: 1px; color: var(--mist); margin-top: 2px; }
+.type-sample{ color: var(--white); line-height: 1; }
+
+/* ─── 4. APLICACIONES ─── */
+/* Web header */
+.app-web-header {
+  width: 100%; background: var(--black);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 48px; height: 72px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.nav-links { display: flex; gap: 32px; }
+.nav-link { font-weight: 400; font-size: 14px; letter-spacing: 0.5px; color: var(--mist); cursor: pointer; }
+.nav-cta { font-weight: 500; font-size: 13px; letter-spacing: 1px; color: var(--black); background: var(--white); padding: 10px 24px; }
+
+/* Mobile app icon */
+.app-icon-grid { display: flex; gap: 16px; align-items: flex-end; }
+.app-icon {
+  display: flex; align-items: center; justify-content: center;
+  background: var(--black);
+}
+.app-icon .cf { font-weight: 700; color: var(--white); letter-spacing: -0.03em; line-height: 1; }
+.app-icon-wrap { display: flex; flex-direction: column; align-items: center; gap: 10px; }
+.app-icon-label { font-weight: 200; font-size: 9px; letter-spacing: 3px; text-transform: uppercase; color: var(--label); }
+
+/* Social profile */
+.social-profile {
+  width: 100%; background: var(--black); padding: 32px 40px;
+  display: flex; align-items: center; gap: 32px;
+}
+.profile-avatar {
+  width: 80px; height: 80px; border-radius: 50%;
+  background: var(--black); border: 2px solid rgba(255,255,255,0.15);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.profile-avatar .cf { font-weight: 700; font-size: 26px; letter-spacing: -0.03em; color: var(--white); line-height: 1; }
+.profile-info { display: flex; flex-direction: column; gap: 4px; }
+.profile-name { font-weight: 600; font-size: 18px; color: var(--white); }
+.profile-handle { font-weight: 300; font-size: 13px; color: var(--mist); }
+.profile-bio { font-weight: 300; font-size: 13px; color: var(--white); margin-top: 6px; line-height: 1.5; }
+.profile-stats { display: flex; gap: 32px; margin-top: 12px; }
+.stat-num { font-weight: 600; font-size: 16px; color: var(--white); }
+.stat-label { font-weight: 300; font-size: 11px; color: var(--mist); }
+
+/* Sticker */
+.sticker {
+  background: var(--black);
+  border: 2px solid rgba(255,255,255,0.9);
+  padding: 20px 28px;
+  display: inline-flex; flex-direction: column; align-items: flex-start;
+}
+.sticker-sub { font-weight: 200; font-size: 8px; letter-spacing: 4px; text-transform: uppercase; color: var(--mist); margin-top: 4px; }
+
+/* Cap / uniform */
+.embroidery-preview {
+  background: #1A1A1A; padding: 48px;
+  display: flex; flex-direction: column; align-items: center; gap: 16px;
+  flex: 1;
+}
+.embroidery-label { font-weight: 200; font-size: 9px; letter-spacing: 4px; text-transform: uppercase; color: var(--label); }
+.cap-shape {
+  width: 200px; height: 100px; background: #111;
+  border-radius: 50% 50% 0 0 / 60% 60% 0 0;
+  border: 1px solid rgba(255,255,255,0.1);
+  display: flex; align-items: center; justify-content: center; padding-top: 16px;
+}
+.polo-shape {
+  width: 140px; height: 160px; background: #111;
+  clip-path: polygon(20% 0%, 80% 0%, 100% 15%, 85% 100%, 15% 100%, 0% 15%);
+  display: flex; align-items: center; justify-content: center;
+}
+.emb-text { font-weight: 700; font-size: 12px; letter-spacing: 1px; color: rgba(255,255,255,0.7); line-height: 1.2; text-align: center; }
+
+/* DO / DON'T */
+.dos-donts { display: flex; gap: 3px; width: 100%; }
+.do-card   { flex: 1; background: var(--black); padding: 40px; border-top: 2px solid rgba(255,255,255,0.3); }
+.dont-card { flex: 1; background: var(--black); padding: 40px; border-top: 2px solid rgba(255,255,255,0.1); }
+.rule-tag  { font-weight: 200; font-size: 9px; letter-spacing: 5px; text-transform: uppercase; margin-bottom: 24px; display: block; }
+.rule-text { font-weight: 300; font-size: 13px; color: var(--mist); line-height: 1.7; }
+.logo-dont { opacity: 0.3; filter: blur(0.5px); }
+.logo-stretched { transform: scaleX(1.4); display: inline-block; transform-origin: left; }
+</style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════════════════════════
+     PORTADA
+══════════════════════════════════════════════════════════════ -->
+<div style="width:900px; background:#000; padding:80px; display:flex; flex-direction:column; gap:48px;">
+  <div>
+    <span style="font-weight:200; font-size:10px; letter-spacing:5px; text-transform:uppercase; color:var(--label);">Brand Guidelines · 2025</span>
+  </div>
+  <div class="logo">
+    <div class="line1">
+      <span class="coastal">Coastal&nbsp;</span><span class="finest">Finest</span>
+    </div>
+    <span class="detailing">Detailing</span>
+  </div>
+  <div style="height:1px; background:rgba(255,255,255,0.08);"></div>
+  <div style="display:flex; gap:64px;">
+    <div>
+      <div style="font-weight:200; font-size:9px; letter-spacing:4px; text-transform:uppercase; color:var(--label); margin-bottom:8px;">Posicionamiento</div>
+      <div style="font-weight:300; font-size:14px; color:var(--mist); line-height:1.7;">Premium mobile auto detailing.<br>Mobile, Alabama.</div>
+    </div>
+    <div>
+      <div style="font-weight:200; font-size:9px; letter-spacing:4px; text-transform:uppercase; color:var(--label); margin-bottom:8px;">Fuente</div>
+      <div style="font-weight:300; font-size:14px; color:var(--mist);">Clash Display</div>
+    </div>
+    <div>
+      <div style="font-weight:200; font-size:9px; letter-spacing:4px; text-transform:uppercase; color:var(--label); margin-bottom:8px;">Acento</div>
+      <div style="font-weight:300; font-size:14px; color:var(--steel);">#C4D0D8 — Steel</div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════════
+     1. LOGO SYSTEM
+══════════════════════════════════════════════════════════════ -->
+<div class="section">
+  <div class="section-header">
+    <span class="section-number">01</span>
+    <span class="section-title">Logo System</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <!-- Versión primaria -->
+  <div class="card-full">
+    <span class="card-label">Marca primaria — fondo oscuro · uso principal</span>
+    <div class="logo">
+      <div class="line1">
+        <span class="coastal">Coastal&nbsp;</span><span class="finest">Finest</span>
+      </div>
+      <span class="detailing">Detailing</span>
+    </div>
+  </div>
+
+  <div class="row">
+    <!-- Navy -->
+    <div class="card-navy" style="padding:48px 64px;">
+      <span class="card-label">Fondo navy</span>
+      <div class="logo" style="transform:scale(0.65); transform-origin:left top; height:120px;">
+        <div class="line1"><span class="coastal">Coastal&nbsp;</span><span class="finest">Finest</span></div>
+        <span class="detailing">Detailing</span>
+      </div>
+    </div>
+    <!-- Claro -->
+    <div class="card-cream" style="padding:48px 64px;">
+      <span class="card-label-dark">Fondo claro</span>
+      <div class="logo" style="transform:scale(0.65); transform-origin:left top; height:120px;">
+        <div class="line1"><span class="coastal-d">Coastal&nbsp;</span><span class="finest-d">Finest</span></div>
+        <span class="detailing-d">Detailing</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Compacta + Monograma -->
+  <div class="row">
+    <div class="card" style="padding:48px 64px; flex:2;">
+      <span class="card-label">Versión compacta — navbar, email, uso horizontal</span>
+      <div class="logo-compact">
+        <div class="left">
+          <span class="c">Coastal</span>
+          <span class="f">Finest</span>
+        </div>
+        <div class="vl"></div>
+        <span class="d">Detailing</span>
+      </div>
+    </div>
+    <div class="card" style="padding:48px; display:flex; gap:32px; align-items:center; justify-content:center;">
+      <div>
+        <span class="card-label" style="margin-bottom:16px;">Monograma CF</span>
+        <div class="monogram-wrap">
+          <div class="mono-rule"></div>
+          <span class="mono-cf">CF</span>
+          <div class="mono-rule"></div>
+        </div>
+      </div>
+      <div style="background:var(--cream); padding:32px; display:flex; flex-direction:column; align-items:center; gap:16px;">
+        <span style="font-weight:200; font-size:9px; letter-spacing:4px; text-transform:uppercase; color:rgba(8,15,30,0.3);">Claro</span>
+        <div class="monogram-wrap">
+          <div class="mono-rule-dark"></div>
+          <span class="mono-cf-d">CF</span>
+          <div class="mono-rule-dark"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Clear space -->
+  <div class="card-full" style="padding:64px; display:flex; align-items:center; justify-content:center;">
+    <div style="display:flex; flex-direction:column; align-items:center; gap:32px; width:100%;">
+      <span style="font-weight:200; font-size:9px; letter-spacing:4px; text-transform:uppercase; color:var(--label);">Espacio mínimo de respiro — igual a la altura de "Coastal Finest"</span>
+      <div class="clearspace-wrap">
+        <span class="clearspace-label">· · · zona de respeto · · ·</span>
+        <div class="logo" style="transform:scale(0.7); transform-origin:left top; height:115px;">
+          <div class="line1"><span class="coastal">Coastal&nbsp;</span><span class="finest">Finest</span></div>
+          <span class="detailing">Detailing</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════════
+     2. COLOR SYSTEM
+══════════════════════════════════════════════════════════════ -->
+<div class="section">
+  <div class="section-header">
+    <span class="section-number">02</span>
+    <span class="section-title">Color System</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <div class="swatch-row">
+    <div class="swatch-card" style="background:#000000; color:#fff;">
+      <div>
+        <div class="swatch-name">Jet Black</div>
+        <div class="swatch-meta">Color primario</div>
+      </div>
+      <div>
+        <div class="swatch-hex">#000000</div>
+        <div class="swatch-usage">RGB 0 · 0 · 0</div>
+        <div class="swatch-usage" style="margin-top:2px;">Fondo principal · Stickers · Tarjetas</div>
+      </div>
+    </div>
+    <div class="swatch-card" style="background:#080F1E; color:#fff;">
+      <div>
+        <div class="swatch-name">Deep Navy</div>
+        <div class="swatch-meta">Fondo secundario</div>
+      </div>
+      <div>
+        <div class="swatch-hex">#080F1E</div>
+        <div class="swatch-usage">RGB 8 · 15 · 30</div>
+        <div class="swatch-usage" style="margin-top:2px;">Secciones alternativas · Van wrap</div>
+      </div>
+    </div>
+    <div class="swatch-card" style="background:#C4D0D8; color:#080F1E;">
+      <div>
+        <div class="swatch-name" style="color:#080F1E;">Steel</div>
+        <div class="swatch-meta" style="color:#080F1E;">Acento</div>
+      </div>
+      <div>
+        <div class="swatch-hex" style="color:#080F1E;">#C4D0D8</div>
+        <div class="swatch-usage" style="color:#080F1E;">RGB 196 · 208 · 216</div>
+        <div class="swatch-usage" style="color:#080F1E; margin-top:2px;">CTAs · Precio destacado · Detalles</div>
+      </div>
+    </div>
+    <div class="swatch-card" style="background:#F0EDE8; color:#080F1E;">
+      <div>
+        <div class="swatch-name" style="color:#080F1E;">Cream</div>
+        <div class="swatch-meta" style="color:#080F1E;">Fondo claro</div>
+      </div>
+      <div>
+        <div class="swatch-hex" style="color:#080F1E;">#F0EDE8</div>
+        <div class="swatch-usage" style="color:#080F1E;">RGB 240 · 237 · 232</div>
+        <div class="swatch-usage" style="color:#080F1E; margin-top:2px;">Fondos alternativos · Tarjeta reverso</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="swatch-row">
+    <div class="swatch-card" style="background:#FFFFFF; color:#080F1E; flex:2;">
+      <div>
+        <div class="swatch-name" style="color:#080F1E;">White</div>
+        <div class="swatch-meta" style="color:#080F1E;">Texto primario sobre oscuro</div>
+      </div>
+      <div>
+        <div class="swatch-hex" style="color:#080F1E;">#FFFFFF</div>
+        <div class="swatch-usage" style="color:#080F1E;">Texto · Logo sobre negro/navy</div>
+      </div>
+    </div>
+    <div class="swatch-card" style="background:#999999; color:#000; flex:1;">
+      <div>
+        <div class="swatch-name" style="color:#000;">Mist</div>
+        <div class="swatch-meta" style="color:#000;">Texto secundario</div>
+      </div>
+      <div>
+        <div class="swatch-hex" style="color:#000;">#999999</div>
+        <div class="swatch-usage" style="color:#000;">Subtítulos · Descripciones · Labels</div>
+      </div>
+    </div>
+    <div class="swatch-card" style="background:#404040; color:#fff; flex:1;">
+      <div>
+        <div class="swatch-name">Dim</div>
+        <div class="swatch-meta">Bordes · Divisores</div>
+      </div>
+      <div>
+        <div class="swatch-hex">#404040</div>
+        <div class="swatch-usage">Bordes sutiles en fondos negros</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════════
+     3. TYPOGRAPHY
+══════════════════════════════════════════════════════════════ -->
+<div class="section">
+  <div class="section-header">
+    <span class="section-number">03</span>
+    <span class="section-title">Typography — Clash Display</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <div class="type-row" style="padding-top:40px;">
+    <div class="type-meta">
+      <span class="type-tag">Display · Hero</span>
+      <span class="type-spec">Bold 700 · 96px · ls -0.03em</span>
+    </div>
+    <span class="type-sample" style="font-weight:700; font-size:72px; letter-spacing:-0.03em;">Finest.</span>
+  </div>
+  <div class="type-row">
+    <div class="type-meta">
+      <span class="type-tag">H1 · Section Title</span>
+      <span class="type-spec">Semibold 600 · 56px · ls -0.02em</span>
+    </div>
+    <span class="type-sample" style="font-weight:600; font-size:56px; letter-spacing:-0.02em;">Our Services</span>
+  </div>
+  <div class="type-row">
+    <div class="type-meta">
+      <span class="type-tag">H2 · Subsection</span>
+      <span class="type-spec">Medium 500 · 36px · ls -0.01em</span>
+    </div>
+    <span class="type-sample" style="font-weight:500; font-size:36px; letter-spacing:-0.01em;">Full Detail</span>
+  </div>
+  <div class="type-row">
+    <div class="type-meta">
+      <span class="type-tag">H3 · Card Title</span>
+      <span class="type-spec">Medium 500 · 24px</span>
+    </div>
+    <span class="type-sample" style="font-weight:500; font-size:24px;">Interior & Exterior</span>
+  </div>
+  <div class="type-row">
+    <div class="type-meta">
+      <span class="type-tag">Body · Descripción</span>
+      <span class="type-spec">Regular 400 · 16px · lh 1.7</span>
+    </div>
+    <span class="type-sample" style="font-weight:400; font-size:16px; color:var(--mist); line-height:1.7; max-width:480px;">Professional mobile detailing delivered to your location. We bring the equipment, expertise, and care your vehicle deserves.</span>
+  </div>
+  <div class="type-row">
+    <div class="type-meta">
+      <span class="type-tag">Label · Caption</span>
+      <span class="type-spec">Extralight 200 · 11px · ls 4px · uppercase</span>
+    </div>
+    <span class="type-sample" style="font-weight:200; font-size:11px; letter-spacing:4px; text-transform:uppercase; color:var(--label);">Mobile, Alabama · Premium Detailing</span>
+  </div>
+  <div class="type-row" style="padding-bottom:40px;">
+    <div class="type-meta">
+      <span class="type-tag">Price · Número</span>
+      <span class="type-spec">Light 300 · 48px · ls -0.02em</span>
+    </div>
+    <div style="display:flex; align-items:baseline; gap:4px;">
+      <span class="type-sample" style="font-weight:200; font-size:20px; color:var(--mist);">$</span>
+      <span class="type-sample" style="font-weight:300; font-size:48px; letter-spacing:-0.02em;">180</span>
+      <span class="type-sample" style="font-weight:200; font-size:16px; color:var(--mist); padding-bottom:6px;">sedan</span>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════════
+     4. APLICACIONES
+══════════════════════════════════════════════════════════════ -->
+<div class="section">
+  <div class="section-header">
+    <span class="section-number">04</span>
+    <span class="section-title">Aplicaciones</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <!-- Web header -->
+  <div style="background:#000; padding:0;">
+    <span class="card-label" style="padding:16px 48px 0; display:block;">Header del sitio web</span>
+    <div class="app-web-header">
+      <div class="logo-compact">
+        <div class="left">
+          <span class="c" style="font-size:15px;">Coastal</span>
+          <span class="f" style="font-size:15px;">Finest</span>
+        </div>
+        <div class="vl" style="height:28px;"></div>
+        <span class="d" style="font-size:26px;">Detailing</span>
+      </div>
+      <div class="nav-links">
+        <span class="nav-link">Services</span>
+        <span class="nav-link">Pricing</span>
+        <span class="nav-link">About</span>
+      </div>
+      <div class="nav-cta">Get a quote</div>
+    </div>
+  </div>
+
+  <!-- App icons -->
+  <div class="card-full" style="padding:48px;">
+    <span class="card-label">App icon · Favicon · Perfil de redes</span>
+    <div class="app-icon-grid">
+      <div class="app-icon-wrap">
+        <div class="app-icon" style="width:120px; height:120px; border-radius:24px;">
+          <div class="monogram-wrap" style="gap:8px;">
+            <div class="mono-rule" style="width:52px;"></div>
+            <span class="cf" style="font-size:48px;">CF</span>
+            <div class="mono-rule" style="width:52px;"></div>
+          </div>
+        </div>
+        <span class="app-icon-label">120×120</span>
+      </div>
+      <div class="app-icon-wrap">
+        <div class="app-icon" style="width:80px; height:80px; border-radius:16px;">
+          <div class="monogram-wrap" style="gap:5px;">
+            <div class="mono-rule" style="width:34px;"></div>
+            <span class="cf" style="font-size:32px;">CF</span>
+            <div class="mono-rule" style="width:34px;"></div>
+          </div>
+        </div>
+        <span class="app-icon-label">80×80</span>
+      </div>
+      <div class="app-icon-wrap">
+        <div class="app-icon" style="width:48px; height:48px; border-radius:8px;">
+          <div class="monogram-wrap" style="gap:3px;">
+            <div class="mono-rule" style="width:20px;"></div>
+            <span class="cf" style="font-size:19px;">CF</span>
+            <div class="mono-rule" style="width:20px;"></div>
+          </div>
+        </div>
+        <span class="app-icon-label">48×48</span>
+      </div>
+      <div class="app-icon-wrap">
+        <div class="app-icon" style="width:32px; height:32px; border-radius:6px;">
+          <span class="cf" style="font-size:13px; font-weight:700; color:#fff; font-family:'Clash Display';">CF</span>
+        </div>
+        <span class="app-icon-label">32×32</span>
+      </div>
+      <div class="app-icon-wrap">
+        <div class="app-icon" style="width:16px; height:16px; border-radius:3px;">
+          <span style="font-family:'Clash Display'; font-weight:700; font-size:9px; color:#fff; letter-spacing:-0.5px;">CF</span>
+        </div>
+        <span class="app-icon-label">16×16</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Social profile -->
+  <div style="background:#000; padding:0;">
+    <span class="card-label" style="padding:16px 40px 0; display:block;">Perfil Instagram / Facebook</span>
+    <div class="social-profile">
+      <div class="profile-avatar">
+        <div class="monogram-wrap" style="gap:5px;">
+          <div class="mono-rule" style="width:28px;"></div>
+          <span class="profile-avatar .cf" style="font-family:'Clash Display'; font-weight:700; font-size:22px; color:#fff; letter-spacing:-0.02em; line-height:1;">CF</span>
+          <div class="mono-rule" style="width:28px;"></div>
+        </div>
+      </div>
+      <div class="profile-info">
+        <span class="profile-name">Coastal Finest Detailing</span>
+        <span class="profile-handle">@coastalfinestdetailing</span>
+        <span class="profile-bio">Premium mobile auto detailing · Mobile, Alabama<br>Where Precision Meets Perfection.</span>
+        <div class="profile-stats">
+          <div><span class="stat-num">—</span><br><span class="stat-label">Posts</span></div>
+          <div><span class="stat-num">—</span><br><span class="stat-label">Followers</span></div>
+          <div><span class="stat-num">—</span><br><span class="stat-label">Following</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Stickers -->
+  <div class="card-full" style="padding:48px; display:flex; gap:40px; align-items:center; flex-wrap:wrap;">
+    <div>
+      <span class="card-label" style="margin-bottom:24px;">Stickers · Decals</span>
+      <div style="display:flex; gap:24px; align-items:center;">
+        <div class="sticker">
+          <div style="font-family:'Clash Display'; font-weight:300; font-size:11px; letter-spacing:-0.02em; color:#fff;">Coastal <span style="font-weight:700;">Finest</span></div>
+          <div style="font-family:'Clash Display'; font-weight:300; font-size:22px; letter-spacing:-0.03em; color:#fff; line-height:0.9;">Detailing</div>
+          <div class="sticker-sub">Mobile, Alabama</div>
+        </div>
+        <div style="background:#fff; padding:16px 22px; display:inline-flex; flex-direction:column; align-items:flex-start;">
+          <div style="font-family:'Clash Display'; font-weight:300; font-size:10px; letter-spacing:-0.02em; color:#000;">Coastal <span style="font-weight:700;">Finest</span></div>
+          <div style="font-family:'Clash Display'; font-weight:300; font-size:20px; letter-spacing:-0.03em; color:#000; line-height:0.9;">Detailing</div>
+          <div style="font-family:'Clash Display'; font-weight:200; font-size:7px; letter-spacing:3px; text-transform:uppercase; color:#999; margin-top:4px;">Mobile, Alabama</div>
+        </div>
+        <div style="background:#080F1E; border:1px solid rgba(196,208,216,0.3); padding:16px 22px; display:inline-flex; flex-direction:column;">
+          <div style="font-family:'Clash Display'; font-weight:300; font-size:10px; letter-spacing:-0.02em; color:#fff;">Coastal <span style="font-weight:700;">Finest</span></div>
+          <div style="font-family:'Clash Display'; font-weight:300; font-size:20px; letter-spacing:-0.03em; color:#C4D0D8; line-height:0.9;">Detailing</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cap + Polo -->
+  <div class="row">
+    <div class="embroidery-preview">
+      <span class="embroidery-label">Gorra — bordado frontal</span>
+      <div class="cap-shape">
+        <div style="display:flex; flex-direction:column; align-items:center;">
+          <div style="font-family:'Clash Display'; font-weight:300; font-size:8px; color:rgba(255,255,255,0.5); letter-spacing:2px; text-transform:uppercase;">COASTAL FINEST</div>
+          <div style="font-family:'Clash Display'; font-weight:700; font-size:14px; color:rgba(255,255,255,0.8); letter-spacing:-0.5px;">DETAILING</div>
+        </div>
+      </div>
+      <div style="font-weight:200; font-size:9px; letter-spacing:2px; color:var(--label);">Hilo blanco sobre negro</div>
+    </div>
+    <div class="embroidery-preview">
+      <span class="embroidery-label">Polo / Uniforme — pecho izquierdo</span>
+      <div class="polo-shape">
+        <div style="display:flex; flex-direction:column; align-items:center; gap:4px; transform:translateY(10px);">
+          <div class="monogram-wrap" style="gap:5px;">
+            <div style="width:36px; height:1px; background:rgba(255,255,255,0.5);"></div>
+            <span style="font-family:'Clash Display'; font-weight:700; font-size:22px; color:rgba(255,255,255,0.7); letter-spacing:-0.03em; line-height:1;">CF</span>
+            <div style="width:36px; height:1px; background:rgba(255,255,255,0.5);"></div>
+          </div>
+        </div>
+      </div>
+      <div style="font-weight:200; font-size:9px; letter-spacing:2px; color:var(--label);">Monograma CF · pecho izquierdo</div>
+    </div>
+    <div class="embroidery-preview">
+      <span class="embroidery-label">Gorra — variante steel</span>
+      <div class="cap-shape" style="background:#111; border-color:rgba(196,208,216,0.2);">
+        <div style="display:flex; flex-direction:column; align-items:center;">
+          <div style="font-family:'Clash Display'; font-weight:300; font-size:8px; color:rgba(196,208,216,0.5); letter-spacing:2px; text-transform:uppercase;">COASTAL FINEST</div>
+          <div style="font-family:'Clash Display'; font-weight:700; font-size:14px; color:rgba(196,208,216,0.9); letter-spacing:-0.5px;">DETAILING</div>
+        </div>
+      </div>
+      <div style="font-weight:200; font-size:9px; letter-spacing:2px; color:var(--label);">Hilo steel sobre negro</div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ══════════════════════════════════════════════════════════════
+     5. DO's & DON'Ts
+══════════════════════════════════════════════════════════════ -->
+<div class="section">
+  <div class="section-header">
+    <span class="section-number">05</span>
+    <span class="section-title">Uso Correcto del Logo</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <div class="dos-donts">
+    <div class="do-card">
+      <span class="rule-tag" style="color:var(--white);">✓ Correcto</span>
+      <div class="logo" style="transform:scale(0.5); transform-origin:left top; height:80px;">
+        <div class="line1"><span class="coastal">Coastal&nbsp;</span><span class="finest">Finest</span></div>
+        <span class="detailing">Detailing</span>
+      </div>
+      <p class="rule-text" style="margin-top:24px;">Usar siempre sobre fondos negro, navy o cream. Mantener las proporciones originales.</p>
+    </div>
+    <div class="dont-card">
+      <span class="rule-tag" style="color:var(--dim);">✗ Incorrecto — No estirar</span>
+      <div class="logo logo-dont" style="transform:scale(0.5) scaleX(1.5); transform-origin:left top; height:80px;">
+        <div class="line1"><span class="coastal">Coastal&nbsp;</span><span class="finest">Finest</span></div>
+        <span class="detailing">Detailing</span>
+      </div>
+      <p class="rule-text" style="margin-top:24px;">Nunca distorsionar las proporciones del logo.</p>
+    </div>
+    <div class="dont-card">
+      <span class="rule-tag" style="color:var(--dim);">✗ Incorrecto — No sobre colores</span>
+      <div style="background:#C4D0D8; padding:16px; margin-top:8px; display:inline-block;">
+        <div class="logo logo-dont" style="transform:scale(0.5); transform-origin:left top; height:80px;">
+          <div class="line1"><span class="coastal">Coastal&nbsp;</span><span class="finest">Finest</span></div>
+          <span class="detailing">Detailing</span>
+        </div>
+      </div>
+      <p class="rule-text" style="margin-top:8px;">Nunca poner el logo blanco sobre el color steel u otros colores intermedios.</p>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
