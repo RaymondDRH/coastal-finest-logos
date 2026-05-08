@@ -101,9 +101,9 @@ document.fonts.ready.then(() => {
     const sepDiv = wm.querySelector('.sep');
     if (!coastalDiv || !detailingDiv || coastalDiv === detailingDiv) return;
 
-    const targetWidth = coastalDiv.offsetWidth;
+    const coastalWidth = coastalDiv.offsetWidth;
+    const targetWidth = coastalWidth * 0.78;
 
-    // Measure natural width of DETAILING with no letter-spacing
     const saved = detailingDiv.style.letterSpacing;
     detailingDiv.style.letterSpacing = '0px';
     const naturalWidth = detailingDiv.offsetWidth;
@@ -114,7 +114,7 @@ document.fonts.ready.then(() => {
     detailingDiv.style.letterSpacing = newSpacing + 'px';
     detailingDiv.style.width = targetWidth + 'px';
 
-    if (sepDiv) sepDiv.style.width = targetWidth + 'px';
+    if (sepDiv) sepDiv.style.width = coastalWidth + 'px';
   });
 });
 </script>

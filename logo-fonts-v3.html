@@ -457,15 +457,15 @@ document.fonts.ready.then(() => {
     const detailingEl = texts.find(t => t.textContent.trim() === 'DETAILING');
     const sepLine = svg.querySelector('line[stroke="#C9A84C"]');
     if (coastalEl && detailingEl) {
-      const bbox = coastalEl.getBBox();
+      const coastalWidth = coastalEl.getBBox().width;
+      const targetWidth = coastalWidth * 0.78;
       const startX = parseFloat(coastalEl.getAttribute('x'));
-      const endX = startX + bbox.width;
-      detailingEl.setAttribute('textLength', bbox.width);
+      detailingEl.setAttribute('textLength', targetWidth);
       detailingEl.setAttribute('lengthAdjust', 'spacing');
       detailingEl.setAttribute('x', startX);
       if (sepLine) {
         sepLine.setAttribute('x1', startX);
-        sepLine.setAttribute('x2', endX);
+        sepLine.setAttribute('x2', startX + coastalWidth);
       }
     }
   });
