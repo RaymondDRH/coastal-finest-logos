@@ -6,8 +6,6 @@
 <style>
 @font-face { font-family: 'Clash Display'; src: url('fonts/clash-display/ClashDisplay-Bold.woff2') format('woff2'); font-weight: 700; }
 @font-face { font-family: 'Clash Display'; src: url('fonts/clash-display/ClashDisplay-Semibold.woff2') format('woff2'); font-weight: 600; }
-@font-face { font-family: 'Clash Display'; src: url('fonts/clash-display/ClashDisplay-Medium.woff2') format('woff2'); font-weight: 500; }
-@font-face { font-family: 'Clash Display'; src: url('fonts/clash-display/ClashDisplay-Regular.woff2') format('woff2'); font-weight: 400; }
 @font-face { font-family: 'Clash Display'; src: url('fonts/clash-display/ClashDisplay-Light.woff2') format('woff2'); font-weight: 300; }
 @font-face { font-family: 'Clash Display'; src: url('fonts/clash-display/ClashDisplay-Extralight.woff2') format('woff2'); font-weight: 200; }
 
@@ -36,11 +34,8 @@ body {
 }
 
 /* ─── FRENTE ─── */
-#front {
-  background: #000;
-}
+#front { background: #000; }
 
-/* Auto de lujo — lado derecho */
 .car-bg {
   position: absolute;
   inset: 0;
@@ -50,16 +45,15 @@ body {
   opacity: 0.9;
 }
 
-/* Gradiente que protege el logo a la izquierda */
 .car-mask {
   position: absolute;
   inset: 0;
   background: linear-gradient(
     to right,
     #000 0%,
-    #000 30%,
-    rgba(0,0,0,0.75) 52%,
-    rgba(0,0,0,0.1) 75%,
+    #000 32%,
+    rgba(0,0,0,0.80) 50%,
+    rgba(0,0,0,0.15) 72%,
     rgba(0,0,0,0) 100%
   );
 }
@@ -67,12 +61,13 @@ body {
 .front-content {
   position: absolute;
   inset: 0;
-  padding: 60px 68px;
+  padding: 52px 68px 52px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
+/* Logo */
 .logo-lockup {
   display: flex;
   flex-direction: column;
@@ -80,147 +75,78 @@ body {
   line-height: 1;
 }
 .logo-line1  { display: flex; align-items: baseline; }
-.l-coastal   { font-weight: 300; font-size: 37px; letter-spacing: -0.02em; color: #fff; }
-.l-finest    { font-weight: 700; font-size: 37px; letter-spacing: -0.02em; color: #fff; }
-.l-detailing { font-weight: 300; font-size: 70px; letter-spacing: -0.03em; color: #fff; line-height: 0.88; }
+.l-coastal   { font-weight: 300; font-size: 32px; letter-spacing: -0.02em; color: #fff; }
+.l-finest    { font-weight: 700; font-size: 32px; letter-spacing: -0.02em; color: #fff; }
+.l-detailing { font-weight: 300; font-size: 60px; letter-spacing: -0.03em; color: #fff; line-height: 0.88; }
 
-.front-bottom {
+/* Bloque de contacto — abajo izquierda */
+.front-contact {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
+  flex-direction: column;
+  gap: 0;
 }
-.tagline {
-  font-weight: 200;
-  font-size: 10px;
-  letter-spacing: 4px;
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.28);
+.fc-name  {
+  font-weight: 600; font-size: 16px; letter-spacing: -0.01em;
+  color: #fff; margin-bottom: 3px;
 }
-.steel-bar {
-  width: 48px;
-  height: 1px;
-  background: #C4D0D8;
-  opacity: 0.55;
+.fc-title {
+  font-weight: 200; font-size: 9px; letter-spacing: 2.5px;
+  text-transform: uppercase; color: rgba(255,255,255,0.35);
+  margin-bottom: 14px;
+}
+.fc-rule { width: 32px; height: 1px; background: rgba(196,208,216,0.4); margin-bottom: 14px; }
+.fc-line {
+  display: flex; align-items: center; gap: 12px;
+  margin-bottom: 6px;
+}
+.fc-line:last-child { margin-bottom: 0; }
+.fc-label {
+  font-weight: 200; font-size: 8px; letter-spacing: 2.5px;
+  text-transform: uppercase; color: #C4D0D8; width: 42px; flex-shrink: 0;
+}
+.fc-value {
+  font-weight: 300; font-size: 12px; letter-spacing: 0.1px;
+  color: rgba(255,255,255,0.75);
 }
 
 /* ─── DORSO ─── */
-#back {
-  background: #040404;
-}
+#back { background: #040404; }
 
-.back-logo {
+/* QR centrado como hero */
+.back-qr-wrap {
   position: absolute;
-  top: 64px;
-  left: 0; right: 0;
+  inset: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  line-height: 1;
+  justify-content: center;
+  gap: 18px;
 }
-.bl-line1      { display: flex; align-items: baseline; }
-.bl-coastal    { font-weight: 300; font-size: 26px; letter-spacing: -0.02em; color: #fff; }
-.bl-finest     { font-weight: 700; font-size: 26px; letter-spacing: -0.02em; color: #fff; }
-.bl-detailing  { font-weight: 300; font-size: 50px; letter-spacing: -0.03em; color: #fff; line-height: 0.9; }
-
-.divider {
-  position: absolute;
-  top: 260px;
-  left: 68px;
-  right: 68px;
-  height: 1px;
-  background: rgba(255,255,255,0.07);
+.back-qr-wrap img {
+  width: 220px;
+  height: 220px;
+  display: block;
+  border-radius: 6px;
 }
-
-.person-name {
-  position: absolute;
-  top: 283px;
-  left: 68px;
-  font-weight: 600; font-size: 22px; letter-spacing: -0.02em; color: #fff;
-}
-.person-title {
-  position: absolute;
-  top: 315px;
-  left: 68px;
-  font-weight: 300; font-size: 10px;
-  letter-spacing: 2px; text-transform: uppercase;
-  color: rgba(255,255,255,0.32);
-}
-
-.contact-grid {
-  position: absolute;
-  top: 356px;
-  left: 68px;
-  display: flex;
-  flex-direction: column;
-  gap: 13px;
-}
-.contact-row {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-.contact-label {
+.qr-tagline {
   font-weight: 200;
   font-size: 9px;
-  letter-spacing: 3px;
+  letter-spacing: 4px;
   text-transform: uppercase;
-  color: #C4D0D8;
-  width: 50px;
-  flex-shrink: 0;
-}
-.contact-value {
-  font-weight: 300;
-  font-size: 13px;
-  letter-spacing: 0.2px;
-  color: rgba(255,255,255,0.78);
+  color: rgba(255,255,255,0.22);
 }
 
-/* QR code — derecha del dorso */
-.qr-block {
+/* Footer dorso */
+.back-footer {
   position: absolute;
-  top: 283px;
-  right: 68px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-}
-.qr-block img {
-  width: 112px;
-  height: 112px;
-  display: block;
-  border-radius: 4px;
-}
-.qr-label {
+  bottom: 38px;
+  left: 0; right: 0;
+  text-align: center;
   font-weight: 200;
   font-size: 8px;
   letter-spacing: 3px;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.25);
-  text-align: center;
-}
-
-.back-bottom {
-  position: absolute;
-  bottom: 44px;
-  left: 68px;
-  right: 68px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.location {
-  font-weight: 200;
-  font-size: 9px;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.16);
-}
-.steel-line {
-  flex: 1;
-  height: 1px;
-  background: linear-gradient(to right, transparent, rgba(196,208,216,0.2), transparent);
-  margin: 0 28px;
+  color: rgba(255,255,255,0.12);
 }
 </style>
 </head>
@@ -237,52 +163,33 @@ body {
       </div>
       <span class="l-detailing">Detailing</span>
     </div>
-    <div class="front-bottom">
-      <span class="tagline">Mobile Auto Detailing · Mobile, AL</span>
-      <div class="steel-bar"></div>
+    <div class="front-contact">
+      <div class="fc-name">Raymond Reyes</div>
+      <div class="fc-title">Owner &amp; Operator</div>
+      <div class="fc-rule"></div>
+      <div class="fc-line">
+        <span class="fc-label">Phone</span>
+        <span class="fc-value">(251) 477-9029</span>
+      </div>
+      <div class="fc-line">
+        <span class="fc-label">Email</span>
+        <span class="fc-value">info@coastalfinest.com</span>
+      </div>
+      <div class="fc-line">
+        <span class="fc-label">Web</span>
+        <span class="fc-value">coastalfinest.com</span>
+      </div>
     </div>
   </div>
 </div>
 
 <!-- DORSO -->
 <div class="card" id="back">
-  <div class="back-logo">
-    <div class="bl-line1">
-      <span class="bl-coastal">Coastal&nbsp;</span><span class="bl-finest">Finest</span>
-    </div>
-    <span class="bl-detailing">Detailing</span>
+  <div class="back-qr-wrap">
+    <img src="data:image/png;base64,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" alt="Book Online QR">
+    <span class="qr-tagline">Scan to book your detail</span>
   </div>
-
-  <div class="divider"></div>
-
-  <div class="person-name">Raymond Reyes</div>
-  <div class="person-title">Owner &amp; Operator</div>
-
-  <div class="contact-grid">
-    <div class="contact-row">
-      <span class="contact-label">Phone</span>
-      <span class="contact-value">(251) 000-0000</span>
-    </div>
-    <div class="contact-row">
-      <span class="contact-label">Email</span>
-      <span class="contact-value">hello@coastalfinest.com</span>
-    </div>
-    <div class="contact-row">
-      <span class="contact-label">Web</span>
-      <span class="contact-value">coastalfinest.com</span>
-    </div>
-  </div>
-
-  <div class="qr-block">
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKUAAAClCAIAAACySaqNAAADhElEQVR4nO2dy24jMQzA2iL5/w/OpXcDcVbVw8aSvCaZmQwhQJBt6fvxeHwJhp/TDyCj6JuFvlnom4W+Weibhb5Z6JuFvll8KK69Xq+Z53g+n5v7Lp+eIvNUp97kgvHNQt8s9M1C3yxii6GFedM+fwmlb4XJXSirCv2F0KchQs9sfLPQNwt9s9A3i9TmtVCmcKpGFsr1TjH2Jo1vFvpmoW8W+mZx6WGDwoJaJkEL/faSRds9xjcLfbPQNwt9s7g0X1vYJ0qZCtr+y4WLtpdgfLPQNwt9s9A3i1S+dklKUrhhLbNvLsPYmzS+Weibhb5Z6JtFLF87tdsrlCgVpmB96dupN2l8s9A3C32z0DeLD/naJRW0UIKW4T+ooO0xvlnom4W+Weibxfd+vkFhx7G+ff9jRz7vXC0NOTK+Weibhb5Z6JtFLF9bKEzfMr/t2+if+fuXrB0vGN8s9M1C3yz0zSK1HppJSfp6Y2Se6pKjC32TE4xvFvpmoW8W+maRmkfVl5IU5lyhp8qcGTh1KCKE8c1C3yz0zULfLGL1tX12U9i3tvC+e8bWNPta74a+bHyz0DcLfbPQN4sP+9cWxpYa+6YQ9P12j/Pe5QD6ZqFvFvpmUTnfoLBW1Vcyy1yqsK1I5l1lckzjm4W+Weibhb5ZxOprIQpXLU9dqm/73v5SezKXMr5Z6JuFvlnom0XsvEFhBW0sBesrimVOFBTi/jV5i75Z6JuFvlnMrYfuv5xJDE+1Yxvbv2a/XPkj+mahbxb6ZpFaDy1sJ9u3739s31yGsd5txjcLfbPQNwt9s0jV1y4Zw76/0UKm/1phH7TCWmQI45uFvlnom4W+WaTmUS2M1chOjQ44NYDK9VD5I/pmoW8W+mbReD40Q99phIVTQ9oXxpJK45uFvlnom4W+WaTmURXS19CisJVb4bzUwiXdEMY3C32z0DcLfbOIFdf6zlrubzTW/OOSclvhAuiC8c1C3yz0zULfLFKLoZdMbxore/V1dss8leuh8hZ9s9A3C32zuHHz2tetLTrGJhiEsL4mb9E3C32z0DeLS/O1PWNjFvqWR/f0TYowvlnom4W+WeibRWX/tVNk+r6NbVgrrM3Zf03+FX2z0DcLfbOI5WunCkyhbWWhK+8vNTYDNIProfIWfbPQNwt9s7i0/5o0YXyz0DcLfbPQNwt9s9A3C32z0DcLfbP4BUhoC8ttoHsaAAAAAElFTkSuQmCC" alt="QR Book">
-    <span class="qr-label">Book Online</span>
-  </div>
-
-  <div class="back-bottom">
-    <span class="location">Mobile, Alabama</span>
-    <div class="steel-line"></div>
-    <span class="location">coastalfinestdetailing.com</span>
-  </div>
+  <div class="back-footer">coastalfinest.com/book</div>
 </div>
 
 </body>
