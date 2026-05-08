@@ -92,5 +92,31 @@
   </div>
 </div>
 
+<script>
+document.fonts.ready.then(() => {
+  document.querySelectorAll('.wordmark').forEach(wm => {
+    const allDivs = wm.querySelectorAll('div');
+    const coastalDiv = allDivs[0];
+    const detailingDiv = allDivs[allDivs.length - 1];
+    const sepDiv = wm.querySelector('.sep');
+    if (!coastalDiv || !detailingDiv || coastalDiv === detailingDiv) return;
+
+    const targetWidth = coastalDiv.offsetWidth;
+
+    // Measure natural width of DETAILING with no letter-spacing
+    const saved = detailingDiv.style.letterSpacing;
+    detailingDiv.style.letterSpacing = '0px';
+    const naturalWidth = detailingDiv.offsetWidth;
+    detailingDiv.style.letterSpacing = saved;
+
+    const n = detailingDiv.textContent.trim().length;
+    const newSpacing = (targetWidth - naturalWidth) / n;
+    detailingDiv.style.letterSpacing = newSpacing + 'px';
+    detailingDiv.style.width = targetWidth + 'px';
+
+    if (sepDiv) sepDiv.style.width = targetWidth + 'px';
+  });
+});
+</script>
 </body>
 </html>
