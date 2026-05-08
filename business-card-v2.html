@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Coastal Finest — Business Card v2</title>
+<style>
+@font-face { font-family: 'Clash Display'; src: url('fonts/clash-display/ClashDisplay-Bold.woff2') format('woff2'); font-weight: 700; }
+@font-face { font-family: 'Clash Display'; src: url('fonts/clash-display/ClashDisplay-Semibold.woff2') format('woff2'); font-weight: 600; }
+@font-face { font-family: 'Clash Display'; src: url('fonts/clash-display/ClashDisplay-Medium.woff2') format('woff2'); font-weight: 500; }
+@font-face { font-family: 'Clash Display'; src: url('fonts/clash-display/ClashDisplay-Regular.woff2') format('woff2'); font-weight: 400; }
+@font-face { font-family: 'Clash Display'; src: url('fonts/clash-display/ClashDisplay-Light.woff2') format('woff2'); font-weight: 300; }
+@font-face { font-family: 'Clash Display'; src: url('fonts/clash-display/ClashDisplay-Extralight.woff2') format('woff2'); font-weight: 200; }
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background: #111;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 48px;
+  padding: 80px 60px;
+  font-family: 'Clash Display', sans-serif;
+  min-height: 100vh;
+}
+
+/* 3.5" × 2" @ 150dpi × 2 = 1050 × 600 px */
+.card {
+  width: 1050px;
+  height: 600px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 28px;
+  flex-shrink: 0;
+}
+
+/* ─── FRENTE ─── */
+#front {
+  background: #000;
+}
+
+#front::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 70% 30%, rgba(30,35,50,0.45) 0%, rgba(0,0,0,0) 70%);
+  pointer-events: none;
+}
+
+.front-content {
+  position: absolute;
+  inset: 0;
+  padding: 60px 68px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.logo-lockup {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 1;
+}
+.logo-line1  { display: flex; align-items: baseline; }
+.l-coastal   { font-weight: 300; font-size: 37px; letter-spacing: -0.02em; color: #fff; }
+.l-finest    { font-weight: 700; font-size: 37px; letter-spacing: -0.02em; color: #fff; }
+.l-detailing { font-weight: 300; font-size: 70px; letter-spacing: -0.03em; color: #fff; line-height: 0.88; }
+
+.front-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.tagline {
+  font-weight: 200;
+  font-size: 10px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.28);
+}
+.steel-bar {
+  width: 48px;
+  height: 1px;
+  background: #C4D0D8;
+  opacity: 0.55;
+}
+
+/* ─── DORSO ─── */
+#back {
+  background: #040404;
+}
+
+.back-monogram {
+  position: absolute;
+  top: 68px;
+  left: 0; right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+.mono-rule { width: 52px; height: 1px; background: rgba(255,255,255,0.35); }
+.mono-cf   { font-weight: 700; font-size: 68px; letter-spacing: -0.03em; color: #fff; line-height: 1; }
+
+.divider {
+  position: absolute;
+  top: 260px;
+  left: 68px;
+  right: 68px;
+  height: 1px;
+  background: rgba(255,255,255,0.07);
+}
+
+.person-name {
+  position: absolute;
+  top: 283px;
+  left: 68px;
+  font-weight: 600; font-size: 22px; letter-spacing: -0.02em; color: #fff;
+}
+.person-title {
+  position: absolute;
+  top: 315px;
+  left: 68px;
+  font-weight: 300; font-size: 10px;
+  letter-spacing: 2px; text-transform: uppercase;
+  color: rgba(255,255,255,0.32);
+}
+
+.contact-grid {
+  position: absolute;
+  top: 356px;
+  left: 68px;
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+.contact-row {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.contact-label {
+  font-weight: 200;
+  font-size: 9px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #C4D0D8;
+  width: 50px;
+  flex-shrink: 0;
+}
+.contact-value {
+  font-weight: 300;
+  font-size: 13px;
+  letter-spacing: 0.2px;
+  color: rgba(255,255,255,0.78);
+}
+
+.back-bottom {
+  position: absolute;
+  bottom: 44px;
+  left: 68px;
+  right: 68px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.location {
+  font-weight: 200;
+  font-size: 9px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.16);
+}
+.steel-line {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(196,208,216,0.2), transparent);
+  margin: 0 28px;
+}
+</style>
+</head>
+<body>
+
+<!-- FRENTE -->
+<div class="card" id="front">
+  <div class="front-content">
+    <div class="logo-lockup">
+      <div class="logo-line1">
+        <span class="l-coastal">Coastal&nbsp;</span><span class="l-finest">Finest</span>
+      </div>
+      <span class="l-detailing">Detailing</span>
+    </div>
+    <div class="front-bottom">
+      <span class="tagline">Mobile Auto Detailing · Mobile, AL</span>
+      <div class="steel-bar"></div>
+    </div>
+  </div>
+</div>
+
+<!-- DORSO -->
+<div class="card" id="back">
+  <div class="back-monogram">
+    <div class="mono-rule"></div>
+    <span class="mono-cf">CF</span>
+    <div class="mono-rule"></div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="person-name">Raymond Reyes</div>
+  <div class="person-title">Owner &amp; Operator</div>
+
+  <div class="contact-grid">
+    <div class="contact-row">
+      <span class="contact-label">Phone</span>
+      <span class="contact-value">(251) 000-0000</span>
+    </div>
+    <div class="contact-row">
+      <span class="contact-label">Email</span>
+      <span class="contact-value">hello@coastalfinest.com</span>
+    </div>
+    <div class="contact-row">
+      <span class="contact-label">Web</span>
+      <span class="contact-value">coastalfinest.com</span>
+    </div>
+  </div>
+
+  <div class="back-bottom">
+    <span class="location">Mobile, Alabama</span>
+    <div class="steel-line"></div>
+    <span class="location">coastalfinestdetailing.com</span>
+  </div>
+</div>
+
+</body>
+</html>
