@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Coastal Finest — Evolution Style</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=DM+Sans:wght@300;400&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #0B1628; font-family: 'DM Sans', sans-serif; color: #F2F0EB; padding: 48px 40px; }
+
+  .header { margin-bottom: 48px; }
+  .header-label { font-size: 10px; letter-spacing: 5px; text-transform: uppercase; color: #C9A84C; margin-bottom: 8px; }
+  .header-title { font-family: 'Cormorant Garamond', serif; font-size: 28px; font-weight: 300; margin-bottom: 6px; }
+  .header-sub { font-size: 12px; color: #8BA3B8; }
+
+  .ref-bar {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: #0F1E35;
+    border-left: 2px solid #C9A84C;
+    padding: 14px 20px;
+    margin-bottom: 40px;
+  }
+  .ref-label { font-size: 9px; letter-spacing: 3px; text-transform: uppercase; color: #C9A84C; white-space: nowrap; }
+  .ref-img { height: 36px; filter: invert(1) brightness(0.7); }
+
+  .concepts { display: flex; flex-direction: column; gap: 3px; }
+
+  .card { background: #0F1E35; }
+  .card-preview {
+    background: #ffffff;
+    padding: 48px 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 220px;
+  }
+  .card-preview img { max-width: 100%; max-height: 160px; object-fit: contain; display: block; }
+  .card-preview-dark {
+    background: #0B1628;
+    padding: 48px 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 220px;
+  }
+  .card-preview-dark img { max-width: 100%; max-height: 160px; object-fit: contain; display: block; }
+
+  .card-previews { display: grid; grid-template-columns: 1fr 1fr; gap: 3px; }
+
+  .card-info { padding: 16px 24px 20px; display: flex; gap: 24px; align-items: center; }
+  .card-num { font-size: 9px; letter-spacing: 4px; text-transform: uppercase; color: #C9A84C; }
+  .card-name { font-family: 'Cormorant Garamond', serif; font-size: 18px; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-label">Coastal Finest — Round 4</div>
+  <div class="header-title">Evolution Style — Shield Horizontal + Wordmark</div>
+  <div class="header-sub">3 variantes · Escudo geométrico izquierda · COASTAL FINEST DETAILING derecha · Navy + Gold</div>
+</div>
+
+<div class="ref-bar">
+  <div class="ref-label">Referencia base</div>
+  <img class="ref-img" src="https://pugodesigns.com/wp-content/uploads/2020/05/18836857_1587511587928763_6545862638764967029_o-Copy-768x425.jpg" alt="Evolution reference">
+</div>
+
+<div class="concepts">
+
+  <div class="card">
+    <div class="card-previews">
+      <div class="card-preview"><img src="07-evolution-style-A.svg" alt="Evolution A white"></div>
+      <div class="card-preview-dark"><img src="07-evolution-style-A.svg" alt="Evolution A dark"></div>
+    </div>
+    <div class="card-info">
+      <div class="card-num">Variante A</div>
+      <div class="card-name">CF estilizado · Wordmark una línea</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-previews">
+      <div class="card-preview"><img src="07-evolution-style-B.svg" alt="Evolution B white"></div>
+      <div class="card-preview-dark"><img src="07-evolution-style-B.svg" alt="Evolution B dark"></div>
+    </div>
+    <div class="card-info">
+      <div class="card-num">Variante B</div>
+      <div class="card-name">CF barras paralelas · DETAILING más pequeño</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-previews">
+      <div class="card-preview"><img src="07-evolution-style-C.svg" alt="Evolution C white"></div>
+      <div class="card-preview-dark"><img src="07-evolution-style-C.svg" alt="Evolution C dark"></div>
+    </div>
+    <div class="card-info">
+      <div class="card-num">Variante C</div>
+      <div class="card-name">CF monograma · Acento gold entre líneas</div>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
