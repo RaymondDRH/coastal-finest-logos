@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Coastal Finest — CIP Mockups</title>
+<style>
+@font-face { font-family: 'Clash Display'; src: url('fonts/clash-display/ClashDisplay-Bold.woff2') format('woff2'); font-weight: 700; }
+@font-face { font-family: 'Clash Display'; src: url('fonts/clash-display/ClashDisplay-Light.woff2') format('woff2'); font-weight: 300; }
+@font-face { font-family: 'Clash Display'; src: url('fonts/clash-display/ClashDisplay-Extralight.woff2') format('woff2'); font-weight: 200; }
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  background: #060C18;
+  font-family: 'Clash Display', sans-serif;
+  padding: 64px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+}
+
+.page-header {
+  width: 900px;
+  padding: 48px 0 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  margin-bottom: 4px;
+}
+.page-title { font-weight: 700; font-size: 28px; letter-spacing: -0.02em; color: #fff; }
+.page-sub   { font-weight: 200; font-size: 10px; letter-spacing: 4px; text-transform: uppercase; color: #3A5070; }
+
+.label {
+  font-size: 9px; font-weight: 200; letter-spacing: 4px; text-transform: uppercase;
+  color: #3A5070; padding: 12px 0 4px; width: 900px;
+}
+.card {
+  width: 900px; background: #000;
+  overflow: hidden;
+}
+.card img {
+  width: 100%; display: block;
+}
+.row { width: 900px; display: flex; gap: 3px; }
+.row .card { flex: 1; width: auto; }
+</style>
+</head>
+<body>
+
+<div class="page-header">
+  <div>
+    <div class="page-sub">Corporate Identity Program · 2025</div>
+    <div class="page-title">Coastal Finest<br>Detailing</div>
+  </div>
+  <div style="font-weight:200; font-size:10px; letter-spacing:3px; text-transform:uppercase; color:#3A5070; text-align:right;">
+    Generated with<br>Gemini 3 Pro Image
+  </div>
+</div>
+
+<!-- Business Card -->
+<div class="label">Tarjeta de presentación</div>
+<div class="card">
+  <img src="cip/business-card.png" alt="Business Card">
+</div>
+
+<!-- Cap + Polo -->
+<div class="label" style="margin-top:16px;">Uniformes — Gorra · Polo</div>
+<div class="row">
+  <div class="card"><img src="cip/cap.png" alt="Cap"></div>
+  <div class="card"><img src="cip/polo.png" alt="Polo"></div>
+</div>
+
+<!-- Sticker -->
+<div class="label" style="margin-top:16px;">Sticker / Decal</div>
+<div class="card">
+  <img src="cip/sticker.png" alt="Sticker">
+</div>
+
+</body>
+</html>
