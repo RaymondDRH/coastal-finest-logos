@@ -57,199 +57,81 @@ body {
   width: 900px;
 }
 
-.card-dark {
+.card {
   width: 900px;
   background: #000000;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 80px 72px;
+  padding: 72px 72px;
 }
 
-.card-navy {
-  width: 900px;
-  background: #080F1E;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 80px 72px;
-}
-
-.card-light {
-  width: 900px;
-  background: #F0EDE8;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 80px 72px;
-}
-
-/* ─── LOGO CORE ─── */
 .logo {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   line-height: 1;
-  gap: 0;
 }
 
-.logo .eyebrow {
+.eyebrow {
   font-family: 'Clash Display', sans-serif;
   font-weight: 300;
   font-size: 20px;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
   color: #FFFFFF;
-  margin-bottom: 2px;
+  margin-bottom: 4px;
 }
 
-.logo .eyebrow-dark {
-  font-family: 'Clash Display', sans-serif;
-  font-weight: 300;
-  font-size: 20px;
-  letter-spacing: 1px;
-  color: #080F1E;
-  margin-bottom: 2px;
-}
-
-.logo .main-line {
+.main-line {
   display: flex;
   align-items: baseline;
   line-height: 1;
 }
 
-.logo .finest {
-  font-family: 'Clash Display', sans-serif;
-  font-weight: 300;
-  font-size: 84px;
-  letter-spacing: -2px;
-  color: #FFFFFF;
-}
+/* ─── Opción A: Light 300 + Semibold 600 ─── */
+.a-finest   { font-family: 'Clash Display'; font-weight: 300; font-size: 84px; letter-spacing: -2px; color: #FFFFFF; }
+.a-detailing{ font-family: 'Clash Display'; font-weight: 600; font-size: 84px; letter-spacing: -2px; color: #FFFFFF; }
 
-.logo .detailing {
-  font-family: 'Clash Display', sans-serif;
-  font-weight: 700;
-  font-size: 84px;
-  letter-spacing: -2px;
-  color: #FFFFFF;
-}
+/* ─── Opción B: Light 300 + Medium 500 ─── */
+.b-finest   { font-family: 'Clash Display'; font-weight: 300; font-size: 84px; letter-spacing: -2px; color: #FFFFFF; }
+.b-detailing{ font-family: 'Clash Display'; font-weight: 500; font-size: 84px; letter-spacing: -2px; color: #FFFFFF; }
 
-.logo .finest-dark {
-  font-family: 'Clash Display', sans-serif;
-  font-weight: 300;
-  font-size: 84px;
-  letter-spacing: -2px;
-  color: #080F1E;
-}
-
-.logo .detailing-dark {
-  font-family: 'Clash Display', sans-serif;
-  font-weight: 700;
-  font-size: 84px;
-  letter-spacing: -2px;
-  color: #080F1E;
-}
-
-/* ─── VARIANT: con estrella como separador entre Finest y Detailing ─── */
-.logo .finest-star {
-  font-family: 'Clash Display', sans-serif;
-  font-weight: 300;
-  font-size: 84px;
-  letter-spacing: -2px;
-  color: #FFFFFF;
-  margin-right: 14px;
-}
-
-.logo .detailing-star {
-  font-family: 'Clash Display', sans-serif;
-  font-weight: 700;
-  font-size: 84px;
-  letter-spacing: -2px;
-  color: #FFFFFF;
-  margin-left: 14px;
-}
-
-.star-inline {
-  flex-shrink: 0;
-  align-self: center;
-  margin-bottom: 6px;
-}
-
-/* ─── VARIANT: con acento silver en "Detailing" ─── */
-.logo .detailing-silver {
-  font-family: 'Clash Display', sans-serif;
-  font-weight: 700;
-  font-size: 84px;
-  letter-spacing: -2px;
-  background: linear-gradient(135deg, #EEF3F6 0%, #B8C8D2 35%, #E4EDF2 60%, #8FA8B8 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
+/* ─── Opción C: Regular 400 + Semibold 600 ─── */
+.c-finest   { font-family: 'Clash Display'; font-weight: 400; font-size: 84px; letter-spacing: -2px; color: #FFFFFF; }
+.c-detailing{ font-family: 'Clash Display'; font-weight: 600; font-size: 84px; letter-spacing: -2px; color: #FFFFFF; }
 </style>
 </head>
 <body>
 
-<!-- ─── PRINCIPAL: Fondo negro puro ─── -->
-<div class="label">Principal — Fondo negro · Finest Light + Detailing Bold</div>
-<div class="card-dark">
+<!-- ─── A: Light + Semibold ─── -->
+<div class="label">A — Finest Light 300 · Detailing Semibold 600</div>
+<div class="card">
   <div class="logo">
     <div class="eyebrow">Coastal</div>
     <div class="main-line">
-      <span class="finest">Finest</span><span class="detailing">Detailing</span>
+      <span class="a-finest">Finest</span><span class="a-detailing">Detailing</span>
     </div>
   </div>
 </div>
 
-<!-- ─── VARIANTE: Detailing en silver gradient ─── -->
-<div class="label" style="margin-top:16px;">Variante — "Detailing" en plateado metálico</div>
-<div class="card-dark">
+<!-- ─── B: Light + Medium ─── -->
+<div class="label" style="margin-top:16px;">B — Finest Light 300 · Detailing Medium 500</div>
+<div class="card">
   <div class="logo">
     <div class="eyebrow">Coastal</div>
     <div class="main-line">
-      <span class="finest">Finest</span><span class="detailing-silver">Detailing</span>
+      <span class="b-finest">Finest</span><span class="b-detailing">Detailing</span>
     </div>
   </div>
 </div>
 
-<!-- ─── VARIANTE: con estrella entre Finest y Detailing ─── -->
-<div class="label" style="margin-top:16px;">Variante — Estrella plata entre Finest y Detailing</div>
-<div class="card-dark">
+<!-- ─── C: Regular + Semibold ─── -->
+<div class="label" style="margin-top:16px;">C — Finest Regular 400 · Detailing Semibold 600</div>
+<div class="card">
   <div class="logo">
     <div class="eyebrow">Coastal</div>
     <div class="main-line">
-      <span class="finest-star">Finest</span>
-      <svg class="star-inline" width="18" height="32" viewBox="0 0 20 36" xmlns="http://www.w3.org/2000/svg">
-        <defs><linearGradient id="sg1" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stop-color="#EEF3F6"/>
-          <stop offset="35%" stop-color="#B8C8D2"/>
-          <stop offset="60%" stop-color="#E4EDF2"/>
-          <stop offset="100%" stop-color="#8FA8B8"/>
-        </linearGradient></defs>
-        <path d="M10,0 C10,13.5 12.5,17.5 20,18 C12.5,18.5 10,22.5 10,36 C10,22.5 7.5,18.5 0,18 C7.5,17.5 10,13.5 10,0 Z" fill="url(#sg1)"/>
-      </svg>
-      <span class="detailing-star">Detailing</span>
-    </div>
-  </div>
-</div>
-
-<!-- ─── FONDO NAVY ─── -->
-<div class="label" style="margin-top:16px;">Fondo navy #080F1E</div>
-<div class="card-navy">
-  <div class="logo">
-    <div class="eyebrow">Coastal</div>
-    <div class="main-line">
-      <span class="finest">Finest</span><span class="detailing-silver">Detailing</span>
-    </div>
-  </div>
-</div>
-
-<!-- ─── FONDO CLARO ─── -->
-<div class="label" style="margin-top:16px;">Fondo claro — uso alternativo</div>
-<div class="card-light">
-  <div class="logo">
-    <div class="eyebrow-dark">Coastal</div>
-    <div class="main-line">
-      <span class="finest-dark">Finest</span><span class="detailing-dark">Detailing</span>
+      <span class="c-finest">Finest</span><span class="c-detailing">Detailing</span>
     </div>
   </div>
 </div>
