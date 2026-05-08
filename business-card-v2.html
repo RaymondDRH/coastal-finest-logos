@@ -92,17 +92,19 @@ body {
   background: #040404;
 }
 
-.back-monogram {
+.back-logo {
   position: absolute;
-  top: 68px;
+  top: 64px;
   left: 0; right: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 12px;
+  line-height: 1;
 }
-.mono-rule { width: 52px; height: 1px; background: rgba(255,255,255,0.35); }
-.mono-cf   { font-weight: 700; font-size: 68px; letter-spacing: -0.03em; color: #fff; line-height: 1; }
+.bl-line1      { display: flex; align-items: baseline; }
+.bl-coastal    { font-weight: 300; font-size: 26px; letter-spacing: -0.02em; color: #fff; }
+.bl-finest     { font-weight: 700; font-size: 26px; letter-spacing: -0.02em; color: #fff; }
+.bl-detailing  { font-weight: 300; font-size: 50px; letter-spacing: -0.03em; color: #fff; line-height: 0.9; }
 
 .divider {
   position: absolute;
@@ -157,6 +159,31 @@ body {
   color: rgba(255,255,255,0.78);
 }
 
+/* QR code — derecha del dorso */
+.qr-block {
+  position: absolute;
+  top: 283px;
+  right: 68px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.qr-block img {
+  width: 112px;
+  height: 112px;
+  display: block;
+  border-radius: 4px;
+}
+.qr-label {
+  font-weight: 200;
+  font-size: 8px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.25);
+  text-align: center;
+}
+
 .back-bottom {
   position: absolute;
   bottom: 44px;
@@ -201,10 +228,11 @@ body {
 
 <!-- DORSO -->
 <div class="card" id="back">
-  <div class="back-monogram">
-    <div class="mono-rule"></div>
-    <span class="mono-cf">CF</span>
-    <div class="mono-rule"></div>
+  <div class="back-logo">
+    <div class="bl-line1">
+      <span class="bl-coastal">Coastal&nbsp;</span><span class="bl-finest">Finest</span>
+    </div>
+    <span class="bl-detailing">Detailing</span>
   </div>
 
   <div class="divider"></div>
@@ -225,6 +253,11 @@ body {
       <span class="contact-label">Web</span>
       <span class="contact-value">coastalfinest.com</span>
     </div>
+  </div>
+
+  <div class="qr-block">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKUAAAClCAIAAACySaqNAAADhElEQVR4nO2dy24jMQzA2iL5/w/OpXcDcVbVw8aSvCaZmQwhQJBt6fvxeHwJhp/TDyCj6JuFvlnom4W+Weibhb5Z6JuFvll8KK69Xq+Z53g+n5v7Lp+eIvNUp97kgvHNQt8s9M1C3yxii6GFedM+fwmlb4XJXSirCv2F0KchQs9sfLPQNwt9s9A3i9TmtVCmcKpGFsr1TjH2Jo1vFvpmoW8W+mZx6WGDwoJaJkEL/faSRds9xjcLfbPQNwt9s7g0X1vYJ0qZCtr+y4WLtpdgfLPQNwt9s9A3i1S+dklKUrhhLbNvLsPYmzS+Weibhb5Z6JtFLF87tdsrlCgVpmB96dupN2l8s9A3C32z0DeLD/naJRW0UIKW4T+ooO0xvlnom4W+Weibxfd+vkFhx7G+ff9jRz7vXC0NOTK+Weibhb5Z6JtFLF9bKEzfMr/t2+if+fuXrB0vGN8s9M1C3yz0zSK1HppJSfp6Y2Se6pKjC32TE4xvFvpmoW8W+maRmkfVl5IU5lyhp8qcGTh1KCKE8c1C3yz0zULfLGL1tX12U9i3tvC+e8bWNPta74a+bHyz0DcLfbPQN4sP+9cWxpYa+6YQ9P12j/Pe5QD6ZqFvFvpmUTnfoLBW1Vcyy1yqsK1I5l1lckzjm4W+Weibhb5ZxOprIQpXLU9dqm/73v5SezKXMr5Z6JuFvlnom0XsvEFhBW0sBesrimVOFBTi/jV5i75Z6JuFvlnMrYfuv5xJDE+1Yxvbv2a/XPkj+mahbxb6ZpFaDy1sJ9u3739s31yGsd5txjcLfbPQNwt9s0jV1y4Zw76/0UKm/1phH7TCWmQI45uFvlnom4W+WaTmUS2M1chOjQ44NYDK9VD5I/pmoW8W+mbReD40Q99phIVTQ9oXxpJK45uFvlnom4W+WaTmURXS19CisJVb4bzUwiXdEMY3C32z0DcLfbOIFdf6zlrubzTW/OOSclvhAuiC8c1C3yz0zULfLFKLoZdMbxore/V1dss8leuh8hZ9s9A3C32zuHHz2tetLTrGJhiEsL4mb9E3C32z0DeLS/O1PWNjFvqWR/f0TYowvlnom4W+WeibRWX/tVNk+r6NbVgrrM3Zf03+FX2z0DcLfbOI5WunCkyhbWWhK+8vNTYDNIProfIWfbPQNwt9s7i0/5o0YXyz0DcLfbPQNwt9s9A3C32z0DcLfbP4BUhoC8ttoHsaAAAAAElFTkSuQmCC" alt="QR Book">
+    <span class="qr-label">Book Online</span>
   </div>
 
   <div class="back-bottom">
