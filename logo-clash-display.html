@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Coastal Finest — Clash Display</title>
+<style>
+@font-face {
+  font-family: 'Clash Display';
+  src: url('fonts/clash-display/ClashDisplay-Bold.woff2') format('woff2');
+  font-weight: 700;
+}
+@font-face {
+  font-family: 'Clash Display';
+  src: url('fonts/clash-display/ClashDisplay-Semibold.woff2') format('woff2');
+  font-weight: 600;
+}
+@font-face {
+  font-family: 'Clash Display';
+  src: url('fonts/clash-display/ClashDisplay-Medium.woff2') format('woff2');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'Clash Display';
+  src: url('fonts/clash-display/ClashDisplay-Regular.woff2') format('woff2');
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'Clash Display';
+  src: url('fonts/clash-display/ClashDisplay-Light.woff2') format('woff2');
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'Clash Display';
+  src: url('fonts/clash-display/ClashDisplay-Extralight.woff2') format('woff2');
+  font-weight: 200;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  background: #050A12;
+  padding: 48px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  align-items: center;
+  font-family: 'Clash Display', sans-serif;
+}
+
+.label {
+  font-family: 'Clash Display', sans-serif;
+  font-size: 9px;
+  font-weight: 400;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #3A5070;
+  padding: 10px 0 4px;
+  width: 900px;
+}
+
+.card-dark {
+  width: 900px;
+  background: #080F1E;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 64px;
+}
+
+.card-light {
+  width: 900px;
+  background: #EFEFEB;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 64px;
+}
+
+.card-black {
+  width: 900px;
+  background: #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 64px;
+}
+
+/* ─── CONCEPTO A: Bold + Extralight split ─── */
+.logo-a {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.logo-a .line1 {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  line-height: 1;
+}
+
+.logo-a .coastal {
+  font-family: 'Clash Display', sans-serif;
+  font-weight: 700;
+  font-size: 68px;
+  color: #FFFFFF;
+  letter-spacing: -1px;
+}
+
+.logo-a .finest {
+  font-family: 'Clash Display', sans-serif;
+  font-weight: 200;
+  font-size: 68px;
+  color: #FFFFFF;
+  letter-spacing: 2px;
+}
+
+.logo-a .sep {
+  height: 1px;
+  background: linear-gradient(to right, rgba(196,208,216,0.6), transparent);
+  margin: 14px 0 12px;
+  width: 100%;
+}
+
+.logo-a .sub {
+  font-family: 'Clash Display', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  letter-spacing: 7px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+/* ─── CONCEPTO B: Stacked, uppercase, weight contrast ─── */
+.logo-b {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0;
+}
+
+.logo-b .top {
+  font-family: 'Clash Display', sans-serif;
+  font-weight: 200;
+  font-size: 18px;
+  letter-spacing: 12px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.55);
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.logo-b .main {
+  font-family: 'Clash Display', sans-serif;
+  font-weight: 600;
+  font-size: 76px;
+  letter-spacing: -2px;
+  color: #FFFFFF;
+  line-height: 0.9;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.logo-b .sep {
+  height: 1px;
+  background: rgba(196,208,216,0.35);
+  margin: 16px 0 12px;
+  width: 100%;
+}
+
+.logo-b .sub {
+  font-family: 'Clash Display', sans-serif;
+  font-weight: 400;
+  font-size: 11px;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.5);
+}
+
+/* ─── CONCEPTO C: single line, all caps, wide ─── */
+.logo-c {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.logo-c .wordmark {
+  font-family: 'Clash Display', sans-serif;
+  font-weight: 500;
+  font-size: 56px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.logo-c .sep {
+  height: 1px;
+  background: linear-gradient(to right, rgba(196,208,216,0.5), transparent);
+  margin: 12px 0 10px;
+  width: 100%;
+}
+
+.logo-c .sub {
+  font-family: 'Clash Display', sans-serif;
+  font-weight: 300;
+  font-size: 11px;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.45);
+}
+
+/* ─── CONCEPTO D: Version negra para fondo blanco ─── */
+.logo-d-main {
+  font-family: 'Clash Display', sans-serif;
+  font-weight: 600;
+  font-size: 76px;
+  letter-spacing: -2px;
+  color: #080F1E;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  line-height: 0.9;
+}
+
+.logo-d-top {
+  font-family: 'Clash Display', sans-serif;
+  font-weight: 200;
+  font-size: 18px;
+  letter-spacing: 12px;
+  text-transform: uppercase;
+  color: rgba(8,15,30,0.45);
+  margin-bottom: 6px;
+}
+
+.logo-d-sep {
+  height: 1px;
+  background: rgba(8,15,30,0.2);
+  margin: 16px 0 12px;
+  width: 100%;
+}
+
+.logo-d-sub {
+  font-family: 'Clash Display', sans-serif;
+  font-weight: 400;
+  font-size: 11px;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+  color: rgba(8,15,30,0.45);
+}
+
+/* STAR SVG */
+.star { flex-shrink: 0; }
+</style>
+</head>
+<body>
+
+<!-- ─────────────── CONCEPTO A: COASTAL Bold + FINEST Extralight ─────────────── -->
+<div class="label">Concepto A — Bold + Extralight split · Fondo oscuro</div>
+<div class="card-dark">
+  <div class="logo-a">
+    <div class="line1">
+      <span class="coastal">Coastal</span>
+      <svg class="star" width="22" height="40" viewBox="0 0 20 36" xmlns="http://www.w3.org/2000/svg">
+        <defs><linearGradient id="sg-a" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#F0F4F7"/>
+          <stop offset="30%" stop-color="#BBC8D4"/>
+          <stop offset="55%" stop-color="#E2EBF0"/>
+          <stop offset="100%" stop-color="#8EA9BB"/>
+        </linearGradient></defs>
+        <path d="M10,0 C10,13.5 12.5,17.5 20,18 C12.5,18.5 10,22.5 10,36 C10,22.5 7.5,18.5 0,18 C7.5,17.5 10,13.5 10,0 Z" fill="url(#sg-a)"/>
+      </svg>
+      <span class="finest">Finest</span>
+    </div>
+    <div class="logo-a sep"></div>
+    <div class="logo-a sub">Mobile Auto Detailing · Mobile, Alabama</div>
+  </div>
+</div>
+
+<!-- ─────────────── CONCEPTO B: Stacked, Coastal Finest grande ─────────────── -->
+<div class="label" style="margin-top:16px;">Concepto B — Stacked · eyebrow + wordmark grande</div>
+<div class="card-dark">
+  <div class="logo-b">
+    <div class="logo-b top">Mobile, Alabama</div>
+    <div class="logo-b main">
+      Coastal Finest
+      <svg class="star" width="26" height="46" viewBox="0 0 20 36" xmlns="http://www.w3.org/2000/svg">
+        <defs><linearGradient id="sg-b" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#F0F4F7"/>
+          <stop offset="30%" stop-color="#BBC8D4"/>
+          <stop offset="55%" stop-color="#E2EBF0"/>
+          <stop offset="100%" stop-color="#8EA9BB"/>
+        </linearGradient></defs>
+        <path d="M10,0 C10,13.5 12.5,17.5 20,18 C12.5,18.5 10,22.5 10,36 C10,22.5 7.5,18.5 0,18 C7.5,17.5 10,13.5 10,0 Z" fill="url(#sg-b)"/>
+      </svg>
+    </div>
+    <div class="logo-b sep"></div>
+    <div class="logo-b sub">Premium Detailing</div>
+  </div>
+</div>
+
+<!-- ─────────────── CONCEPTO C: Uppercase all caps ─────────────── -->
+<div class="label" style="margin-top:16px;">Concepto C — All Caps · Medium weight</div>
+<div class="card-black">
+  <div class="logo-c">
+    <div class="logo-c wordmark">
+      COASTAL FINEST
+      <svg class="star" width="20" height="36" viewBox="0 0 20 36" xmlns="http://www.w3.org/2000/svg">
+        <defs><linearGradient id="sg-c" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#F0F4F7"/>
+          <stop offset="30%" stop-color="#BBC8D4"/>
+          <stop offset="55%" stop-color="#E2EBF0"/>
+          <stop offset="100%" stop-color="#8EA9BB"/>
+        </linearGradient></defs>
+        <path d="M10,0 C10,13.5 12.5,17.5 20,18 C12.5,18.5 10,22.5 10,36 C10,22.5 7.5,18.5 0,18 C7.5,17.5 10,13.5 10,0 Z" fill="url(#sg-c)"/>
+      </svg>
+    </div>
+    <div class="logo-c sep"></div>
+    <div class="logo-c sub">Detailing</div>
+  </div>
+</div>
+
+<!-- ─────────────── CONCEPTO B: Fondo claro ─────────────── -->
+<div class="label" style="margin-top:16px;">Concepto B — Fondo claro</div>
+<div class="card-light">
+  <div>
+    <div class="logo-d-top">Mobile, Alabama</div>
+    <div class="logo-d-main">
+      Coastal Finest
+      <svg class="star" width="26" height="46" viewBox="0 0 20 36" xmlns="http://www.w3.org/2000/svg">
+        <defs><linearGradient id="sg-d" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#8EA9BB"/>
+          <stop offset="45%" stop-color="#5A7A92"/>
+          <stop offset="100%" stop-color="#3A5A72"/>
+        </linearGradient></defs>
+        <path d="M10,0 C10,13.5 12.5,17.5 20,18 C12.5,18.5 10,22.5 10,36 C10,22.5 7.5,18.5 0,18 C7.5,17.5 10,13.5 10,0 Z" fill="url(#sg-d)"/>
+      </svg>
+    </div>
+    <div class="logo-d-sep"></div>
+    <div class="logo-d-sub">Premium Detailing</div>
+  </div>
+</div>
+
+</body>
+</html>
