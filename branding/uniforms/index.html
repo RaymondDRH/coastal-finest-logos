@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coastal Finest — Uniform Mockups</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --gold: #BB8F52;
+      --gold-light: #D4AA73;
+      --black: #0A0A0A;
+      --charcoal: #161616;
+      --white: #FFFFFF;
+      --white-80: rgba(255,255,255,0.8);
+      --white-40: rgba(255,255,255,0.4);
+      --white-10: rgba(255,255,255,0.1);
+      --white-05: rgba(255,255,255,0.05);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--black);
+      color: var(--white);
+      font-family: 'Montserrat', sans-serif;
+      min-height: 100vh;
+      padding: 60px 24px;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 72px;
+    }
+
+    .header .eyebrow {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 16px;
+    }
+
+    .header h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(36px, 5vw, 56px);
+      font-weight: 300;
+      letter-spacing: 2px;
+      color: var(--white);
+      line-height: 1.1;
+      margin-bottom: 16px;
+    }
+
+    .header .subtitle {
+      font-size: 13px;
+      color: var(--white-40);
+      letter-spacing: 1px;
+      font-weight: 300;
+    }
+
+    .divider {
+      width: 60px;
+      height: 1px;
+      background: var(--gold);
+      margin: 24px auto 0;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 32px;
+      max-width: 1200px;
+      margin: 0 auto 80px;
+    }
+
+    .card {
+      background: var(--charcoal);
+      border: 1px solid var(--white-10);
+      border-radius: 2px;
+      overflow: hidden;
+      transition: border-color 0.3s, transform 0.3s;
+      cursor: pointer;
+    }
+
+    .card:hover {
+      border-color: var(--gold);
+      transform: translateY(-4px);
+    }
+
+    .card-image {
+      width: 100%;
+      aspect-ratio: 3/4;
+      object-fit: contain;
+      background: #111;
+      display: block;
+    }
+
+    .card-body {
+      padding: 24px;
+      border-top: 1px solid var(--white-10);
+    }
+
+    .card-tag {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+
+    .card-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px;
+      font-weight: 400;
+      color: var(--white);
+      margin-bottom: 8px;
+    }
+
+    .card-desc {
+      font-size: 12px;
+      color: var(--white-40);
+      line-height: 1.6;
+      font-weight: 300;
+    }
+
+    .card-placements {
+      margin-top: 16px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .badge {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border: 1px solid var(--white-10);
+      color: var(--white-40);
+      border-radius: 2px;
+    }
+
+    .badge.gold {
+      border-color: var(--gold);
+      color: var(--gold);
+    }
+
+    /* Lightbox */
+    .lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.95);
+      z-index: 100;
+      align-items: center;
+      justify-content: center;
+      padding: 40px;
+      cursor: zoom-out;
+    }
+
+    .lightbox.active {
+      display: flex;
+    }
+
+    .lightbox img {
+      max-width: 90vw;
+      max-height: 90vh;
+      object-fit: contain;
+      border: 1px solid var(--white-10);
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: 24px;
+      right: 24px;
+      width: 40px;
+      height: 40px;
+      background: var(--charcoal);
+      border: 1px solid var(--white-10);
+      color: var(--white);
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      border-radius: 2px;
+      transition: border-color 0.2s;
+    }
+
+    .lightbox-close:hover {
+      border-color: var(--gold);
+      color: var(--gold);
+    }
+
+    .notes-section {
+      max-width: 800px;
+      margin: 0 auto;
+      border: 1px solid var(--white-10);
+      border-left: 2px solid var(--gold);
+      padding: 32px;
+      background: var(--white-05);
+    }
+
+    .notes-section h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 24px;
+      font-weight: 300;
+      margin-bottom: 20px;
+      color: var(--gold);
+    }
+
+    .notes-section ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .notes-section li {
+      font-size: 13px;
+      color: var(--white-80);
+      line-height: 1.6;
+      padding-left: 16px;
+      position: relative;
+    }
+
+    .notes-section li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: var(--gold);
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 80px;
+      padding-top: 40px;
+      border-top: 1px solid var(--white-10);
+    }
+
+    .footer p {
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--white-40);
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <p class="eyebrow">Brand Identity — CIP Deliverables</p>
+    <h1>Uniform Concepts</h1>
+    <p class="subtitle">F1-Inspired Premium Workwear · Coastal Finest Detailing LLC</p>
+    <div class="divider"></div>
+  </header>
+
+  <div class="grid">
+    <!-- Coverall / F1 Style -->
+    <div class="card" onclick="openLightbox(this)">
+      <img
+        class="card-image"
+        src="coastal-finest-detailing-apron-20260510_041742.png"
+        alt="F1 Coverall Uniform Concept"
+        loading="lazy"
+      />
+      <div class="card-body">
+        <p class="card-tag">Option A</p>
+        <h2 class="card-title">F1 Pit Crew Coverall</h2>
+        <p class="card-desc">
+          One-piece sublimated mechanic suit with contrast gold piping along seams.
+          Full-body branding opportunity. Maximum motorsport impact.
+        </p>
+        <div class="card-placements">
+          <span class="badge gold">Chest — Primary Logo</span>
+          <span class="badge gold">Left Sleeve — CFD Mark</span>
+          <span class="badge gold">Upper Back — Wordmark</span>
+          <span class="badge">Knee Patch</span>
+          <span class="badge">Name Tag</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Polo + Pants -->
+    <div class="card" onclick="openLightbox(this)">
+      <img
+        class="card-image"
+        src="coastal-finest-detailing-polo-shirt-20260510_041812.png"
+        alt="Polo + Pants Uniform Concept"
+        loading="lazy"
+      />
+      <div class="card-body">
+        <p class="card-tag">Option B</p>
+        <h2 class="card-title">Premium Polo + Utility Pants</h2>
+        <p class="card-desc">
+          Client-facing fitted polo with gold collar trim and sleeve piping.
+          Versatile for consult + work phases. Most approachable for clients.
+        </p>
+        <div class="card-placements">
+          <span class="badge gold">Left Chest — CFD Mark</span>
+          <span class="badge gold">Right Sleeve — Wordmark</span>
+          <span class="badge gold">Pants Side Stripe</span>
+          <span class="badge">Gold Collar Trim</span>
+          <span class="badge">Name Tag</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bomber Jacket -->
+    <div class="card" onclick="openLightbox(this)">
+      <img
+        class="card-image"
+        src="coastal-finest-detailing-jacket-20260510_041840.png"
+        alt="Premium Bomber Jacket Concept"
+        loading="lazy"
+      />
+      <div class="card-body">
+        <p class="card-tag">Option C</p>
+        <h2 class="card-title">Motorsport Bomber Jacket</h2>
+        <p class="card-desc">
+          Matte black bomber with carbon fiber shoulder panels and gold zipper hardware.
+          Full wordmark embroidered on back. Premium brand statement on arrival/departure.
+        </p>
+        <div class="card-placements">
+          <span class="badge gold">Left Chest — CFD Mark</span>
+          <span class="badge gold">Full Back — Wordmark</span>
+          <span class="badge gold">Gold Zipper + Cuff Trim</span>
+          <span class="badge">Carbon Fiber Panels</span>
+          <span class="badge">Inside Logo Tag</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="notes-section">
+    <h2>Design Direction Notes</h2>
+    <ul>
+      <li>All concepts follow F1 multi-zone logo placement: chest (primary), sleeve (secondary), back (impact)</li>
+      <li>Brand palette: #0A0A0A black body, #BB8F52 gold accents, white logo/text</li>
+      <li>Recommended real-world execution: embroidered chest logos, sublimated sleeve panels</li>
+      <li>Option A (Coverall) = maximum motorsport authenticity — ideal for outdoor/heavy detailing</li>
+      <li>Option B (Polo+Pants) = client-facing professionalism — best for initial vehicle walk-around</li>
+      <li>Option C (Jacket) = brand statement — wear arriving/departing client property</li>
+      <li>Ideal system: Bomber jacket for arrival → Coverall for work → Polo for handover</li>
+    </ul>
+  </div>
+
+  <footer class="footer">
+    <p>Coastal Finest Detailing LLC &nbsp;·&nbsp; Uniform Concepts v1 &nbsp;·&nbsp; Mobile, Alabama</p>
+  </footer>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+    <img id="lightbox-img" src="" alt="" />
+  </div>
+
+  <script>
+    function openLightbox(card) {
+      const img = card.querySelector('.card-image');
+      document.getElementById('lightbox-img').src = img.src;
+      document.getElementById('lightbox-img').alt = img.alt;
+      document.getElementById('lightbox').classList.add('active');
+    }
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('active');
+    }
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') closeLightbox();
+    });
+  </script>
+
+</body>
+</html>

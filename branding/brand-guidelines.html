@@ -1,0 +1,1539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coastal Finest Detailing — Brand Identity Manual</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    /* ─────────────────────────────────────────
+       TOKENS
+    ───────────────────────────────────────── */
+    :root {
+      --black:       #0A0A0A;
+      --black-2:     #111111;
+      --black-3:     #161616;
+      --black-4:     #1C1C1C;
+      --gold:        #BB8F52;
+      --gold-light:  #D4A96A;
+      --gold-dark:   #8A6535;
+      --gold-muted:  rgba(187,143,82,0.15);
+      --white:       #FFFFFF;
+      --gray-100:    #E8E8E8;
+      --gray-300:    #AAAAAA;
+      --gray-500:    #666666;
+      --gray-700:    #333333;
+      --border:      rgba(255,255,255,0.07);
+      --border-gold: rgba(187,143,82,0.25);
+    }
+
+    /* ─────────────────────────────────────────
+       RESET & BASE
+    ───────────────────────────────────────── */
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--black);
+      color: var(--white);
+      font-family: 'Montserrat', sans-serif;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    img { display: block; max-width: 100%; }
+
+    /* ─────────────────────────────────────────
+       NAV
+    ───────────────────────────────────────── */
+    .nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 48px;
+      background: rgba(10,10,10,0.85);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-brand {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--gray-300);
+    }
+
+    .nav-brand span { color: var(--gold); }
+
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--gray-500);
+      text-decoration: none;
+      transition: color 200ms;
+    }
+
+    .nav-links a:hover { color: var(--gold); cursor: pointer; }
+
+    .nav-badge {
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      border: 1px solid var(--border-gold);
+      padding: 4px 12px;
+    }
+
+    /* ─────────────────────────────────────────
+       COVER
+    ───────────────────────────────────────── */
+    .cover {
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      position: relative;
+      overflow: hidden;
+      padding: 120px 48px 80px;
+    }
+
+    .cover-bg {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 80% 60% at 50% 40%, rgba(187,143,82,0.06) 0%, transparent 70%),
+        linear-gradient(180deg, var(--black) 0%, #080808 100%);
+    }
+
+    .cover-lines {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(var(--border) 1px, transparent 1px),
+        linear-gradient(90deg, var(--border) 1px, transparent 1px);
+      background-size: 80px 80px;
+      mask-image: radial-gradient(ellipse 70% 70% at 50% 50%, black 30%, transparent 100%);
+      opacity: 0.4;
+    }
+
+    .cover-inner {
+      position: relative;
+      text-align: center;
+      max-width: 800px;
+    }
+
+    .cover-eyebrow {
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.6em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 48px;
+    }
+
+    .cover-logo-wrap {
+      width: 280px;
+      margin: 0 auto 64px;
+      position: relative;
+    }
+
+    .cover-logo-wrap::before {
+      content: '';
+      position: absolute;
+      inset: -30px;
+      background: radial-gradient(circle, rgba(187,143,82,0.12) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+
+    .cover-logo-wrap img { width: 100%; position: relative; }
+
+    .cover-rule {
+      width: 1px;
+      height: 60px;
+      background: linear-gradient(to bottom, transparent, var(--gold), transparent);
+      margin: 0 auto 40px;
+    }
+
+    .cover-title {
+      font-family: 'Cormorant', serif;
+      font-size: clamp(42px, 6vw, 72px);
+      font-weight: 300;
+      font-style: italic;
+      letter-spacing: 0.02em;
+      line-height: 1.1;
+      margin-bottom: 16px;
+    }
+
+    .cover-title strong {
+      font-weight: 600;
+      font-style: normal;
+      color: var(--gold);
+    }
+
+    .cover-subtitle {
+      font-size: 12px;
+      font-weight: 400;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: var(--gray-300);
+      margin-bottom: 64px;
+    }
+
+    .cover-meta {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+    }
+
+    .cover-meta-item {
+      text-align: center;
+    }
+
+    .cover-meta-val {
+      font-family: 'Cormorant', serif;
+      font-size: 28px;
+      font-weight: 600;
+      color: var(--gold);
+      display: block;
+    }
+
+    .cover-meta-key {
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--gray-500);
+    }
+
+    /* ─────────────────────────────────────────
+       CHAPTER HEADER
+    ───────────────────────────────────────── */
+    .chapter {
+      padding: 120px 48px 80px;
+      border-top: 1px solid var(--border);
+    }
+
+    .chapter-inner { max-width: 1200px; margin: 0 auto; }
+
+    .chapter-head {
+      display: flex;
+      align-items: flex-start;
+      gap: 48px;
+      margin-bottom: 80px;
+    }
+
+    .chapter-number {
+      font-family: 'Cormorant', serif;
+      font-size: 120px;
+      font-weight: 300;
+      line-height: 0.85;
+      color: var(--black-4);
+      flex-shrink: 0;
+      user-select: none;
+    }
+
+    .chapter-text { padding-top: 8px; }
+
+    .chapter-label {
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.6em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 12px;
+    }
+
+    .chapter-title {
+      font-family: 'Cormorant', serif;
+      font-size: clamp(36px, 4vw, 56px);
+      font-weight: 400;
+      line-height: 1.1;
+      margin-bottom: 20px;
+    }
+
+    .chapter-desc {
+      font-size: 14px;
+      color: var(--gray-300);
+      max-width: 540px;
+      line-height: 1.8;
+    }
+
+    /* ─────────────────────────────────────────
+       BRAND PILLARS
+    ───────────────────────────────────────── */
+    .pillars {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--border);
+    }
+
+    .pillar {
+      background: var(--black);
+      padding: 48px 36px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .pillar::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      transform: scaleX(0);
+      transition: transform 400ms ease;
+    }
+
+    .pillar:hover::before { transform: scaleX(1); }
+
+    .pillar-num {
+      font-family: 'Cormorant', serif;
+      font-size: 48px;
+      font-weight: 300;
+      color: var(--gold-muted);
+      margin-bottom: 20px;
+      line-height: 1;
+    }
+
+    .pillar-title {
+      font-family: 'Cormorant', serif;
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+
+    .pillar-desc {
+      font-size: 13px;
+      color: var(--gray-300);
+      line-height: 1.8;
+    }
+
+    .pillar-quote {
+      margin-top: 24px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+      font-family: 'Cormorant', serif;
+      font-size: 15px;
+      font-style: italic;
+      color: var(--gold);
+    }
+
+    /* ─────────────────────────────────────────
+       LOGO SYSTEM
+    ───────────────────────────────────────── */
+    .logo-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.4em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 32px;
+    }
+
+    .logo-tag::before {
+      content: '';
+      width: 24px;
+      height: 1px;
+      background: var(--gold);
+    }
+
+    .logo-context {
+      font-size: 13px;
+      color: var(--gray-300);
+      max-width: 600px;
+      line-height: 1.8;
+      margin-bottom: 48px;
+    }
+
+    .logo-showcase {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--border);
+      margin-bottom: 80px;
+    }
+
+    .logo-cell {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 24px;
+      padding: 64px 32px 40px;
+      position: relative;
+    }
+
+    .logo-cell.on-black { background: var(--black); }
+    .logo-cell.on-white { background: #FFFFFF; }
+    .logo-cell.on-gold  { background: var(--gold); }
+
+    .logo-cell img { width: 200px; }
+
+    .logo-cell-label {
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+    }
+
+    .logo-cell.on-black .logo-cell-label { color: var(--gray-700); }
+    .logo-cell.on-white .logo-cell-label { color: #AAAAAA; }
+    .logo-cell.on-gold  .logo-cell-label { color: rgba(0,0,0,0.4); }
+
+    .logo-usage-tag {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      font-size: 8px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+    }
+
+    .logo-cell.on-black .logo-usage-tag { background: var(--gold-muted); color: var(--gold); }
+    .logo-cell.on-white .logo-usage-tag { background: rgba(0,0,0,0.08); color: #666; }
+    .logo-cell.on-gold  .logo-usage-tag { background: rgba(0,0,0,0.12); color: rgba(0,0,0,0.5); }
+
+    /* ─────────────────────────────────────────
+       CLEAR SPACE
+    ───────────────────────────────────────── */
+    .clearspace-section {
+      padding: 64px;
+      border: 1px solid var(--border);
+      background: var(--black-2);
+      display: flex;
+      align-items: center;
+      gap: 80px;
+      margin-bottom: 80px;
+    }
+
+    .clearspace-demo {
+      flex-shrink: 0;
+      position: relative;
+      padding: 40px;
+      border: 1px dashed rgba(187,143,82,0.35);
+    }
+
+    .clearspace-demo img { width: 160px; }
+
+    .cs-arrow {
+      position: absolute;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      color: var(--gold);
+      background: var(--black-2);
+      padding: 2px 6px;
+    }
+
+    .cs-top    { top: -10px; left: 50%; transform: translateX(-50%); }
+    .cs-bottom { bottom: -10px; left: 50%; transform: translateX(-50%); }
+    .cs-left   { left: -10px; top: 50%; transform: translateY(-50%) rotate(-90deg); }
+    .cs-right  { right: -10px; top: 50%; transform: translateY(-50%) rotate(90deg); }
+
+    .clearspace-info { flex: 1; }
+
+    .clearspace-info h3 {
+      font-family: 'Cormorant', serif;
+      font-size: 28px;
+      font-weight: 500;
+      margin-bottom: 16px;
+    }
+
+    .clearspace-info p {
+      font-size: 13px;
+      color: var(--gray-300);
+      line-height: 1.8;
+      margin-bottom: 24px;
+    }
+
+    .clearspace-rule {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 16px 20px;
+      border: 1px solid var(--border-gold);
+      background: var(--gold-muted);
+    }
+
+    .clearspace-rule-icon {
+      width: 32px;
+      height: 32px;
+      background: var(--gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .clearspace-rule-icon svg { width: 16px; height: 16px; }
+
+    .clearspace-rule-text {
+      font-size: 12px;
+      color: var(--gold-light);
+      line-height: 1.5;
+    }
+
+    /* ─────────────────────────────────────────
+       DO / DON'T
+    ───────────────────────────────────────── */
+    .rules-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1px;
+      background: var(--border);
+      margin-bottom: 80px;
+    }
+
+    .rules-card {
+      background: var(--black);
+      padding: 48px 40px;
+    }
+
+    .rules-card-head {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 32px;
+    }
+
+    .rules-card-icon {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .rules-card.do   .rules-card-icon { background: rgba(74,222,128,0.15); color: #4ADE80; }
+    .rules-card.dont .rules-card-icon { background: rgba(248,113,113,0.15); color: #F87171; }
+
+    .rules-card-title {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.4em;
+      text-transform: uppercase;
+    }
+
+    .rules-card.do   .rules-card-title { color: #4ADE80; }
+    .rules-card.dont .rules-card-title { color: #F87171; }
+
+    .rules-list { list-style: none; display: flex; flex-direction: column; gap: 14px; }
+
+    .rules-list li {
+      display: flex;
+      gap: 14px;
+      font-size: 13px;
+      color: var(--gray-300);
+      line-height: 1.6;
+    }
+
+    .rules-list li::before {
+      content: '—';
+      color: var(--gray-700);
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    /* ─────────────────────────────────────────
+       COLOR PALETTE
+    ───────────────────────────────────────── */
+    .palette {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1px;
+      background: var(--border);
+      margin-bottom: 48px;
+    }
+
+    .palette-block {}
+
+    .palette-swatch {
+      height: 240px;
+      position: relative;
+    }
+
+    .palette-info {
+      background: var(--black-2);
+      padding: 28px;
+      border-top: none;
+    }
+
+    .palette-name {
+      font-family: 'Cormorant', serif;
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .palette-hex {
+      font-family: 'Montserrat', monospace;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--gray-100);
+      letter-spacing: 0.05em;
+      margin-bottom: 3px;
+    }
+
+    .palette-rgb {
+      font-family: 'Montserrat', monospace;
+      font-size: 10px;
+      color: var(--gray-500);
+      margin-bottom: 3px;
+    }
+
+    .palette-cmyk {
+      font-family: 'Montserrat', monospace;
+      font-size: 10px;
+      color: var(--gray-500);
+      margin-bottom: 12px;
+    }
+
+    .palette-role {
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+
+    .palette-tag {
+      position: absolute;
+      bottom: 16px;
+      right: 16px;
+      font-size: 8px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      padding: 4px 8px;
+    }
+
+    /* Color combinations */
+    .color-combos {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--border);
+    }
+
+    .combo {
+      padding: 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .combo-preview {
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .combo-preview-text {
+      font-family: 'Cormorant', serif;
+      font-size: 24px;
+      font-weight: 600;
+    }
+
+    .combo-label {
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--gray-500);
+    }
+
+    .combo-desc {
+      font-size: 11px;
+      color: var(--gray-500);
+      line-height: 1.6;
+    }
+
+    /* ─────────────────────────────────────────
+       TYPOGRAPHY
+    ───────────────────────────────────────── */
+    .type-duo {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1px;
+      background: var(--border);
+      margin-bottom: 1px;
+    }
+
+    .type-card {
+      background: var(--black-2);
+      padding: 48px;
+    }
+
+    .type-card-label {
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.5em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 32px;
+    }
+
+    .type-display {
+      font-family: 'Cormorant', serif;
+      font-size: 56px;
+      font-weight: 300;
+      font-style: italic;
+      line-height: 1;
+      margin-bottom: 8px;
+      letter-spacing: -0.01em;
+    }
+
+    .type-display strong { font-weight: 700; font-style: normal; }
+
+    .type-body-sample {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      color: var(--gray-300);
+      line-height: 1.8;
+      margin-bottom: 16px;
+    }
+
+    .type-specs-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin-top: 32px;
+      padding-top: 32px;
+      border-top: 1px solid var(--border);
+    }
+
+    .type-spec {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+
+    .type-spec-key {
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gray-700);
+    }
+
+    .type-spec-val {
+      font-size: 12px;
+      color: var(--gray-300);
+    }
+
+    .type-scale-card {
+      background: var(--black-2);
+      padding: 48px;
+      border-top: 1px solid var(--border);
+    }
+
+    .type-scale-row {
+      display: flex;
+      align-items: baseline;
+      gap: 32px;
+      padding: 20px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .type-scale-row:last-child { border-bottom: none; }
+
+    .type-scale-meta {
+      width: 140px;
+      flex-shrink: 0;
+    }
+
+    .type-scale-name {
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--gray-700);
+    }
+
+    .type-scale-info {
+      font-size: 9px;
+      color: var(--gray-500);
+      margin-top: 4px;
+    }
+
+    .type-scale-sample { flex: 1; font-family: 'Montserrat', sans-serif; }
+
+    /* ─────────────────────────────────────────
+       APPLICATIONS
+    ───────────────────────────────────────── */
+    .apps-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1px;
+      background: var(--border);
+    }
+
+    .app-cell {
+      background: var(--black-2);
+      overflow: hidden;
+    }
+
+    .app-cell img { width: 100%; }
+
+    .app-cell-info {
+      padding: 32px;
+      border-top: 1px solid var(--border);
+    }
+
+    .app-cell-num {
+      font-family: 'Cormorant', serif;
+      font-size: 13px;
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+
+    .app-cell-name {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .app-cell-desc {
+      font-size: 12px;
+      color: var(--gray-500);
+      line-height: 1.6;
+    }
+
+    /* ─────────────────────────────────────────
+       TOUCHPOINTS
+    ───────────────────────────────────────── */
+    .touchpoints {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--border);
+      margin-top: 1px;
+    }
+
+    .touchpoint {
+      background: var(--black);
+      padding: 40px 32px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .touchpoint::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--gold-dark), transparent);
+    }
+
+    .touchpoint-icon {
+      width: 40px;
+      height: 40px;
+      border: 1px solid var(--border-gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 24px;
+    }
+
+    .touchpoint-icon svg {
+      width: 18px;
+      height: 18px;
+      stroke: var(--gold);
+      fill: none;
+      stroke-width: 1.5;
+    }
+
+    .touchpoint-name {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.4em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 16px;
+    }
+
+    .touchpoint-desc {
+      font-size: 12px;
+      color: var(--gray-300);
+      line-height: 1.8;
+    }
+
+    /* ─────────────────────────────────────────
+       VOICE
+    ───────────────────────────────────────── */
+    .voice-examples {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1px;
+      background: var(--border);
+    }
+
+    .voice-col {
+      background: var(--black);
+      padding: 48px 40px;
+    }
+
+    .voice-col-head {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 32px;
+    }
+
+    .voice-col-indicator {
+      width: 32px;
+      height: 2px;
+    }
+
+    .voice-col.do   .voice-col-indicator { background: #4ADE80; }
+    .voice-col.dont .voice-col-indicator { background: #F87171; }
+
+    .voice-col-title {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.4em;
+      text-transform: uppercase;
+    }
+
+    .voice-col.do   .voice-col-title { color: #4ADE80; }
+    .voice-col.dont .voice-col-title { color: #F87171; }
+
+    .voice-quote {
+      padding: 20px 24px;
+      margin-bottom: 12px;
+      font-family: 'Cormorant', serif;
+      font-size: 18px;
+      font-style: italic;
+      line-height: 1.5;
+    }
+
+    .voice-col.do   .voice-quote { border-left: 2px solid rgba(74,222,128,0.3); color: var(--gray-100); }
+    .voice-col.dont .voice-quote { border-left: 2px solid rgba(248,113,113,0.3); color: var(--gray-500); }
+
+    /* ─────────────────────────────────────────
+       FOOTER
+    ───────────────────────────────────────── */
+    .footer {
+      border-top: 1px solid var(--border);
+      padding: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: var(--black);
+    }
+
+    .footer-logo { width: 120px; }
+
+    .footer-center {
+      text-align: center;
+    }
+
+    .footer-center-name {
+      font-family: 'Cormorant', serif;
+      font-size: 18px;
+      font-weight: 500;
+      color: var(--gray-300);
+      margin-bottom: 4px;
+    }
+
+    .footer-center-name span { color: var(--gold); }
+
+    .footer-center-meta {
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--gray-700);
+    }
+
+    .footer-right {
+      text-align: right;
+    }
+
+    .footer-contact {
+      font-size: 11px;
+      color: var(--gray-500);
+      line-height: 1.8;
+    }
+
+    /* ─────────────────────────────────────────
+       RESPONSIVE
+    ───────────────────────────────────────── */
+    @media (max-width: 900px) {
+      .nav { padding: 16px 24px; }
+      .nav-links { display: none; }
+      .chapter { padding: 80px 24px 60px; }
+      .chapter-head { flex-direction: column; gap: 0; }
+      .chapter-number { font-size: 72px; }
+      .pillars, .logo-showcase, .wordmark-grid, .palette, .rules-grid,
+      .type-duo, .apps-grid, .touchpoints, .voice-examples, .color-combos {
+        grid-template-columns: 1fr;
+      }
+      .clearspace-section { flex-direction: column; padding: 40px 24px; }
+      .cover-meta { flex-wrap: wrap; gap: 24px; }
+      .footer { flex-direction: column; gap: 32px; text-align: center; }
+      .footer-right { text-align: center; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .pillar::before { transition: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="nav-brand">Coastal <span>Finest</span> Detailing</div>
+    <ul class="nav-links">
+      <li><a href="#overview">Overview</a></li>
+      <li><a href="#logo">Logo</a></li>
+      <li><a href="#color">Color</a></li>
+      <li><a href="#type">Type</a></li>
+      <li><a href="#apply">Apply</a></li>
+      <li><a href="#voice">Voice</a></li>
+    </ul>
+    <div class="nav-badge">v1.0 · 2026</div>
+  </nav>
+
+  <!-- COVER -->
+  <section class="cover">
+    <div class="cover-bg"></div>
+    <div class="cover-lines"></div>
+    <div class="cover-inner">
+      <div class="cover-eyebrow">Brand Identity Manual</div>
+      <div class="cover-logo-wrap">
+        <img src="../lovart-export/CFD Auto Detailing Logo Black Background.png" alt="Coastal Finest Detailing">
+      </div>
+      <div class="cover-rule"></div>
+      <h1 class="cover-title">Coastal <strong>Finest</strong><br>Detailing</h1>
+      <div class="cover-subtitle">Mobile, Alabama &nbsp;✦&nbsp; Premium Auto Detailing</div>
+      <div class="cover-meta">
+        <div class="cover-meta-item">
+          <span class="cover-meta-val">2</span>
+          <span class="cover-meta-key">Logo Marks</span>
+        </div>
+        <div class="cover-meta-item">
+          <span class="cover-meta-val">4</span>
+          <span class="cover-meta-key">Brand Colors</span>
+        </div>
+        <div class="cover-meta-item">
+          <span class="cover-meta-val">6</span>
+          <span class="cover-meta-key">Chapters</span>
+        </div>
+        <div class="cover-meta-item">
+          <span class="cover-meta-val">1</span>
+          <span class="cover-meta-key">Standard</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CHAPTER 1: OVERVIEW ── -->
+  <section id="overview" class="chapter">
+    <div class="chapter-inner">
+      <div class="chapter-head">
+        <div class="chapter-number">01</div>
+        <div class="chapter-text">
+          <div class="chapter-label">Introduction</div>
+          <h2 class="chapter-title">Brand Overview</h2>
+          <p class="chapter-desc">Coastal Finest Detailing is not the cheapest — it is the finest. A premium mobile auto detailing service built on craftsmanship, precision, and respect for the vehicles we care for. This manual defines how our identity must appear in every context, without exception.</p>
+        </div>
+      </div>
+
+      <div class="pillars">
+        <div class="pillar">
+          <div class="pillar-num">I</div>
+          <div class="pillar-title">Who We Are</div>
+          <div class="pillar-desc">A premium mobile detailing service serving discerning clients across the Gulf Coast of Alabama. We bring the finest care directly to you — on your schedule, at your location.</div>
+          <div class="pillar-quote">"Not just clean. Finest."</div>
+        </div>
+        <div class="pillar">
+          <div class="pillar-num">II</div>
+          <div class="pillar-title">Our Mission</div>
+          <div class="pillar-desc">To deliver an unmatched vehicle care experience that protects, enhances, and elevates every car we touch — with precision tools, premium products, and professional pride.</div>
+          <div class="pillar-quote">"Precision detail. Zero shortcuts."</div>
+        </div>
+        <div class="pillar">
+          <div class="pillar-num">III</div>
+          <div class="pillar-title">Brand Personality</div>
+          <div class="pillar-desc">Confident. Precise. Premium. We are bold without being flashy, exclusive without being inaccessible. Performance-driven, coast-inspired, uncompromising in quality.</div>
+          <div class="pillar-quote">"Gulf Coast's premier standard."</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CHAPTER 2: LOGO ── -->
+  <section id="logo" class="chapter">
+    <div class="chapter-inner">
+      <div class="chapter-head">
+        <div class="chapter-number">02</div>
+        <div class="chapter-text">
+          <div class="chapter-label">Identity</div>
+          <h2 class="chapter-title">Logo System</h2>
+          <p class="chapter-desc">Two distinct marks form our complete identity system. Each serves a specific purpose and must never be used interchangeably. Both are proprietary — never recreate, alter, or approximate them.</p>
+        </div>
+      </div>
+
+      <!-- CFD Lettermark -->
+      <div class="logo-tag">Primary Mark — CFD Lettermark</div>
+      <p class="logo-context">The CFD lettermark is a fused monogram where C, F, and D share a continuous form united by the gold diagonal accent. Use for compact applications: uniforms, caps, stickers, profile icons, and embroidery where the full wordmark would not be legible.</p>
+
+      <div class="logo-showcase">
+        <div class="logo-cell on-black">
+          <span class="logo-usage-tag">Primary</span>
+          <img src="../lovart-export/CFD Auto Detailing Logo Black Background.png" alt="CFD on Black">
+          <span class="logo-cell-label">Version Dark — Preferred</span>
+        </div>
+        <div class="logo-cell on-white">
+          <span class="logo-usage-tag">Light BG</span>
+          <img src="../lovart-export/CFD Auto Detailing Logo Fondo Blanco.png" alt="CFD on White">
+          <span class="logo-cell-label" style="color:#999;">Version Light</span>
+        </div>
+        <div class="logo-cell on-gold">
+          <span class="logo-usage-tag">Special Use</span>
+          <img src="../lovart-export/CFD Auto Detailing Logo Fondo Dorado.png" alt="CFD on Gold">
+          <span class="logo-cell-label">Version Gold — Sparingly</span>
+        </div>
+      </div>
+
+      <!-- Wordmark -->
+      <div class="logo-tag">Secondary Mark — Full Wordmark</div>
+      <p class="logo-context">The full wordmark stacks the complete brand name in bold condensed italics. "FINEST" is always rendered in gold — this is non-negotiable. Use for: website header, van wrap, large format signage, marketing materials, and any context where brand recognition requires the full name.</p>
+
+      <div class="logo-showcase">
+        <div class="logo-cell on-black">
+          <span class="logo-usage-tag">Primary</span>
+          <img src="../lovart-export/Coastal Finest Detailing Logo Completo Fondo Negro.png" alt="Wordmark on Black">
+          <span class="logo-cell-label">Version Dark — Preferred</span>
+        </div>
+        <div class="logo-cell on-white">
+          <span class="logo-usage-tag">Light BG</span>
+          <img src="../lovart-export/Coastal Finest Detailing Logo Completo Fondo Blanco.png" alt="Wordmark on White">
+          <span class="logo-cell-label" style="color:#999;">Version Light</span>
+        </div>
+        <div class="logo-cell on-gold">
+          <span class="logo-usage-tag">Special Use</span>
+          <img src="../lovart-export/Coastal Finest Detailing Logo Completo Fondo Dorado.png" alt="Wordmark on Gold">
+          <span class="logo-cell-label">Version Gold — Events Only</span>
+        </div>
+      </div>
+
+      <!-- Clear Space -->
+      <div class="clearspace-section">
+        <div class="clearspace-demo">
+          <span class="cs-arrow cs-top">1×</span>
+          <span class="cs-arrow cs-bottom">1×</span>
+          <span class="cs-arrow cs-left">1×</span>
+          <span class="cs-arrow cs-right">1×</span>
+          <img src="../lovart-export/CFD Auto Detailing Logo Black Background.png" alt="Clear space">
+        </div>
+        <div class="clearspace-info">
+          <h3>Clear Space Rule</h3>
+          <p>Every logo mark requires protected breathing room — a minimum clear space that must be kept free of all other graphic elements, text, and image content on all four sides.</p>
+          <div class="clearspace-rule">
+            <div class="clearspace-rule-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2">
+                <path d="M12 22V12M12 12V2M12 12H2M12 12h10"/>
+              </svg>
+            </div>
+            <div class="clearspace-rule-text">
+              Minimum clear space = height of the "C" letterform in the CFD mark, applied uniformly on all sides.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Rules -->
+      <div class="rules-grid">
+        <div class="rules-card do">
+          <div class="rules-card-head">
+            <div class="rules-card-icon">✓</div>
+            <div class="rules-card-title">Always Do</div>
+          </div>
+          <ul class="rules-list">
+            <li>Use the dark version (on black) as the primary application across all touchpoints</li>
+            <li>Maintain minimum clear space around the logo at all times</li>
+            <li>Use SVG files for all digital and screen applications</li>
+            <li>Use PNG files with transparency when placed over photography</li>
+            <li>Apply only on the three approved background colors: black, white, gold</li>
+            <li>Use the CFD lettermark for compact/small-scale applications</li>
+            <li>Use the wordmark when communicating the full brand name is important</li>
+          </ul>
+        </div>
+        <div class="rules-card dont">
+          <div class="rules-card-head">
+            <div class="rules-card-icon">✗</div>
+            <div class="rules-card-title">Never Do</div>
+          </div>
+          <ul class="rules-list">
+            <li>Never stretch, compress, or distort either mark in any direction</li>
+            <li>Never rotate the logo or apply any angle other than its original orientation</li>
+            <li>Never change the gold accent to any other color</li>
+            <li>Never recreate the logo from scratch using available fonts</li>
+            <li>Never place the logo on busy photographic backgrounds without a dark overlay</li>
+            <li>Never add shadows, glows, outlines, or visual effects to the logo</li>
+            <li>Never use either mark below 32px on screen or 0.5 inch in print</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CHAPTER 3: COLOR ── -->
+  <section id="color" class="chapter">
+    <div class="chapter-inner">
+      <div class="chapter-head">
+        <div class="chapter-number">03</div>
+        <div class="chapter-text">
+          <div class="chapter-label">Visual Identity</div>
+          <h2 class="chapter-title">Color Palette</h2>
+          <p class="chapter-desc">Three colors. That is our entire palette. Deep black, prestige gold, and pure white. This restraint is what makes every application feel intentional and premium. Never introduce additional colors without explicit brand approval.</p>
+        </div>
+      </div>
+
+      <div class="palette">
+        <div class="palette-block">
+          <div class="palette-swatch" style="background:#0A0A0A; border-right:1px solid #1a1a1a; border-bottom:1px solid #1a1a1a;">
+            <span class="palette-tag" style="background:rgba(255,255,255,0.05); color:#555;">Primary</span>
+          </div>
+          <div class="palette-info">
+            <div class="palette-name">Midnight Black</div>
+            <div class="palette-hex">#0A0A0A</div>
+            <div class="palette-rgb">RGB  10 · 10 · 10</div>
+            <div class="palette-cmyk">CMYK  0 · 0 · 0 · 96</div>
+            <div class="palette-role">Primary Background</div>
+          </div>
+        </div>
+
+        <div class="palette-block">
+          <div class="palette-swatch" style="background:#BB8F52;">
+            <span class="palette-tag" style="background:rgba(0,0,0,0.2); color:rgba(0,0,0,0.5);">Accent</span>
+          </div>
+          <div class="palette-info">
+            <div class="palette-name">Prestige Gold</div>
+            <div class="palette-hex">#BB8F52</div>
+            <div class="palette-rgb">RGB  187 · 143 · 82</div>
+            <div class="palette-cmyk">CMYK  0 · 24 · 56 · 27</div>
+            <div class="palette-role">Brand Accent — "Finest"</div>
+          </div>
+        </div>
+
+        <div class="palette-block">
+          <div class="palette-swatch" style="background:#FFFFFF; border-right:1px solid #ddd; border-bottom:1px solid #ddd;">
+            <span class="palette-tag" style="background:rgba(0,0,0,0.06); color:#999;">Text</span>
+          </div>
+          <div class="palette-info">
+            <div class="palette-name">Pure White</div>
+            <div class="palette-hex">#FFFFFF</div>
+            <div class="palette-rgb">RGB  255 · 255 · 255</div>
+            <div class="palette-cmyk">CMYK  0 · 0 · 0 · 0</div>
+            <div class="palette-role">Primary Text on Dark</div>
+          </div>
+        </div>
+
+        <div class="palette-block">
+          <div class="palette-swatch" style="background:#161616; border-bottom:1px solid #1a1a1a;">
+            <span class="palette-tag" style="background:rgba(255,255,255,0.05); color:#555;">Secondary</span>
+          </div>
+          <div class="palette-info">
+            <div class="palette-name">Deep Charcoal</div>
+            <div class="palette-hex">#161616</div>
+            <div class="palette-rgb">RGB  22 · 22 · 22</div>
+            <div class="palette-cmyk">CMYK  0 · 0 · 0 · 91</div>
+            <div class="palette-role">Logo on Light BG / Surface</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="color-combos">
+        <div class="combo" style="background:#0A0A0A; border:1px solid #1a1a1a;">
+          <div class="combo-preview" style="background:#0A0A0A;">
+            <span class="combo-preview-text" style="color:#FFFFFF;">Coastal <span style="color:#BB8F52;">Finest</span></span>
+          </div>
+          <div class="combo-label">Primary Combination</div>
+          <div class="combo-desc" style="color:#555;">Black background · White text · Gold accent. The dominant combination across all brand materials.</div>
+        </div>
+        <div class="combo" style="background:#FFFFFF; border:1px solid #eee;">
+          <div class="combo-preview" style="background:#FFFFFF;">
+            <span class="combo-preview-text" style="color:#161616;">Coastal <span style="color:#BB8F52;">Finest</span></span>
+          </div>
+          <div class="combo-label" style="color:#999;">Light Combination</div>
+          <div class="combo-desc" style="color:#aaa;">White background · Charcoal text · Gold accent. For documents and print applications.</div>
+        </div>
+        <div class="combo" style="background:#BB8F52; border:1px solid #BB8F52;">
+          <div class="combo-preview" style="background:#BB8F52;">
+            <span class="combo-preview-text" style="color:#0A0A0A;">Coastal Finest</span>
+          </div>
+          <div class="combo-label" style="color:rgba(0,0,0,0.4);">Special Combination</div>
+          <div class="combo-desc" style="color:rgba(0,0,0,0.35);">Gold background · Black text. Reserved for special events and accent elements only.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CHAPTER 4: TYPOGRAPHY ── -->
+  <section id="type" class="chapter">
+    <div class="chapter-inner">
+      <div class="chapter-head">
+        <div class="chapter-number">04</div>
+        <div class="chapter-text">
+          <div class="chapter-label">Typography</div>
+          <h2 class="chapter-title">Type System</h2>
+          <p class="chapter-desc">Our typography pairs a luxury serif for expressive headlines with a precise geometric sans-serif for functional communication. The custom logo letterforms are proprietary and exist only in the approved logo files.</p>
+        </div>
+      </div>
+
+      <div class="type-duo">
+        <div class="type-card">
+          <div class="type-card-label">Display Font — Logo Marks</div>
+          <div class="type-display">Coastal<br><strong>Finest</strong></div>
+          <p style="font-size:12px; color:var(--gray-500); line-height:1.7; margin-bottom:16px;">The bold condensed italic letterforms in both logo marks are proprietary. They exist exclusively in the approved SVG and PNG logo files — they are NOT available as a standalone typeface and must never be approximated using public fonts.</p>
+          <div class="type-specs-grid">
+            <div class="type-spec">
+              <span class="type-spec-key">Style</span>
+              <span class="type-spec-val">Ultra Bold Condensed Italic</span>
+            </div>
+            <div class="type-spec">
+              <span class="type-spec-key">Use</span>
+              <span class="type-spec-val">Logo marks only</span>
+            </div>
+            <div class="type-spec">
+              <span class="type-spec-key">Format</span>
+              <span class="type-spec-val">SVG · PNG only</span>
+            </div>
+            <div class="type-spec">
+              <span class="type-spec-key">Alternate</span>
+              <span class="type-spec-val">Barlow Condensed XB Italic</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="type-card">
+          <div class="type-card-label">System Font — Montserrat</div>
+          <div style="font-family:'Montserrat',sans-serif; font-size:48px; font-weight:900; line-height:1; margin-bottom:16px; letter-spacing:-0.02em;">Aa</div>
+          <div class="type-body-sample">Premium Auto Detailing — Mobile, Alabama. Every vehicle treated with precision and care.</div>
+          <div style="font-size:10px; font-weight:700; letter-spacing:0.4em; text-transform:uppercase; color:var(--gold);">AUTO ✦ DETAILING · SINCE 2026</div>
+          <div class="type-specs-grid">
+            <div class="type-spec">
+              <span class="type-spec-key">Family</span>
+              <span class="type-spec-val">Montserrat</span>
+            </div>
+            <div class="type-spec">
+              <span class="type-spec-key">Source</span>
+              <span class="type-spec-val">Google Fonts (free)</span>
+            </div>
+            <div class="type-spec">
+              <span class="type-spec-key">Weights</span>
+              <span class="type-spec-val">300 · 400 · 600 · 700 · 800 · 900</span>
+            </div>
+            <div class="type-spec">
+              <span class="type-spec-key">Use</span>
+              <span class="type-spec-val">All brand communications</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="type-scale-card">
+        <div class="type-scale-row">
+          <div class="type-scale-meta">
+            <div class="type-scale-name">Display / H1</div>
+            <div class="type-scale-info">52px · Weight 900</div>
+          </div>
+          <div class="type-scale-sample" style="font-size:52px; font-weight:900; letter-spacing:-0.02em; line-height:1;">Premium Detail</div>
+        </div>
+        <div class="type-scale-row">
+          <div class="type-scale-meta">
+            <div class="type-scale-name">Heading / H2</div>
+            <div class="type-scale-info">36px · Weight 800</div>
+          </div>
+          <div class="type-scale-sample" style="font-size:36px; font-weight:800; letter-spacing:-0.01em; line-height:1.1;">Our Services</div>
+        </div>
+        <div class="type-scale-row">
+          <div class="type-scale-meta">
+            <div class="type-scale-name">Subhead / H3</div>
+            <div class="type-scale-info">22px · Weight 700</div>
+          </div>
+          <div class="type-scale-sample" style="font-size:22px; font-weight:700; line-height:1.2;">Full Detail Package — From $180</div>
+        </div>
+        <div class="type-scale-row">
+          <div class="type-scale-meta">
+            <div class="type-scale-name">Body</div>
+            <div class="type-scale-info">16px · Weight 400</div>
+          </div>
+          <div class="type-scale-sample" style="font-size:16px; font-weight:400; color:var(--gray-300); line-height:1.75; max-width:560px;">We bring the finest mobile detailing experience directly to you. Every vehicle is treated with precision tools, premium products, and professional pride.</div>
+        </div>
+        <div class="type-scale-row">
+          <div class="type-scale-meta">
+            <div class="type-scale-name">Caption / Label</div>
+            <div class="type-scale-info">10px · Weight 700</div>
+          </div>
+          <div class="type-scale-sample" style="font-size:10px; font-weight:700; letter-spacing:0.4em; text-transform:uppercase; color:var(--gold);">AUTO ✦ DETAILING &nbsp;·&nbsp; MOBILE, ALABAMA</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CHAPTER 5: APPLICATIONS ── -->
+  <section id="apply" class="chapter">
+    <div class="chapter-inner">
+      <div class="chapter-head">
+        <div class="chapter-number">05</div>
+        <div class="chapter-text">
+          <div class="chapter-label">Applications</div>
+          <h2 class="chapter-title">Brand in Use</h2>
+          <p class="chapter-desc">How Coastal Finest appears across real-world touchpoints. Consistency in color, clear space, and logo version is mandatory across every application. When in doubt, reference this manual.</p>
+        </div>
+      </div>
+
+      <div class="apps-grid">
+        <div class="app-cell">
+          <img src="../lovart-export/CFD Business Card Frente Final.png" alt="Business Card Front">
+          <div class="app-cell-info">
+            <div class="app-cell-num">01</div>
+            <div class="app-cell-name">Business Card — Front</div>
+            <div class="app-cell-desc">CFD lettermark top-left. Luxury vehicle photography on right with gradient overlay. Contact information bottom-left in white. 3.5" × 2" standard format. Print at 300 DPI minimum.</div>
+          </div>
+        </div>
+        <div class="app-cell">
+          <img src="../lovart-export/Image 1.png" alt="Digital Header">
+          <div class="app-cell-info">
+            <div class="app-cell-num">02</div>
+            <div class="app-cell-name">Digital Header / Banner</div>
+            <div class="app-cell-desc">CFD mark top-left on dark background with vehicle photography. Works for website hero, Facebook cover, email headers. Maintain gold and white only — no additional colors.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="touchpoints">
+        <div class="touchpoint">
+          <div class="touchpoint-icon">
+            <svg viewBox="0 0 24 24"><path d="M20 7H4C2.9 7 2 7.9 2 9v10c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V9c0-1.1-.9-2-2-2zM4 5h16M8 5V3h8v2"/></svg>
+          </div>
+          <div class="touchpoint-name">Uniforms</div>
+          <div class="touchpoint-desc">CFD lettermark embroidered on chest of black polo shirts. White or gold thread only. Never use the full wordmark on uniforms — monogram only. No minimum color variations.</div>
+        </div>
+        <div class="touchpoint">
+          <div class="touchpoint-icon">
+            <svg viewBox="0 0 24 24"><path d="M1 17l4-8 4 4 4-6 4 6 2-3 3 7H1zM7 7a2 2 0 100-4 2 2 0 000 4z"/></svg>
+          </div>
+          <div class="touchpoint-name">Van Wrap</div>
+          <div class="touchpoint-desc">Full wordmark on both sides. Black base with gold and white. CFD lettermark large on rear doors. Website URL and phone in Montserrat 600. No decorative elements beyond the logo system.</div>
+        </div>
+        <div class="touchpoint">
+          <div class="touchpoint-icon">
+            <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+          </div>
+          <div class="touchpoint-name">Digital &amp; Social</div>
+          <div class="touchpoint-desc">CFD lettermark as profile icon on all platforms. Full wordmark for cover photos. Black backgrounds always. Gold used sparingly as accent — never the dominant element in compositions.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CHAPTER 6: VOICE ── -->
+  <section id="voice" class="chapter">
+    <div class="chapter-inner">
+      <div class="chapter-head">
+        <div class="chapter-number">06</div>
+        <div class="chapter-text">
+          <div class="chapter-label">Communication</div>
+          <h2 class="chapter-title">Brand Voice</h2>
+          <p class="chapter-desc">How we speak is as important as how we look. Our tone is confident, precise, and premium — without arrogance. We let our work speak first. Clear language over clever language, always.</p>
+        </div>
+      </div>
+
+      <div class="pillars" style="margin-bottom:1px;">
+        <div class="pillar">
+          <div class="pillar-num">I</div>
+          <div class="pillar-title">Confident</div>
+          <div class="pillar-desc">We state what we do without hedging or qualifying. We know our work is exceptional and our communication reflects that certainty — never arrogant, always assured.</div>
+        </div>
+        <div class="pillar">
+          <div class="pillar-num">II</div>
+          <div class="pillar-title">Precise</div>
+          <div class="pillar-desc">Specific language. Exact pricing. Clear service descriptions. We don't use vague terms, filler words, or empty promises. Our precision in language mirrors our precision in work.</div>
+        </div>
+        <div class="pillar">
+          <div class="pillar-num">III</div>
+          <div class="pillar-title">Local & Proud</div>
+          <div class="pillar-desc">We are Mobile, Alabama. Gulf Coast roots, premium standards. We reference our location with pride — this is not just a business, it is a commitment to our community.</div>
+        </div>
+      </div>
+
+      <div class="voice-examples">
+        <div class="voice-col do">
+          <div class="voice-col-head">
+            <div class="voice-col-indicator"></div>
+            <div class="voice-col-title">Write Like This</div>
+          </div>
+          <div class="voice-quote">"Book your detail today — precision care for your vehicle, on your schedule."</div>
+          <div class="voice-quote">"Coastal Finest brings premium detailing directly to you across Mobile and the Gulf Coast."</div>
+          <div class="voice-quote">"Full Detail from $180 — every surface, every panel, every detail."</div>
+          <div class="voice-quote">"Your vehicle deserves the finest. We deliver it."</div>
+        </div>
+        <div class="voice-col dont">
+          <div class="voice-col-head">
+            <div class="voice-col-indicator"></div>
+            <div class="voice-col-title">Never Write Like This</div>
+          </div>
+          <div class="voice-quote">"BEST PRICES IN TOWN!! Don't miss out on our CRAZY deals!!!"</div>
+          <div class="voice-quote">"We're cheap and fast — hit us up anytime lol"</div>
+          <div class="voice-quote">"Your car is dirty, let us make it clean real quick"</div>
+          <div class="voice-quote">"Competitive rates available, we will beat any price guaranteed!!!"</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <img class="footer-logo" src="../lovart-export/CFD Auto Detailing Logo Black Background.png" alt="CFD">
+    <div class="footer-center">
+      <div class="footer-center-name">Coastal <span>Finest</span> Detailing LLC</div>
+      <div class="footer-center-meta">Brand Identity Manual · Version 1.0 · 2026</div>
+    </div>
+    <div class="footer-right">
+      <div class="footer-contact">
+        info@coastalfinest.com<br>
+        coastalfinest.com<br>
+        Mobile, Alabama
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
