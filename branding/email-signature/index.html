@@ -1,259 +1,265 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coastal Finest Detailing - Email Signatures</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
-            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
-            padding: 40px 20px;
-            min-height: 100vh;
-            color: #fff;
-        }
-        .container { max-width: 1400px; margin: 0 auto; }
-        h1 { text-align: center; font-size: 48px; margin-bottom: 12px; color: #BB8F52; font-weight: 900; }
-        .subtitle { text-align: center; font-size: 16px; color: #AAAAAA; margin-bottom: 60px; }
-        .signatures-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-bottom: 60px; }
-        .signature-card { background: #f5f5f5; border-radius: 8px; overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,0.5); }
-        .signature-card h2 { background: #BB8F52; color: #0A0A0A; padding: 16px 20px; font-size: 16px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; }
-        .signature-content { padding: 20px; background: white; display: flex; align-items: center; justify-content: center; overflow: auto; }
-        .code-section { background: #161616; border-top: 3px solid #BB8F52; padding: 40px; border-radius: 8px; margin-bottom: 40px; }
-        .code-section h3 { color: #BB8F52; font-size: 20px; margin-bottom: 20px; font-weight: 700; }
-        .code-label { color: #AAAAAA; font-size: 12px; font-weight: 700; letter-spacing: 1px; margin-bottom: 12px; text-transform: uppercase; }
-        .code-block { background: #0A0A0A; border: 1px solid #BB8F52; border-radius: 4px; padding: 20px; font-family: 'Monaco', 'Courier New', monospace; font-size: 11px; color: #00ff00; line-height: 1.6; overflow-x: auto; margin-bottom: 20px; max-height: 300px; overflow-y: auto; white-space: pre-wrap; word-wrap: break-word; }
-        .copy-btn { background: #BB8F52; color: #0A0A0A; border: none; padding: 12px 24px; font-weight: 700; font-size: 12px; cursor: pointer; border-radius: 4px; text-transform: uppercase; letter-spacing: 0.5px; transition: all 0.3s ease; margin-bottom: 20px; }
-        .copy-btn:hover { background: #d4a574; transform: translateY(-2px); box-shadow: 0 8px 16px rgba(187,143,82,0.3); }
-        .copy-btn.copied { background: #4CAF50; color: white; }
-        .instructions { background: #161616; border-left: 4px solid #BB8F52; padding: 24px; margin-bottom: 40px; border-radius: 4px; line-height: 1.8; }
-        .instructions h4 { color: #BB8F52; margin-bottom: 12px; font-size: 14px; }
-        .instructions ol { color: #AAAAAA; margin-left: 20px; font-size: 13px; }
-        .instructions li { margin-bottom: 8px; }
-        .section-divider { height: 2px; background: linear-gradient(90deg, transparent, #BB8F52, transparent); margin: 60px 0; }
-        @media (max-width: 1024px) { .signatures-grid { grid-template-columns: 1fr; } h1 { font-size: 36px; } }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coastal Finest Detailing — Email Signatures</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+      background: #111;
+      color: #fff;
+      padding: 48px 24px;
+      min-height: 100vh;
+    }
+    .page-header {
+      text-align: center;
+      margin-bottom: 56px;
+    }
+    .page-header h1 {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #BB8F52;
+      margin-bottom: 8px;
+    }
+    .page-header p {
+      font-size: 13px;
+      color: #666;
+    }
+    .sig-block {
+      max-width: 800px;
+      margin: 0 auto 64px;
+    }
+    .sig-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #555;
+      margin-bottom: 16px;
+      padding-left: 2px;
+    }
+    .sig-preview {
+      margin-bottom: 20px;
+      border-radius: 16px;
+      overflow: hidden;
+    }
+    .sig-actions {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+    .copy-btn {
+      background: #1a1a1a;
+      border: 1px solid #333;
+      color: #BB8F52;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 10px 20px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.2s, border-color 0.2s;
+    }
+    .copy-btn:hover { background: #222; border-color: #BB8F52; }
+    .copy-btn.copied { color: #4caf50; border-color: #4caf50; }
+    .note {
+      font-size: 12px;
+      color: #444;
+    }
+    .instructions {
+      max-width: 800px;
+      margin: 0 auto;
+      background: #161616;
+      border: 1px solid #222;
+      border-radius: 12px;
+      padding: 32px;
+    }
+    .instructions h2 {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #BB8F52;
+      margin-bottom: 20px;
+    }
+    .instructions ol {
+      padding-left: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .instructions li {
+      font-size: 13px;
+      color: #888;
+      line-height: 1.6;
+    }
+    .instructions li strong { color: #ccc; }
+  </style>
 </head>
 <body>
-<div class="container">
 
-    <h1>COASTAL FINEST DETAILING</h1>
-    <p class="subtitle">Email Signatures — Premium Auto Detailing · Mobile, Alabama</p>
+  <div class="page-header">
+    <h1>Coastal Finest Detailing LLC</h1>
+    <p>Email Signatures — Raymond Reyes &amp; Reivis Nunez</p>
+  </div>
 
-    <div class="instructions">
-        <h4>INSTRUCCIONES PARA GMAIL</h4>
-        <ol>
-            <li>Copiá el código HTML de tu nombre (botón abajo)</li>
-            <li>Gmail → <strong>Settings ⚙ → See all settings → Signature → Create new</strong></li>
-            <li>En el editor de firma, clic en el ícono <strong>&lt;/&gt;</strong> (HTML source)</li>
-            <li>Pegá el código y cerrá el editor HTML</li>
-            <li>Activá la firma en <strong>New emails</strong> y <strong>Replies</strong> → guardá</li>
-        </ol>
-    </div>
-
-    <!-- PREVIEWS -->
-    <div class="signatures-grid">
-        <div class="signature-card">
-            <h2>Raymond Reyes</h2>
-            <div class="signature-content">
-                <table cellpadding="0" cellspacing="0" width="660" style="background-color:#0A0A0A; border-collapse:collapse; margin:0;">
+  <!-- RAYMOND REYES -->
+  <div class="sig-block">
+    <div class="sig-label">Raymond Reyes — Owner &amp; Co-Founder</div>
+    <div class="sig-preview">
+      <table cellpadding="0" cellspacing="0" border="0" width="720" style="width:720px; background-color:#0A0A0A; background-image:url('https://raw.githubusercontent.com/RaymondDRH/coastal-finest-logos/main/branding/car-luxury.png'); background-size:cover; background-position:right center; background-repeat:no-repeat; border-radius:16px; border-collapse:separate; overflow:hidden;">
+        <tr>
+          <td width="22" style="width:22px; background-color:#BB8F52; padding:0;"></td>
+          <td style="padding:0; vertical-align:middle; background:linear-gradient(90deg, rgba(10,10,10,0.97) 0%, rgba(10,10,10,0.95) 40%, rgba(10,10,10,0.75) 60%, rgba(10,10,10,0.35) 80%, rgba(10,10,10,0.05) 100%);">
+            <table cellpadding="0" cellspacing="0" border="0" width="100%">
+              <tr>
+                <td style="padding:32px 30px;">
+                  <table cellpadding="0" cellspacing="0" border="0" style="margin-bottom:10px;">
                     <tr>
-                        <td width="6" style="background-color:#BB8F52; padding:0;"></td>
-                        <td width="354" style="padding:32px 24px; vertical-align:top;">
-                            <table cellpadding="0" cellspacing="0" width="100%" style="margin-bottom:8px;">
-                                <tr><td style="font-size:24px; font-weight:700; color:#FFFFFF; line-height:1.2;">Raymond Reyes</td></tr>
-                            </table>
-                            <table cellpadding="0" cellspacing="0" style="margin-bottom:20px;">
-                                <tr><td style="background-color:#BB8F52; padding:6px 12px; font-size:10px; font-weight:700; color:#0A0A0A; letter-spacing:0.5px; text-transform:uppercase;">Owner &amp; Co-Founder</td></tr>
-                            </table>
-                            <table cellpadding="0" cellspacing="0" width="100%" style="margin-bottom:16px;">
-                                <tr><td style="height:1px; background-color:#BB8F52;"></td></tr>
-                            </table>
-                            <table cellpadding="0" cellspacing="0" width="100%" style="margin-bottom:20px;">
-                                <tr style="height:32px;">
-                                    <td width="32" style="padding-right:12px; vertical-align:middle;"><table cellpadding="0" cellspacing="0" style="width:28px; height:28px; border-radius:50%; background-color:#BB8F52; text-align:center;"><tr><td style="font-size:13px; font-weight:700; color:#0A0A0A; line-height:28px;">P</td></tr></table></td>
-                                    <td style="font-size:13px; color:#AAAAAA; vertical-align:middle;">(251) 477-9029</td>
-                                </tr>
-                                <tr style="height:32px;">
-                                    <td width="32" style="padding-right:12px; vertical-align:middle;"><table cellpadding="0" cellspacing="0" style="width:28px; height:28px; border-radius:50%; background-color:#BB8F52; text-align:center;"><tr><td style="font-size:13px; font-weight:700; color:#0A0A0A; line-height:28px;">E</td></tr></table></td>
-                                    <td style="font-size:13px; color:#AAAAAA; vertical-align:middle;"><a href="mailto:info@coastalfinest.com" style="color:#AAAAAA; text-decoration:none;">info@coastalfinest.com</a></td>
-                                </tr>
-                                <tr style="height:32px;">
-                                    <td width="32" style="padding-right:12px; vertical-align:middle;"><table cellpadding="0" cellspacing="0" style="width:28px; height:28px; border-radius:50%; background-color:#BB8F52; text-align:center;"><tr><td style="font-size:13px; font-weight:700; color:#0A0A0A; line-height:28px;">W</td></tr></table></td>
-                                    <td style="font-size:13px; color:#AAAAAA; vertical-align:middle;"><a href="https://coastalfinest.com" style="color:#AAAAAA; text-decoration:none;">coastalfinest.com</a></td>
-                                </tr>
-                                <tr style="height:32px;">
-                                    <td width="32" style="padding-right:12px; vertical-align:middle;"><table cellpadding="0" cellspacing="0" style="width:28px; height:28px; border-radius:50%; background-color:#BB8F52; text-align:center;"><tr><td style="font-size:13px; font-weight:700; color:#0A0A0A; line-height:28px;">@</td></tr></table></td>
-                                    <td style="font-size:13px; color:#AAAAAA; vertical-align:middle;">@thecoastalfinest</td>
-                                </tr>
-                            </table>
-                            <table cellpadding="0" cellspacing="0" width="100%" style="padding-top:16px; border-top:1px solid #BB8F52;">
-                                <tr><td style="font-size:11px; color:#BB8F52; font-weight:700; letter-spacing:0.5px; line-height:1.5;">PRECISION DETAIL · ZERO SHORTCUTS<br>Mobile, Alabama</td></tr>
-                            </table>
-                        </td>
-                        <td width="300" style="padding:0; vertical-align:top;">
-                            <img src="https://raw.githubusercontent.com/RaymondDRH/coastal-finest-logos/main/branding/car-luxury.png" alt="Coastal Finest" style="display:block; width:300px; height:300px; object-fit:cover;">
-                        </td>
+                      <td style="font-family:Montserrat,Arial,sans-serif; font-size:32px; font-weight:700; color:#FFFFFF; line-height:1; letter-spacing:-0.5px; white-space:nowrap;">Raymond Reyes</td>
                     </tr>
-                </table>
-            </div>
-        </div>
-
-        <div class="signature-card">
-            <h2>Reivis Nunez</h2>
-            <div class="signature-content">
-                <table cellpadding="0" cellspacing="0" width="660" style="background-color:#0A0A0A; border-collapse:collapse; margin:0;">
+                  </table>
+                  <table cellpadding="0" cellspacing="0" border="0" style="margin-bottom:20px;">
                     <tr>
-                        <td width="6" style="background-color:#BB8F52; padding:0;"></td>
-                        <td width="354" style="padding:32px 24px; vertical-align:top;">
-                            <table cellpadding="0" cellspacing="0" width="100%" style="margin-bottom:8px;">
-                                <tr><td style="font-size:24px; font-weight:700; color:#FFFFFF; line-height:1.2;">Reivis Nunez</td></tr>
-                            </table>
-                            <table cellpadding="0" cellspacing="0" style="margin-bottom:20px;">
-                                <tr><td style="background-color:#BB8F52; padding:6px 12px; font-size:10px; font-weight:700; color:#0A0A0A; letter-spacing:0.5px; text-transform:uppercase;">Owner &amp; Co-Founder</td></tr>
-                            </table>
-                            <table cellpadding="0" cellspacing="0" width="100%" style="margin-bottom:16px;">
-                                <tr><td style="height:1px; background-color:#BB8F52;"></td></tr>
-                            </table>
-                            <table cellpadding="0" cellspacing="0" width="100%" style="margin-bottom:20px;">
-                                <tr style="height:32px;">
-                                    <td width="32" style="padding-right:12px; vertical-align:middle;"><table cellpadding="0" cellspacing="0" style="width:28px; height:28px; border-radius:50%; background-color:#BB8F52; text-align:center;"><tr><td style="font-size:13px; font-weight:700; color:#0A0A0A; line-height:28px;">P</td></tr></table></td>
-                                    <td style="font-size:13px; color:#AAAAAA; vertical-align:middle;">(251) 477-9029</td>
-                                </tr>
-                                <tr style="height:32px;">
-                                    <td width="32" style="padding-right:12px; vertical-align:middle;"><table cellpadding="0" cellspacing="0" style="width:28px; height:28px; border-radius:50%; background-color:#BB8F52; text-align:center;"><tr><td style="font-size:13px; font-weight:700; color:#0A0A0A; line-height:28px;">E</td></tr></table></td>
-                                    <td style="font-size:13px; color:#AAAAAA; vertical-align:middle;"><a href="mailto:info@coastalfinest.com" style="color:#AAAAAA; text-decoration:none;">info@coastalfinest.com</a></td>
-                                </tr>
-                                <tr style="height:32px;">
-                                    <td width="32" style="padding-right:12px; vertical-align:middle;"><table cellpadding="0" cellspacing="0" style="width:28px; height:28px; border-radius:50%; background-color:#BB8F52; text-align:center;"><tr><td style="font-size:13px; font-weight:700; color:#0A0A0A; line-height:28px;">W</td></tr></table></td>
-                                    <td style="font-size:13px; color:#AAAAAA; vertical-align:middle;"><a href="https://coastalfinest.com" style="color:#AAAAAA; text-decoration:none;">coastalfinest.com</a></td>
-                                </tr>
-                                <tr style="height:32px;">
-                                    <td width="32" style="padding-right:12px; vertical-align:middle;"><table cellpadding="0" cellspacing="0" style="width:28px; height:28px; border-radius:50%; background-color:#BB8F52; text-align:center;"><tr><td style="font-size:13px; font-weight:700; color:#0A0A0A; line-height:28px;">@</td></tr></table></td>
-                                    <td style="font-size:13px; color:#AAAAAA; vertical-align:middle;">@thecoastalfinest</td>
-                                </tr>
-                            </table>
-                            <table cellpadding="0" cellspacing="0" width="100%" style="padding-top:16px; border-top:1px solid #BB8F52;">
-                                <tr><td style="font-size:11px; color:#BB8F52; font-weight:700; letter-spacing:0.5px; line-height:1.5;">PRECISION DETAIL · ZERO SHORTCUTS<br>Mobile, Alabama</td></tr>
-                            </table>
-                        </td>
-                        <td width="300" style="padding:0; vertical-align:top;">
-                            <img src="https://raw.githubusercontent.com/RaymondDRH/coastal-finest-logos/main/branding/car-luxury.png" alt="Coastal Finest" style="display:block; width:300px; height:300px; object-fit:cover;">
-                        </td>
+                      <td style="font-family:Montserrat,Arial,sans-serif; background-color:#BB8F52; padding:7px 14px; border-radius:20px; font-size:11px; font-weight:700; color:#0A0A0A; white-space:nowrap; letter-spacing:0.3px;">Owner &amp; Co-Founder</td>
                     </tr>
-                </table>
-            </div>
-        </div>
+                  </table>
+                  <table cellpadding="0" cellspacing="0" border="0" width="340" style="margin-bottom:16px;">
+                    <tr><td style="height:1px; background-color:#BB8F52; opacity:0.5;"></td></tr>
+                  </table>
+                  <table cellpadding="0" cellspacing="0" border="0">
+                    <tr>
+                      <td style="font-family:Montserrat,Arial,sans-serif; padding:5px 18px 5px 0; font-size:11px; font-weight:700; color:#BB8F52; letter-spacing:1px; text-transform:uppercase; vertical-align:middle;">Phone</td>
+                      <td style="font-family:Montserrat,Arial,sans-serif; padding:5px 0; font-size:13px; color:#FFFFFF; vertical-align:middle;">(251)&nbsp;477-9029</td>
+                    </tr>
+                    <tr>
+                      <td style="font-family:Montserrat,Arial,sans-serif; padding:5px 18px 5px 0; font-size:11px; font-weight:700; color:#BB8F52; letter-spacing:1px; text-transform:uppercase; vertical-align:middle;">Email</td>
+                      <td style="font-family:Montserrat,Arial,sans-serif; padding:5px 0; font-size:13px; color:#FFFFFF; vertical-align:middle;"><a href="mailto:info@coastalfinest.com" style="color:#FFFFFF; text-decoration:none;">info@coastalfinest.com</a></td>
+                    </tr>
+                    <tr>
+                      <td style="font-family:Montserrat,Arial,sans-serif; padding:5px 18px 5px 0; font-size:11px; font-weight:700; color:#BB8F52; letter-spacing:1px; text-transform:uppercase; vertical-align:middle;">Web</td>
+                      <td style="font-family:Montserrat,Arial,sans-serif; padding:5px 0; font-size:13px; color:#FFFFFF; vertical-align:middle;"><a href="https://coastalfinest.com" style="color:#FFFFFF; text-decoration:none;">coastalfinest.com</a></td>
+                    </tr>
+                    <tr>
+                      <td style="font-family:Montserrat,Arial,sans-serif; padding:5px 18px 5px 0; font-size:11px; font-weight:700; color:#BB8F52; letter-spacing:1px; text-transform:uppercase; vertical-align:middle;">Social</td>
+                      <td style="font-family:Montserrat,Arial,sans-serif; padding:5px 0; font-size:13px; color:#FFFFFF; vertical-align:middle;">@thecoastalfinest</td>
+                    </tr>
+                  </table>
+                  <table cellpadding="0" cellspacing="0" border="0" style="margin-top:20px;">
+                    <tr>
+                      <td style="font-family:Montserrat,Arial,sans-serif; font-size:11px; font-weight:700; color:#BB8F52; letter-spacing:2px; text-transform:uppercase;">Coastal Finest Detailing LLC</td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
     </div>
-
-    <div class="section-divider"></div>
-
-    <!-- CODE BLOCKS -->
-    <div class="code-section">
-        <h3>CÓDIGO HTML — RAYMOND REYES</h3>
-        <div class="code-label">Copiá este bloque completo y pegalo en Gmail</div>
-        <button class="copy-btn" onclick="copyCode('raymond')">Copiar Código</button>
-        <div id="raymond" class="code-block">&lt;table cellpadding="0" cellspacing="0" width="660" style="background-color:#0A0A0A; border-collapse:collapse; margin:0;"&gt;
-  &lt;tr&gt;
-    &lt;td width="6" style="background-color:#BB8F52; padding:0;"&gt;&lt;/td&gt;
-    &lt;td width="354" style="padding:32px 24px; vertical-align:top;"&gt;
-      &lt;table cellpadding="0" cellspacing="0" width="100%" style="margin-bottom:8px;"&gt;
-        &lt;tr&gt;&lt;td style="font-size:24px; font-weight:700; color:#FFFFFF; line-height:1.2;"&gt;Raymond Reyes&lt;/td&gt;&lt;/tr&gt;
-      &lt;/table&gt;
-      &lt;table cellpadding="0" cellspacing="0" style="margin-bottom:20px;"&gt;
-        &lt;tr&gt;&lt;td style="background-color:#BB8F52; padding:6px 12px; font-size:10px; font-weight:700; color:#0A0A0A; letter-spacing:0.5px; text-transform:uppercase;"&gt;Owner &amp;amp; Co-Founder&lt;/td&gt;&lt;/tr&gt;
-      &lt;/table&gt;
-      &lt;table cellpadding="0" cellspacing="0" width="100%" style="margin-bottom:16px;"&gt;
-        &lt;tr&gt;&lt;td style="height:1px; background-color:#BB8F52;"&gt;&lt;/td&gt;&lt;/tr&gt;
-      &lt;/table&gt;
-      &lt;table cellpadding="0" cellspacing="0" width="100%" style="margin-bottom:20px;"&gt;
-        &lt;tr style="height:32px;"&gt;
-          &lt;td width="32" style="padding-right:12px; vertical-align:middle;"&gt;&lt;table cellpadding="0" cellspacing="0" style="width:28px; height:28px; border-radius:50%; background-color:#BB8F52; text-align:center;"&gt;&lt;tr&gt;&lt;td style="font-size:13px; font-weight:700; color:#0A0A0A; line-height:28px;"&gt;P&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/td&gt;
-          &lt;td style="font-size:13px; color:#AAAAAA; vertical-align:middle;"&gt;(251) 477-9029&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr style="height:32px;"&gt;
-          &lt;td width="32" style="padding-right:12px; vertical-align:middle;"&gt;&lt;table cellpadding="0" cellspacing="0" style="width:28px; height:28px; border-radius:50%; background-color:#BB8F52; text-align:center;"&gt;&lt;tr&gt;&lt;td style="font-size:13px; font-weight:700; color:#0A0A0A; line-height:28px;"&gt;E&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/td&gt;
-          &lt;td style="font-size:13px; color:#AAAAAA; vertical-align:middle;"&gt;&lt;a href="mailto:info@coastalfinest.com" style="color:#AAAAAA; text-decoration:none;"&gt;info@coastalfinest.com&lt;/a&gt;&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr style="height:32px;"&gt;
-          &lt;td width="32" style="padding-right:12px; vertical-align:middle;"&gt;&lt;table cellpadding="0" cellspacing="0" style="width:28px; height:28px; border-radius:50%; background-color:#BB8F52; text-align:center;"&gt;&lt;tr&gt;&lt;td style="font-size:13px; font-weight:700; color:#0A0A0A; line-height:28px;"&gt;W&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/td&gt;
-          &lt;td style="font-size:13px; color:#AAAAAA; vertical-align:middle;"&gt;&lt;a href="https://coastalfinest.com" style="color:#AAAAAA; text-decoration:none;"&gt;coastalfinest.com&lt;/a&gt;&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr style="height:32px;"&gt;
-          &lt;td width="32" style="padding-right:12px; vertical-align:middle;"&gt;&lt;table cellpadding="0" cellspacing="0" style="width:28px; height:28px; border-radius:50%; background-color:#BB8F52; text-align:center;"&gt;&lt;tr&gt;&lt;td style="font-size:13px; font-weight:700; color:#0A0A0A; line-height:28px;"&gt;@&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/td&gt;
-          &lt;td style="font-size:13px; color:#AAAAAA; vertical-align:middle;"&gt;@thecoastalfinest&lt;/td&gt;
-        &lt;/tr&gt;
-      &lt;/table&gt;
-      &lt;table cellpadding="0" cellspacing="0" width="100%" style="padding-top:16px; border-top:1px solid #BB8F52;"&gt;
-        &lt;tr&gt;&lt;td style="font-size:11px; color:#BB8F52; font-weight:700; letter-spacing:0.5px; line-height:1.5;"&gt;PRECISION DETAIL · ZERO SHORTCUTS&lt;br&gt;Mobile, Alabama&lt;/td&gt;&lt;/tr&gt;
-      &lt;/table&gt;
-    &lt;/td&gt;
-    &lt;td width="300" style="padding:0; vertical-align:top;"&gt;
-      &lt;img src="https://raw.githubusercontent.com/RaymondDRH/coastal-finest-logos/main/branding/car-luxury.png" alt="Coastal Finest" style="display:block; width:300px; height:300px; object-fit:cover;"&gt;
-    &lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/table&gt;</div>
+    <div class="sig-actions">
+      <button class="copy-btn" onclick="copySignature('raymond', this)">Copy HTML for Gmail</button>
+      <span class="note">Select all → paste into Gmail's signature editor</span>
     </div>
+  </div>
 
-    <div class="code-section">
-        <h3>CÓDIGO HTML — REIVIS NUNEZ</h3>
-        <div class="code-label">Copiá este bloque completo y pegalo en Gmail</div>
-        <button class="copy-btn" onclick="copyCode('reivis')">Copiar Código</button>
-        <div id="reivis" class="code-block">&lt;table cellpadding="0" cellspacing="0" width="660" style="background-color:#0A0A0A; border-collapse:collapse; margin:0;"&gt;
-  &lt;tr&gt;
-    &lt;td width="6" style="background-color:#BB8F52; padding:0;"&gt;&lt;/td&gt;
-    &lt;td width="354" style="padding:32px 24px; vertical-align:top;"&gt;
-      &lt;table cellpadding="0" cellspacing="0" width="100%" style="margin-bottom:8px;"&gt;
-        &lt;tr&gt;&lt;td style="font-size:24px; font-weight:700; color:#FFFFFF; line-height:1.2;"&gt;Reivis Nunez&lt;/td&gt;&lt;/tr&gt;
-      &lt;/table&gt;
-      &lt;table cellpadding="0" cellspacing="0" style="margin-bottom:20px;"&gt;
-        &lt;tr&gt;&lt;td style="background-color:#BB8F52; padding:6px 12px; font-size:10px; font-weight:700; color:#0A0A0A; letter-spacing:0.5px; text-transform:uppercase;"&gt;Owner &amp;amp; Co-Founder&lt;/td&gt;&lt;/tr&gt;
-      &lt;/table&gt;
-      &lt;table cellpadding="0" cellspacing="0" width="100%" style="margin-bottom:16px;"&gt;
-        &lt;tr&gt;&lt;td style="height:1px; background-color:#BB8F52;"&gt;&lt;/td&gt;&lt;/tr&gt;
-      &lt;/table&gt;
-      &lt;table cellpadding="0" cellspacing="0" width="100%" style="margin-bottom:20px;"&gt;
-        &lt;tr style="height:32px;"&gt;
-          &lt;td width="32" style="padding-right:12px; vertical-align:middle;"&gt;&lt;table cellpadding="0" cellspacing="0" style="width:28px; height:28px; border-radius:50%; background-color:#BB8F52; text-align:center;"&gt;&lt;tr&gt;&lt;td style="font-size:13px; font-weight:700; color:#0A0A0A; line-height:28px;"&gt;P&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/td&gt;
-          &lt;td style="font-size:13px; color:#AAAAAA; vertical-align:middle;"&gt;(251) 477-9029&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr style="height:32px;"&gt;
-          &lt;td width="32" style="padding-right:12px; vertical-align:middle;"&gt;&lt;table cellpadding="0" cellspacing="0" style="width:28px; height:28px; border-radius:50%; background-color:#BB8F52; text-align:center;"&gt;&lt;tr&gt;&lt;td style="font-size:13px; font-weight:700; color:#0A0A0A; line-height:28px;"&gt;E&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/td&gt;
-          &lt;td style="font-size:13px; color:#AAAAAA; vertical-align:middle;"&gt;&lt;a href="mailto:info@coastalfinest.com" style="color:#AAAAAA; text-decoration:none;"&gt;info@coastalfinest.com&lt;/a&gt;&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr style="height:32px;"&gt;
-          &lt;td width="32" style="padding-right:12px; vertical-align:middle;"&gt;&lt;table cellpadding="0" cellspacing="0" style="width:28px; height:28px; border-radius:50%; background-color:#BB8F52; text-align:center;"&gt;&lt;tr&gt;&lt;td style="font-size:13px; font-weight:700; color:#0A0A0A; line-height:28px;"&gt;W&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/td&gt;
-          &lt;td style="font-size:13px; color:#AAAAAA; vertical-align:middle;"&gt;&lt;a href="https://coastalfinest.com" style="color:#AAAAAA; text-decoration:none;"&gt;coastalfinest.com&lt;/a&gt;&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr style="height:32px;"&gt;
-          &lt;td width="32" style="padding-right:12px; vertical-align:middle;"&gt;&lt;table cellpadding="0" cellspacing="0" style="width:28px; height:28px; border-radius:50%; background-color:#BB8F52; text-align:center;"&gt;&lt;tr&gt;&lt;td style="font-size:13px; font-weight:700; color:#0A0A0A; line-height:28px;"&gt;@&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/td&gt;
-          &lt;td style="font-size:13px; color:#AAAAAA; vertical-align:middle;"&gt;@thecoastalfinest&lt;/td&gt;
-        &lt;/tr&gt;
-      &lt;/table&gt;
-      &lt;table cellpadding="0" cellspacing="0" width="100%" style="padding-top:16px; border-top:1px solid #BB8F52;"&gt;
-        &lt;tr&gt;&lt;td style="font-size:11px; color:#BB8F52; font-weight:700; letter-spacing:0.5px; line-height:1.5;"&gt;PRECISION DETAIL · ZERO SHORTCUTS&lt;br&gt;Mobile, Alabama&lt;/td&gt;&lt;/tr&gt;
-      &lt;/table&gt;
-    &lt;/td&gt;
-    &lt;td width="300" style="padding:0; vertical-align:top;"&gt;
-      &lt;img src="https://raw.githubusercontent.com/RaymondDRH/coastal-finest-logos/main/branding/car-luxury.png" alt="Coastal Finest" style="display:block; width:300px; height:300px; object-fit:cover;"&gt;
-    &lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/table&gt;</div>
+  <!-- REIVIS NUNEZ -->
+  <div class="sig-block">
+    <div class="sig-label">Reivis Nunez — Owner &amp; Co-Founder</div>
+    <div class="sig-preview">
+      <table cellpadding="0" cellspacing="0" border="0" width="720" style="width:720px; background-color:#0A0A0A; background-image:url('https://raw.githubusercontent.com/RaymondDRH/coastal-finest-logos/main/branding/car-luxury.png'); background-size:cover; background-position:right center; background-repeat:no-repeat; border-radius:16px; border-collapse:separate; overflow:hidden;">
+        <tr>
+          <td width="22" style="width:22px; background-color:#BB8F52; padding:0;"></td>
+          <td style="padding:0; vertical-align:middle; background:linear-gradient(90deg, rgba(10,10,10,0.97) 0%, rgba(10,10,10,0.95) 40%, rgba(10,10,10,0.75) 60%, rgba(10,10,10,0.35) 80%, rgba(10,10,10,0.05) 100%);">
+            <table cellpadding="0" cellspacing="0" border="0" width="100%">
+              <tr>
+                <td style="padding:32px 30px;">
+                  <table cellpadding="0" cellspacing="0" border="0" style="margin-bottom:10px;">
+                    <tr>
+                      <td style="font-family:Montserrat,Arial,sans-serif; font-size:32px; font-weight:700; color:#FFFFFF; line-height:1; letter-spacing:-0.5px; white-space:nowrap;">Reivis Nunez</td>
+                    </tr>
+                  </table>
+                  <table cellpadding="0" cellspacing="0" border="0" style="margin-bottom:20px;">
+                    <tr>
+                      <td style="font-family:Montserrat,Arial,sans-serif; background-color:#BB8F52; padding:7px 14px; border-radius:20px; font-size:11px; font-weight:700; color:#0A0A0A; white-space:nowrap; letter-spacing:0.3px;">Owner &amp; Co-Founder</td>
+                    </tr>
+                  </table>
+                  <table cellpadding="0" cellspacing="0" border="0" width="340" style="margin-bottom:16px;">
+                    <tr><td style="height:1px; background-color:#BB8F52; opacity:0.5;"></td></tr>
+                  </table>
+                  <table cellpadding="0" cellspacing="0" border="0">
+                    <tr>
+                      <td style="font-family:Montserrat,Arial,sans-serif; padding:5px 18px 5px 0; font-size:11px; font-weight:700; color:#BB8F52; letter-spacing:1px; text-transform:uppercase; vertical-align:middle;">Phone</td>
+                      <td style="font-family:Montserrat,Arial,sans-serif; padding:5px 0; font-size:13px; color:#FFFFFF; vertical-align:middle;">(251)&nbsp;477-9029</td>
+                    </tr>
+                    <tr>
+                      <td style="font-family:Montserrat,Arial,sans-serif; padding:5px 18px 5px 0; font-size:11px; font-weight:700; color:#BB8F52; letter-spacing:1px; text-transform:uppercase; vertical-align:middle;">Email</td>
+                      <td style="font-family:Montserrat,Arial,sans-serif; padding:5px 0; font-size:13px; color:#FFFFFF; vertical-align:middle;"><a href="mailto:info@coastalfinest.com" style="color:#FFFFFF; text-decoration:none;">info@coastalfinest.com</a></td>
+                    </tr>
+                    <tr>
+                      <td style="font-family:Montserrat,Arial,sans-serif; padding:5px 18px 5px 0; font-size:11px; font-weight:700; color:#BB8F52; letter-spacing:1px; text-transform:uppercase; vertical-align:middle;">Web</td>
+                      <td style="font-family:Montserrat,Arial,sans-serif; padding:5px 0; font-size:13px; color:#FFFFFF; vertical-align:middle;"><a href="https://coastalfinest.com" style="color:#FFFFFF; text-decoration:none;">coastalfinest.com</a></td>
+                    </tr>
+                    <tr>
+                      <td style="font-family:Montserrat,Arial,sans-serif; padding:5px 18px 5px 0; font-size:11px; font-weight:700; color:#BB8F52; letter-spacing:1px; text-transform:uppercase; vertical-align:middle;">Social</td>
+                      <td style="font-family:Montserrat,Arial,sans-serif; padding:5px 0; font-size:13px; color:#FFFFFF; vertical-align:middle;">@thecoastalfinest</td>
+                    </tr>
+                  </table>
+                  <table cellpadding="0" cellspacing="0" border="0" style="margin-top:20px;">
+                    <tr>
+                      <td style="font-family:Montserrat,Arial,sans-serif; font-size:11px; font-weight:700; color:#BB8F52; letter-spacing:2px; text-transform:uppercase;">Coastal Finest Detailing LLC</td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
     </div>
+    <div class="sig-actions">
+      <button class="copy-btn" onclick="copySignature('reivis', this)">Copy HTML for Gmail</button>
+      <span class="note">Select all → paste into Gmail's signature editor</span>
+    </div>
+  </div>
 
-</div>
-<script>
-    function copyCode(id) {
-        const el = document.getElementById(id);
-        const text = el.innerText;
-        navigator.clipboard.writeText(text).then(() => {
-            const btn = event.target;
-            btn.innerText = 'Copiado';
-            btn.classList.add('copied');
-            setTimeout(() => { btn.innerText = 'Copiar Código'; btn.classList.remove('copied'); }, 2000);
-        });
+  <!-- INSTRUCTIONS -->
+  <div class="instructions">
+    <h2>How to install in Gmail</h2>
+    <ol>
+      <li>Click <strong>"Copy HTML for Gmail"</strong> above for your signature.</li>
+      <li>Go to <strong>Gmail → Settings → See all settings → General → Signature → Create new</strong>.</li>
+      <li>In the signature editor, click the <strong>&lt;/&gt; HTML source icon</strong> (bottom right of toolbar).</li>
+      <li>Delete any existing content, then <strong>paste the copied HTML</strong>.</li>
+      <li>Click the HTML icon again to close source view, then <strong>Save Changes</strong>.</li>
+      <li>Send a test email to verify the car image loads (it's hosted on GitHub).</li>
+    </ol>
+  </div>
+
+  <script>
+    const signatures = {
+      raymond: `<table cellpadding="0" cellspacing="0" border="0" width="720" style="width:720px; background-color:#0A0A0A; background-image:url('https://raw.githubusercontent.com/RaymondDRH/coastal-finest-logos/main/branding/car-luxury.png'); background-size:cover; background-position:right center; background-repeat:no-repeat; border-radius:16px; border-collapse:separate; overflow:hidden;"><tr><td width="22" style="width:22px; background-color:#BB8F52; padding:0;"></td><td style="padding:0; vertical-align:middle; background:linear-gradient(90deg, rgba(10,10,10,0.97) 0%, rgba(10,10,10,0.95) 40%, rgba(10,10,10,0.75) 60%, rgba(10,10,10,0.35) 80%, rgba(10,10,10,0.05) 100%);"><table cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td style="padding:32px 30px;"><table cellpadding="0" cellspacing="0" border="0" style="margin-bottom:10px;"><tr><td style="font-family:Montserrat,Arial,sans-serif; font-size:32px; font-weight:700; color:#FFFFFF; line-height:1; letter-spacing:-0.5px; white-space:nowrap;">Raymond Reyes</td></tr></table><table cellpadding="0" cellspacing="0" border="0" style="margin-bottom:20px;"><tr><td style="font-family:Montserrat,Arial,sans-serif; background-color:#BB8F52; padding:7px 14px; border-radius:20px; font-size:11px; font-weight:700; color:#0A0A0A; white-space:nowrap; letter-spacing:0.3px;">Owner &amp; Co-Founder</td></tr></table><table cellpadding="0" cellspacing="0" border="0" width="340" style="margin-bottom:16px;"><tr><td style="height:1px; background-color:#BB8F52; opacity:0.5;"></td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="font-family:Montserrat,Arial,sans-serif; padding:5px 18px 5px 0; font-size:11px; font-weight:700; color:#BB8F52; letter-spacing:1px; text-transform:uppercase; vertical-align:middle;">Phone</td><td style="font-family:Montserrat,Arial,sans-serif; padding:5px 0; font-size:13px; color:#FFFFFF; vertical-align:middle;">(251)&nbsp;477-9029</td></tr><tr><td style="font-family:Montserrat,Arial,sans-serif; padding:5px 18px 5px 0; font-size:11px; font-weight:700; color:#BB8F52; letter-spacing:1px; text-transform:uppercase; vertical-align:middle;">Email</td><td style="font-family:Montserrat,Arial,sans-serif; padding:5px 0; font-size:13px; color:#FFFFFF; vertical-align:middle;"><a href="mailto:info@coastalfinest.com" style="color:#FFFFFF; text-decoration:none;">info@coastalfinest.com</a></td></tr><tr><td style="font-family:Montserrat,Arial,sans-serif; padding:5px 18px 5px 0; font-size:11px; font-weight:700; color:#BB8F52; letter-spacing:1px; text-transform:uppercase; vertical-align:middle;">Web</td><td style="font-family:Montserrat,Arial,sans-serif; padding:5px 0; font-size:13px; color:#FFFFFF; vertical-align:middle;"><a href="https://coastalfinest.com" style="color:#FFFFFF; text-decoration:none;">coastalfinest.com</a></td></tr><tr><td style="font-family:Montserrat,Arial,sans-serif; padding:5px 18px 5px 0; font-size:11px; font-weight:700; color:#BB8F52; letter-spacing:1px; text-transform:uppercase; vertical-align:middle;">Social</td><td style="font-family:Montserrat,Arial,sans-serif; padding:5px 0; font-size:13px; color:#FFFFFF; vertical-align:middle;">@thecoastalfinest</td></tr></table><table cellpadding="0" cellspacing="0" border="0" style="margin-top:20px;"><tr><td style="font-family:Montserrat,Arial,sans-serif; font-size:11px; font-weight:700; color:#BB8F52; letter-spacing:2px; text-transform:uppercase;">Coastal Finest Detailing LLC</td></tr></table></td></tr></table></td></tr></table>`,
+
+      reivis: `<table cellpadding="0" cellspacing="0" border="0" width="720" style="width:720px; background-color:#0A0A0A; background-image:url('https://raw.githubusercontent.com/RaymondDRH/coastal-finest-logos/main/branding/car-luxury.png'); background-size:cover; background-position:right center; background-repeat:no-repeat; border-radius:16px; border-collapse:separate; overflow:hidden;"><tr><td width="22" style="width:22px; background-color:#BB8F52; padding:0;"></td><td style="padding:0; vertical-align:middle; background:linear-gradient(90deg, rgba(10,10,10,0.97) 0%, rgba(10,10,10,0.95) 40%, rgba(10,10,10,0.75) 60%, rgba(10,10,10,0.35) 80%, rgba(10,10,10,0.05) 100%);"><table cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td style="padding:32px 30px;"><table cellpadding="0" cellspacing="0" border="0" style="margin-bottom:10px;"><tr><td style="font-family:Montserrat,Arial,sans-serif; font-size:32px; font-weight:700; color:#FFFFFF; line-height:1; letter-spacing:-0.5px; white-space:nowrap;">Reivis Nunez</td></tr></table><table cellpadding="0" cellspacing="0" border="0" style="margin-bottom:20px;"><tr><td style="font-family:Montserrat,Arial,sans-serif; background-color:#BB8F52; padding:7px 14px; border-radius:20px; font-size:11px; font-weight:700; color:#0A0A0A; white-space:nowrap; letter-spacing:0.3px;">Owner &amp; Co-Founder</td></tr></table><table cellpadding="0" cellspacing="0" border="0" width="340" style="margin-bottom:16px;"><tr><td style="height:1px; background-color:#BB8F52; opacity:0.5;"></td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="font-family:Montserrat,Arial,sans-serif; padding:5px 18px 5px 0; font-size:11px; font-weight:700; color:#BB8F52; letter-spacing:1px; text-transform:uppercase; vertical-align:middle;">Phone</td><td style="font-family:Montserrat,Arial,sans-serif; padding:5px 0; font-size:13px; color:#FFFFFF; vertical-align:middle;">(251)&nbsp;477-9029</td></tr><tr><td style="font-family:Montserrat,Arial,sans-serif; padding:5px 18px 5px 0; font-size:11px; font-weight:700; color:#BB8F52; letter-spacing:1px; text-transform:uppercase; vertical-align:middle;">Email</td><td style="font-family:Montserrat,Arial,sans-serif; padding:5px 0; font-size:13px; color:#FFFFFF; vertical-align:middle;"><a href="mailto:info@coastalfinest.com" style="color:#FFFFFF; text-decoration:none;">info@coastalfinest.com</a></td></tr><tr><td style="font-family:Montserrat,Arial,sans-serif; padding:5px 18px 5px 0; font-size:11px; font-weight:700; color:#BB8F52; letter-spacing:1px; text-transform:uppercase; vertical-align:middle;">Web</td><td style="font-family:Montserrat,Arial,sans-serif; padding:5px 0; font-size:13px; color:#FFFFFF; vertical-align:middle;"><a href="https://coastalfinest.com" style="color:#FFFFFF; text-decoration:none;">coastalfinest.com</a></td></tr><tr><td style="font-family:Montserrat,Arial,sans-serif; padding:5px 18px 5px 0; font-size:11px; font-weight:700; color:#BB8F52; letter-spacing:1px; text-transform:uppercase; vertical-align:middle;">Social</td><td style="font-family:Montserrat,Arial,sans-serif; padding:5px 0; font-size:13px; color:#FFFFFF; vertical-align:middle;">@thecoastalfinest</td></tr></table><table cellpadding="0" cellspacing="0" border="0" style="margin-top:20px;"><tr><td style="font-family:Montserrat,Arial,sans-serif; font-size:11px; font-weight:700; color:#BB8F52; letter-spacing:2px; text-transform:uppercase;">Coastal Finest Detailing LLC</td></tr></table></td></tr></table></td></tr></table>`
+    };
+
+    function copySignature(name, btn) {
+      navigator.clipboard.writeText(signatures[name]).then(() => {
+        const original = btn.textContent;
+        btn.textContent = 'Copied!';
+        btn.classList.add('copied');
+        setTimeout(() => {
+          btn.textContent = original;
+          btn.classList.remove('copied');
+        }, 2000);
+      });
     }
-</script>
+  </script>
+
 </body>
 </html>
