@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Coastal Finest — Email Signatures</title>
+  <title>Coastal Finest — Email Signature Concepts</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
@@ -32,25 +32,21 @@
       color: #555;
       margin-bottom: 64px;
     }
-    .sig-block {
+    .concept {
       margin-bottom: 72px;
     }
-    .sig-label {
+    .concept-label {
       font-size: 10px;
       font-weight: 700;
       letter-spacing: 3px;
       text-transform: uppercase;
       color: #BB8F52;
-      margin-bottom: 20px;
-      display: flex;
-      align-items: center;
-      gap: 12px;
+      margin-bottom: 8px;
     }
-    .sig-label::after {
-      content: '';
-      flex: 1;
-      height: 1px;
-      background: #222;
+    .concept-desc {
+      font-size: 12px;
+      color: #555;
+      margin-bottom: 20px;
     }
     .sig-preview {
       background: #fff;
@@ -58,141 +54,195 @@
       display: inline-block;
       border: 1px solid #222;
     }
-    .instructions {
+    hr { border: none; border-top: 1px solid #1e1e1e; margin: 72px 0; }
+
+    /* Voting bar */
+    .vote-note {
+      font-size: 12px;
+      color: #555;
       margin-top: 20px;
+      padding: 16px 20px;
       border: 1px solid #1e1e1e;
       border-left: 2px solid #BB8F52;
-      padding: 24px 28px;
-      background: rgba(187,143,82,0.04);
-    }
-    .instructions h3 {
-      font-size: 10px;
-      font-weight: 700;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      color: #BB8F52;
-      margin-bottom: 16px;
-    }
-    .instructions ol {
-      list-style: none;
-      counter-reset: steps;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-    .instructions li {
-      counter-increment: steps;
-      font-size: 12px;
-      color: #888;
-      line-height: 1.6;
-      padding-left: 28px;
-      position: relative;
-    }
-    .instructions li::before {
-      content: counter(steps);
-      position: absolute;
-      left: 0;
-      color: #BB8F52;
-      font-weight: 700;
-      font-size: 10px;
-    }
-    .instructions strong { color: #ccc; }
-    .divider {
-      border: none;
-      border-top: 1px solid #1e1e1e;
-      margin: 80px 0;
-    }
-    .note {
-      font-size: 11px;
-      color: #444;
-      line-height: 1.7;
-      margin-top: 60px;
-      padding: 20px 24px;
-      border: 1px solid #1e1e1e;
     }
   </style>
 </head>
 <body>
 
   <p class="page-title">Brand Identity — Email Signatures</p>
-  <h1 class="page-heading">Email Signatures</h1>
-  <p class="page-sub">Coastal Finest Detailing LLC · Two versions — Raymond Reyes & Reivis Nunez</p>
+  <h1 class="page-heading">4 Conceptos</h1>
+  <p class="page-sub">Coastal Finest Detailing LLC · Elegí el que más te gusta</p>
 
-  <!-- ── RAYMOND ── -->
-  <div class="sig-block">
-    <div class="sig-label">Raymond Reyes — Owner &amp; Co-Founder</div>
-
+  <!-- ══════════════════════════════════════════════
+       CONCEPTO A — Banner oscuro horizontal completo
+  ══════════════════════════════════════════════ -->
+  <div class="concept">
+    <div class="concept-label">Concepto A — Banner oscuro total</div>
+    <div class="concept-desc">Fondo negro de extremo a extremo. Logo izquierda, nombre y título centro, contacto derecha. Estilo pit crew.</div>
     <div class="sig-preview">
-      <!-- ══════════════════════════════════════
-           EMAIL SIGNATURE — RAYMOND REYES
-           Copy everything inside this comment block
-           and paste into Gmail / Outlook signature settings
-      ══════════════════════════════════════ -->
-      <table cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse; font-family:Arial,Helvetica,sans-serif; max-width:520px;">
+      <table cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse; font-family:Arial,Helvetica,sans-serif; width:540px; background:#0A0A0A;">
         <tr>
-          <!-- Logo block -->
-          <td style="background:#0A0A0A; padding:20px 24px; vertical-align:middle; border-right:3px solid #BB8F52;">
-            <img
-              src="https://raw.githubusercontent.com/RaymondDRH/coastal-finest-logos/main/lovart-export/CFD%20Auto%20Detailing%20Logo%20Black%20Background.png"
-              alt="CFD"
-              width="80"
-              height="80"
-              style="display:block; width:80px; height:80px; object-fit:contain;"
-            >
+          <td style="padding:20px 24px; vertical-align:middle; width:90px;">
+            <img src="https://raw.githubusercontent.com/RaymondDRH/coastal-finest-logos/main/lovart-export/CFD%20Auto%20Detailing%20Logo%20Black%20Background.png"
+              alt="CFD" width="70" height="70" style="display:block;">
           </td>
-          <!-- Info block -->
-          <td style="padding:20px 24px; vertical-align:middle; background:#ffffff;">
+          <td style="padding:20px 16px; vertical-align:middle; border-left:1px solid #BB8F52; border-right:1px solid #1e1e1e;">
+            <div style="font-family:Arial,Helvetica,sans-serif; font-size:15px; font-weight:700; color:#FFFFFF; margin-bottom:4px;">Raymond Reyes</div>
+            <div style="font-family:Arial,Helvetica,sans-serif; font-size:9px; font-weight:600; color:#BB8F52; letter-spacing:0.2em; text-transform:uppercase;">Owner &amp; Co-Founder &nbsp;·&nbsp; Coastal Finest Detailing</div>
+          </td>
+          <td style="padding:20px 24px; vertical-align:middle; text-align:right;">
+            <div style="font-family:Arial,Helvetica,sans-serif; font-size:11px; color:#888888; margin-bottom:5px;">
+              <a href="tel:+12514779029" style="color:#AAAAAA; text-decoration:none;">(251) 477-9029</a>
+            </div>
+            <div style="font-family:Arial,Helvetica,sans-serif; font-size:11px; margin-bottom:5px;">
+              <a href="mailto:info@coastalfinest.com" style="color:#BB8F52; text-decoration:none;">info@coastalfinest.com</a>
+            </div>
+            <div style="font-family:Arial,Helvetica,sans-serif; font-size:11px;">
+              <a href="https://coastalfinest.com" style="color:#888888; text-decoration:none;">coastalfinest.com</a>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="3" style="padding:8px 24px; border-top:1px solid #1e1e1e; text-align:right;">
+            <span style="font-family:Arial,Helvetica,sans-serif; font-size:9px; color:#333; letter-spacing:0.2em; text-transform:uppercase;">@thecoastalfinest &nbsp;·&nbsp; Mobile, Alabama</span>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- ══════════════════════════════════════════════
+       CONCEPTO B — Split negro / blanco con divisor dorado
+  ══════════════════════════════════════════════ -->
+  <div class="concept">
+    <div class="concept-label">Concepto B — Split negro · blanco</div>
+    <div class="concept-desc">Bloque negro con logo a la izquierda, bloque blanco con datos a la derecha. Línea dorada divisora.</div>
+    <div class="sig-preview">
+      <table cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse; font-family:Arial,Helvetica,sans-serif; width:540px;">
+        <tr>
+          <td style="background:#0A0A0A; padding:28px 24px; vertical-align:middle; width:130px; text-align:center; border-right:3px solid #BB8F52;">
+            <img src="https://raw.githubusercontent.com/RaymondDRH/coastal-finest-logos/main/lovart-export/CFD%20Auto%20Detailing%20Logo%20Black%20Background.png"
+              alt="CFD" width="80" height="80" style="display:block; margin:0 auto;">
+          </td>
+          <td style="background:#ffffff; padding:24px 28px; vertical-align:middle;">
+            <div style="font-family:Arial,Helvetica,sans-serif; font-size:17px; font-weight:700; color:#0A0A0A; letter-spacing:0.01em; margin-bottom:3px;">Raymond Reyes</div>
+            <div style="font-family:Arial,Helvetica,sans-serif; font-size:9px; font-weight:600; color:#BB8F52; letter-spacing:0.2em; text-transform:uppercase; margin-bottom:16px;">Owner &amp; Co-Founder · Coastal Finest Detailing LLC</div>
+            <div style="border-top:1px solid #eeeeee; padding-top:14px;">
+              <div style="font-family:Arial,Helvetica,sans-serif; font-size:11px; color:#444; margin-bottom:5px;">
+                <a href="tel:+12514779029" style="color:#333; text-decoration:none;">(251) 477-9029</a>
+                &nbsp;&nbsp;
+                <a href="mailto:info@coastalfinest.com" style="color:#333; text-decoration:none;">info@coastalfinest.com</a>
+              </div>
+              <div style="font-family:Arial,Helvetica,sans-serif; font-size:11px;">
+                <a href="https://coastalfinest.com" style="color:#BB8F52; text-decoration:none;">coastalfinest.com</a>
+                &nbsp;&nbsp;
+                <span style="color:#aaa;">@thecoastalfinest</span>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- ══════════════════════════════════════════════
+       CONCEPTO C — Ultra minimalista, sin logo
+  ══════════════════════════════════════════════ -->
+  <div class="concept">
+    <div class="concept-label">Concepto C — Ultra minimalista</div>
+    <div class="concept-desc">Sin logo. Solo texto. Línea dorada como único elemento de branding. Máximo lujo, mínimos elementos.</div>
+    <div class="sig-preview">
+      <table cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse; font-family:Arial,Helvetica,sans-serif; width:480px;">
+        <tr>
+          <td style="padding-bottom:14px;">
+            <div style="height:2px; background:#BB8F52; width:40px;"></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding-bottom:4px;">
+            <span style="font-family:Arial,Helvetica,sans-serif; font-size:16px; font-weight:700; color:#0A0A0A; letter-spacing:0.02em;">Raymond Reyes</span>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding-bottom:14px;">
+            <span style="font-family:Arial,Helvetica,sans-serif; font-size:10px; font-weight:600; color:#BB8F52; letter-spacing:0.15em; text-transform:uppercase;">Owner &amp; Co-Founder</span>
+            <span style="font-family:Arial,Helvetica,sans-serif; font-size:10px; color:#AAAAAA;"> &nbsp;·&nbsp; Coastal Finest Detailing LLC</span>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding-bottom:5px; border-top:1px solid #e8e8e8; padding-top:14px;">
+            <span style="font-family:Arial,Helvetica,sans-serif; font-size:11px; color:#555;">
+              <a href="tel:+12514779029" style="color:#333; text-decoration:none;">(251) 477-9029</a>
+              &nbsp;&nbsp;·&nbsp;&nbsp;
+              <a href="mailto:info@coastalfinest.com" style="color:#333; text-decoration:none;">info@coastalfinest.com</a>
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <span style="font-family:Arial,Helvetica,sans-serif; font-size:11px; color:#555;">
+              <a href="https://coastalfinest.com" style="color:#BB8F52; text-decoration:none;">coastalfinest.com</a>
+              &nbsp;&nbsp;·&nbsp;&nbsp;
+              <a href="https://instagram.com/thecoastalfinest" style="color:#888; text-decoration:none;">@thecoastalfinest</a>
+              &nbsp;&nbsp;·&nbsp;&nbsp;
+              <span style="color:#bbb;">Mobile, AL</span>
+            </span>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- ══════════════════════════════════════════════
+       CONCEPTO D — Banner arriba + datos abajo
+  ══════════════════════════════════════════════ -->
+  <div class="concept">
+    <div class="concept-label">Concepto D — Banner arriba + datos abajo</div>
+    <div class="concept-desc">Bloque oscuro arriba con logo y nombre en blanco. Línea dorada divisora. Bloque blanco abajo con contacto.</div>
+    <div class="sig-preview">
+      <table cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse; font-family:Arial,Helvetica,sans-serif; width:520px;">
+        <!-- Top dark banner -->
+        <tr>
+          <td style="background:#0A0A0A; padding:22px 28px;">
             <table cellpadding="0" cellspacing="0" border="0">
               <tr>
-                <td style="padding-bottom:4px;">
-                  <span style="font-family:Arial,Helvetica,sans-serif; font-size:16px; font-weight:700; color:#0A0A0A; letter-spacing:0.02em;">Raymond Reyes</span>
+                <td style="vertical-align:middle; padding-right:20px;">
+                  <img src="https://raw.githubusercontent.com/RaymondDRH/coastal-finest-logos/main/lovart-export/CFD%20Auto%20Detailing%20Logo%20Black%20Background.png"
+                    alt="CFD" width="56" height="56" style="display:block;">
                 </td>
-              </tr>
-              <tr>
-                <td style="padding-bottom:16px;">
-                  <span style="font-family:Arial,Helvetica,sans-serif; font-size:10px; font-weight:600; color:#BB8F52; letter-spacing:0.2em; text-transform:uppercase;">Owner &amp; Co-Founder</span>
-                  <span style="font-family:Arial,Helvetica,sans-serif; font-size:10px; color:#AAAAAA; letter-spacing:0.05em;"> &nbsp;·&nbsp; Coastal Finest Detailing LLC</span>
-                </td>
-              </tr>
-              <tr>
-                <td style="padding-bottom:6px; border-top:1px solid #EEEEEE; padding-top:14px;">
-                  <span style="font-family:Arial,Helvetica,sans-serif; font-size:11px; color:#555555;">
-                    <span style="color:#BB8F52; font-weight:700;">P</span>&nbsp;
-                    <a href="tel:+12514779029" style="color:#333333; text-decoration:none;">(251) 477-9029</a>
-                  </span>
-                </td>
-              </tr>
-              <tr>
-                <td style="padding-bottom:6px;">
-                  <span style="font-family:Arial,Helvetica,sans-serif; font-size:11px; color:#555555;">
-                    <span style="color:#BB8F52; font-weight:700;">E</span>&nbsp;
-                    <a href="mailto:info@coastalfinest.com" style="color:#333333; text-decoration:none;">info@coastalfinest.com</a>
-                  </span>
-                </td>
-              </tr>
-              <tr>
-                <td style="padding-bottom:0;">
-                  <span style="font-family:Arial,Helvetica,sans-serif; font-size:11px; color:#555555;">
-                    <span style="color:#BB8F52; font-weight:700;">W</span>&nbsp;
-                    <a href="https://coastalfinest.com" style="color:#333333; text-decoration:none;">coastalfinest.com</a>
-                  </span>
+                <td style="vertical-align:middle; border-left:1px solid #2a2a2a; padding-left:20px;">
+                  <div style="font-family:Arial,Helvetica,sans-serif; font-size:16px; font-weight:700; color:#FFFFFF; margin-bottom:4px;">Raymond Reyes</div>
+                  <div style="font-family:Arial,Helvetica,sans-serif; font-size:9px; font-weight:600; color:#BB8F52; letter-spacing:0.2em; text-transform:uppercase;">Owner &amp; Co-Founder · Coastal Finest Detailing LLC</div>
                 </td>
               </tr>
             </table>
           </td>
         </tr>
-        <!-- Footer bar -->
+        <!-- Gold divider -->
         <tr>
-          <td colspan="2" style="background:#0A0A0A; padding:10px 24px;">
+          <td style="height:2px; background:#BB8F52; font-size:0; line-height:0;">&nbsp;</td>
+        </tr>
+        <!-- Bottom white contact -->
+        <tr>
+          <td style="background:#ffffff; padding:16px 28px;">
             <table cellpadding="0" cellspacing="0" border="0" width="100%">
               <tr>
                 <td>
-                  <span style="font-family:Arial,Helvetica,sans-serif; font-size:9px; font-weight:600; color:#BB8F52; letter-spacing:0.25em; text-transform:uppercase;">
-                    <a href="https://instagram.com/thecoastalfinest" style="color:#BB8F52; text-decoration:none;">@thecoastalfinest</a>
+                  <span style="font-family:Arial,Helvetica,sans-serif; font-size:11px; color:#444;">
+                    <a href="tel:+12514779029" style="color:#333; text-decoration:none;">(251) 477-9029</a>
+                    &nbsp;&nbsp;·&nbsp;&nbsp;
+                    <a href="mailto:info@coastalfinest.com" style="color:#333; text-decoration:none;">info@coastalfinest.com</a>
+                    &nbsp;&nbsp;·&nbsp;&nbsp;
+                    <a href="https://coastalfinest.com" style="color:#BB8F52; text-decoration:none;">coastalfinest.com</a>
+                    &nbsp;&nbsp;·&nbsp;&nbsp;
+                    <span style="color:#aaa;">@thecoastalfinest</span>
                   </span>
-                </td>
-                <td align="right">
-                  <span style="font-family:Arial,Helvetica,sans-serif; font-size:9px; color:#444444; letter-spacing:0.15em; text-transform:uppercase;">Mobile, Alabama</span>
                 </td>
               </tr>
             </table>
@@ -200,112 +250,10 @@
         </tr>
       </table>
     </div>
-
-    <div class="instructions">
-      <h3>Cómo instalar en Gmail</h3>
-      <ol>
-        <li>Abrí <strong>Gmail → Settings (⚙) → See all settings</strong></li>
-        <li>Bajá hasta <strong>Signature → Create new</strong> y poné el nombre "Coastal Finest"</li>
-        <li>En el editor de firma, hacé clic en el ícono <strong>&lt;&gt; (Insert HTML)</strong> — si no aparece, usá el botón de pegar directamente</li>
-        <li>Abrí esta página, clic derecho sobre la firma → <strong>Seleccionar todo el bloque de firma</strong> → copiá</li>
-        <li>Pegá en el editor de Gmail → guardá los cambios</li>
-        <li>Activá la firma como predeterminada en "For New Emails" y "On Reply/Forward"</li>
-      </ol>
-    </div>
   </div>
 
-  <hr class="divider">
-
-  <!-- ── REIVIS ── -->
-  <div class="sig-block">
-    <div class="sig-label">Reivis Nunez — Owner &amp; Co-Founder</div>
-
-    <div class="sig-preview">
-      <table cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse; font-family:Arial,Helvetica,sans-serif; max-width:520px;">
-        <tr>
-          <td style="background:#0A0A0A; padding:20px 24px; vertical-align:middle; border-right:3px solid #BB8F52;">
-            <img
-              src="https://raw.githubusercontent.com/RaymondDRH/coastal-finest-logos/main/lovart-export/CFD%20Auto%20Detailing%20Logo%20Black%20Background.png"
-              alt="CFD"
-              width="80"
-              height="80"
-              style="display:block; width:80px; height:80px; object-fit:contain;"
-            >
-          </td>
-          <td style="padding:20px 24px; vertical-align:middle; background:#ffffff;">
-            <table cellpadding="0" cellspacing="0" border="0">
-              <tr>
-                <td style="padding-bottom:4px;">
-                  <span style="font-family:Arial,Helvetica,sans-serif; font-size:16px; font-weight:700; color:#0A0A0A; letter-spacing:0.02em;">Reivis Nunez</span>
-                </td>
-              </tr>
-              <tr>
-                <td style="padding-bottom:16px;">
-                  <span style="font-family:Arial,Helvetica,sans-serif; font-size:10px; font-weight:600; color:#BB8F52; letter-spacing:0.2em; text-transform:uppercase;">Owner &amp; Co-Founder</span>
-                  <span style="font-family:Arial,Helvetica,sans-serif; font-size:10px; color:#AAAAAA; letter-spacing:0.05em;"> &nbsp;·&nbsp; Coastal Finest Detailing LLC</span>
-                </td>
-              </tr>
-              <tr>
-                <td style="padding-bottom:6px; border-top:1px solid #EEEEEE; padding-top:14px;">
-                  <span style="font-family:Arial,Helvetica,sans-serif; font-size:11px; color:#555555;">
-                    <span style="color:#BB8F52; font-weight:700;">P</span>&nbsp;
-                    <a href="tel:+12514779029" style="color:#333333; text-decoration:none;">(251) 477-9029</a>
-                  </span>
-                </td>
-              </tr>
-              <tr>
-                <td style="padding-bottom:6px;">
-                  <span style="font-family:Arial,Helvetica,sans-serif; font-size:11px; color:#555555;">
-                    <span style="color:#BB8F52; font-weight:700;">E</span>&nbsp;
-                    <a href="mailto:info@coastalfinest.com" style="color:#333333; text-decoration:none;">info@coastalfinest.com</a>
-                  </span>
-                </td>
-              </tr>
-              <tr>
-                <td style="padding-bottom:0;">
-                  <span style="font-family:Arial,Helvetica,sans-serif; font-size:11px; color:#555555;">
-                    <span style="color:#BB8F52; font-weight:700;">W</span>&nbsp;
-                    <a href="https://coastalfinest.com" style="color:#333333; text-decoration:none;">coastalfinest.com</a>
-                  </span>
-                </td>
-              </tr>
-            </table>
-          </td>
-        </tr>
-        <tr>
-          <td colspan="2" style="background:#0A0A0A; padding:10px 24px;">
-            <table cellpadding="0" cellspacing="0" border="0" width="100%">
-              <tr>
-                <td>
-                  <span style="font-family:Arial,Helvetica,sans-serif; font-size:9px; font-weight:600; color:#BB8F52; letter-spacing:0.25em; text-transform:uppercase;">
-                    <a href="https://instagram.com/thecoastalfinest" style="color:#BB8F52; text-decoration:none;">@thecoastalfinest</a>
-                  </span>
-                </td>
-                <td align="right">
-                  <span style="font-family:Arial,Helvetica,sans-serif; font-size:9px; color:#444444; letter-spacing:0.15em; text-transform:uppercase;">Mobile, Alabama</span>
-                </td>
-              </tr>
-            </table>
-          </td>
-        </tr>
-      </table>
-    </div>
-
-    <div class="instructions">
-      <h3>Cómo instalar en Gmail (Reivis)</h3>
-      <ol>
-        <li>Reivis abre su Gmail → <strong>Settings → See all settings</strong></li>
-        <li>Crea una firma nueva con el mismo proceso</li>
-        <li>Selecciona el bloque de firma de Reivis de esta página y lo pega</li>
-        <li>Guarda y activa como predeterminada</li>
-      </ol>
-    </div>
-  </div>
-
-  <div class="note">
-    <strong style="color:#BB8F52; font-size:10px; letter-spacing:2px; text-transform:uppercase;">Nota sobre la imagen del logo</strong><br><br>
-    La firma carga el logo directamente desde GitHub. Una vez que el sitio <strong>coastalfinest.com</strong> esté activo,
-    actualizamos la URL del logo para que apunte al dominio propio — más confiable en todos los clientes de email.
+  <div class="vote-note">
+    Decile a Claude cuál te gusta — A, B, C o D — y lo finalizamos con las dos firmas (Raymond y Reivis) listas para instalar en Gmail.
   </div>
 
 </body>
